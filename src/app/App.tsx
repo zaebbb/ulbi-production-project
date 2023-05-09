@@ -8,7 +8,6 @@ import {Navbar} from "widgets/Navbar";
 export const App = () => {
   const {toggleTheme, theme} = useTheme();
 
-
   return (
     <div className={classNames('app', {}, [theme])}>
       <Navbar />
