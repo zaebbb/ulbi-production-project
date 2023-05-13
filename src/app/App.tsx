@@ -1,13 +1,13 @@
+import React, { Suspense } from 'react'
 import './styles/index.scss'
-import React, {Suspense} from 'react';
-import {classNames} from "shared/lib/classNames/classNames";
-import { useTheme } from './providers/ThemeProvider';
-import {AppRouter} from "./providers/router";
-import {Navbar} from "widgets/Navbar";
-import {Sidebar} from "widgets/Sidebar";
+import { classNames } from 'shared/lib/classNames/classNames'
+import { useTheme } from './providers/ThemeProvider'
+import { AppRouter } from './providers/router'
+import { Navbar } from 'widgets/Navbar'
+import { Sidebar } from 'widgets/Sidebar'
 
-export const App = () => {
-  const {theme} = useTheme();
+export const App: React.FC = () => {
+  const { theme } = useTheme()
 
   return (
     <div className={classNames('app', {}, [theme])}>
@@ -19,5 +19,5 @@ export const App = () => {
         </div>
       </Suspense>
     </div>
-  );
-};
+  )
+}
