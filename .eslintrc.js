@@ -53,7 +53,8 @@ module.exports = {
     // использование camelCase
     '@typescript-eslint/naming-convention': 'warn',
     "i18next/no-literal-string": ['warn', {markupOnly: true}],
-    "max-len": ['error', {ignoreComments: true}]
+    "max-len": ['error', {ignoreComments: true}],
+    "@typescript-eslint/dot-notation": ['warn']
   },
   globals: {
     '__IS_DEV__': true,
