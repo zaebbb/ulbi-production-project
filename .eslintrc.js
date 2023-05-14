@@ -1,7 +1,8 @@
 module.exports = {
   env: {
     browser: true,
-    es2021: true
+    es2021: true,
+    jest: true,
   },
   extends: [
     'plugin:react/recommended',
@@ -51,7 +52,8 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     // использование camelCase
     '@typescript-eslint/naming-convention': 'warn',
-    "i18next/no-literal-string": ['error', {markupOnly: true}]
+    "i18next/no-literal-string": ['warn', {markupOnly: true}],
+    "max-len": ['error', {ignoreComments: true}]
   },
   globals: {
     '__IS_DEV__': true,
