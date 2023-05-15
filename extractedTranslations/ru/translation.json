@@ -2,5 +2,7 @@
   "about": "about",
   "language": "language",
   "main": "main",
-  "not-found": "not-found"
+  "not-found": "not-found",
+  "reload-page": "reload-page",
+  "unexpected-error": "unexpected-error"
 }

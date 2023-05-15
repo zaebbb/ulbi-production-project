@@ -54,7 +54,8 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'warn',
     "i18next/no-literal-string": ['warn', {markupOnly: true}],
     "max-len": ['error', {ignoreComments: true}],
-    "@typescript-eslint/dot-notation": ['warn']
+    "@typescript-eslint/dot-notation": ['warn'],
+    "max-len": ['error', {ignoreComments: true}]
   },
   globals: {
     '__IS_DEV__': true,

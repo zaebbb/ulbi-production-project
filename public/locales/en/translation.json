@@ -1,5 +1,7 @@
 {
   "title_test": "Title Test",
   "language": "English",
-  "not-found": "Page Not Found"
+  "not-found": "Page Not Found",
+  "unexpected-error": "An unexpected error has occurred",
+  "reload-page": "Reload"
 }

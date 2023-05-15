@@ -1,5 +1,6 @@
 import React from 'react'
 import { useTranslation } from 'react-i18next'
+import { BugButton } from 'app/providers/ErrorBoundary'
 
 const MainPage: React.FC = () => {
   const { t } = useTranslation('main')
@@ -7,6 +8,7 @@ const MainPage: React.FC = () => {
   return (
     <div>
       <h1>{t('main')}</h1>
+      <BugButton />
     </div>
   )
 }
