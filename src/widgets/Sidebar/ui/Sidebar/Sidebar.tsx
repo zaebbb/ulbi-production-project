@@ -11,7 +11,7 @@ interface SidebarProps {
 export const Sidebar: React.FC<SidebarProps> = (props) => {
   const [collapsed, setCollapsed] = React.useState<boolean>(false)
   const {
-    className = ''
+    className = '',
   } = props
 
   const onToggle = (): void => {
