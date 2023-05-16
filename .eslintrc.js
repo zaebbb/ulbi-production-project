@@ -9,8 +9,6 @@ module.exports = {
     'standard-with-typescript',
     "plugin:i18next/recommended",
   ],
-  overrides: [
-  ],
   parser: '@typescript-eslint/parser',
   parserOptions: {
     ecmaVersion: 'latest',
@@ -52,9 +50,21 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     // использование camelCase
     '@typescript-eslint/naming-convention': 'warn',
-    "i18next/no-literal-string": ['warn', {markupOnly: true}],
+    "i18next/no-literal-string": [
+      'warn',
+      {
+        markupOnly: true,
+        ignoreAttribute: [
+          'data-testid'
+        ]
+      }],
     "@typescript-eslint/dot-notation": ['warn'],
-    "max-len": ['error', {ignoreComments: true, code: 100}],
+    "max-len": [
+      'error',
+      {
+        ignoreComments: true,
+        code: 100}
+    ],
     "semi": [2, "never"],
     "@typescript-eslint/comma-dangle": ["error", {
       "arrays": "always-multiline",
@@ -73,5 +83,13 @@ module.exports = {
   },
   globals: {
     '__IS_DEV__': true,
-  }
+  },
+  overrides: [
+    {
+      files: ['**/src**/*.test.{tsx,ts}'],
+      rules: {
+        "i18next/no-literal-string": 'off'
+      }
+    }
+  ]
 }
