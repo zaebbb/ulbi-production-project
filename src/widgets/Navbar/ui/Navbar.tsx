@@ -8,7 +8,7 @@ interface NavbarProps {
 }
 
 export const Navbar: React.FC<NavbarProps> = ({
-  className
+  className,
 }) => {
   return (
     <div className={classNames(cls.Navbar, {}, [className])}>

@@ -2,7 +2,7 @@ import React from 'react'
 import {
   LOCAL_STORAGE_THEME_KEY,
   Theme,
-  ThemeContext
+  ThemeContext,
 } from '../lib/ThemeContext'
 
 const defaultTheme = localStorage
@@ -13,7 +13,7 @@ const ThemeProvider: React.FC = ({ children }) => {
 
   const defaultProps = React.useMemo(() => ({
     theme,
-    setTheme
+    setTheme,
   }), [theme])
 
   return (

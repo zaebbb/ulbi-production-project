@@ -53,9 +53,23 @@ module.exports = {
     // использование camelCase
     '@typescript-eslint/naming-convention': 'warn',
     "i18next/no-literal-string": ['warn', {markupOnly: true}],
-    "max-len": ['error', {ignoreComments: true}],
     "@typescript-eslint/dot-notation": ['warn'],
-    "max-len": ['error', {ignoreComments: true}]
+    "max-len": ['error', {ignoreComments: true, code: 100}],
+    "semi": [2, "never"],
+    "@typescript-eslint/comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }],
+    "comma-dangle": ["error", {
+      "arrays": "always-multiline",
+      "objects": "always-multiline",
+      "imports": "always-multiline",
+      "exports": "always-multiline",
+      "functions": "never"
+    }]
   },
   globals: {
     '__IS_DEV__': true,

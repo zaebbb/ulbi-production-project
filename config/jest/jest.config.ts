@@ -28,7 +28,7 @@ export default {
 
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
-    '\\\\node_modules\\\\'
+    '\\\\node_modules\\\\',
   ],
 
   // Indicates which provider should be used to instrument code for coverage
@@ -40,7 +40,7 @@ export default {
     'text',
     'lcov',
     'clover',
-    'html'
+    'html',
   ],
 
   // An object that configures minimum threshold enforcement for coverage results
@@ -69,7 +69,7 @@ export default {
 
   // An array of directory names to be searched recursively up from the requiring module's location
   moduleDirectories: [
-    'node_modules'
+    'node_modules',
   ],
 
   // An array of file extensions your modules use
@@ -79,7 +79,7 @@ export default {
     'ts',
     'tsx',
     'json',
-    'node'
+    'node',
   ],
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
@@ -148,8 +148,8 @@ export default {
 
   // The glob patterns Jest uses to detect test files
   testMatch: [
-    '<rootDir>src/**/*(*.)(spec|test).[tj]s?(x)'
-  ]
+    '<rootDir>src/**/*(*.)(spec|test).[tj]s?(x)',
+  ],
 
   // An array of regexp pattern strings that are matched against all test paths, matched tests are skipped
   // testPathIgnorePatterns: [
