@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './Sidebar.module.scss'
 import { ThemeSwitcher } from 'widgets/ThemeSwicher'
 import { LangSwitcher } from 'widgets/LangSwitcher'
-import {Button} from "shared/ui/Button/Button";
+import { Button } from 'shared/ui/Button/Button'
 
 interface SidebarProps {
   className?: string
