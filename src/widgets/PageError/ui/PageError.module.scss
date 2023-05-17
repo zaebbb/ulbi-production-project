@@ -1,10 +1,11 @@
 .PageError {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-  flex-direction: column;
-  font: var(--font-m);
 
   width: 100%;
   height: 100vh;
+
+  font: var(--font-m);
 }
