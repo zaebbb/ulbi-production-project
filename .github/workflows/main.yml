@@ -14,8 +14,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: ${{ matrix.node-version }}
-      - name: install loki
-        run: npm install -D --force loki
       - name: install modules
         run: npm install
       - name: build production project
