@@ -15,7 +15,7 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
       - name: install loki
-        run: npm install -D --legacy-peer-deps loki
+        run: npm install -D --force loki
       - name: install modules
         run: npm install
       - name: build production project
