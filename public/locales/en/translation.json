@@ -1,7 +1,10 @@
 {
   "title_test": "Title Test",
   "language": "English",
+  "language-short": "Eng.",
   "not-found": "Page Not Found",
   "unexpected-error": "An unexpected error has occurred",
-  "reload-page": "Reload"
+  "reload-page": "Reload",
+  "nav-main": "Main",
+  "nav-about": "About Us"
 }

@@ -1,7 +1,10 @@
 {
   "about": "about",
   "language": "language",
+  "language-short": "language-short",
   "main": "main",
+  "nav-about": "nav-about",
+  "nav-main": "nav-main",
   "not-found": "not-found",
   "reload-page": "reload-page",
   "unexpected-error": "unexpected-error"
