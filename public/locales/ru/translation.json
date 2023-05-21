@@ -1,7 +1,10 @@
 {
   "title_test": "Тест заголовка",
   "language": "Русский",
+  "language-short": "Рус.",
   "not-found": "Страница не найдена",
   "unexpected-error": "Произошла непредвиденная ошибка",
-  "reload-page": "Перезагрузить"
+  "reload-page": "Перезагрузить",
+  "nav-main": "Главная",
+  "nav-about": "О нас"
 }
