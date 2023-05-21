@@ -6,17 +6,12 @@ import { Theme } from 'app/providers/ThemeProvider'
 const meta: Meta<typeof Loader> = {
   title: 'shared/Loader',
   component: Loader,
-  tags: ['autodocs'],
 }
 
 export default meta
 type Story = StoryObj<typeof Loader>
 
-export const Primary: Story = {
-  args: {
-    children: 'Hello Loader',
-  },
-}
+export const Primary: Story = {}
 Primary.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const LoaderLight: Story = {}

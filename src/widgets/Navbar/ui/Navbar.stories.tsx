@@ -6,7 +6,6 @@ import { Theme } from 'app/providers/ThemeProvider'
 const meta: Meta<typeof Navbar> = {
   title: 'widgets/Navbar',
   component: Navbar,
-  tags: ['autodocs'],
   argTypes: {
 
   },

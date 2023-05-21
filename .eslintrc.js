@@ -73,6 +73,7 @@ module.exports = {
     }],
     "@typescript-eslint/explicit-function-return-type": ['warn'],
     "react/display-name": ['warn'],
+    'linebreak-style': 0,
   },
   globals: {
     '__IS_DEV__': true
