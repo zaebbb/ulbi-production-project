@@ -6,7 +6,6 @@ import { Theme } from 'app/providers/ThemeProvider'
 const meta: Meta<typeof MainPage> = {
   title: 'pages/MainPage',
   component: MainPage,
-  tags: ['autodocs'],
   argTypes: {
 
   },

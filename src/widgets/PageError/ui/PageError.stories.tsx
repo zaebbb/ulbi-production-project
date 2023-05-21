@@ -6,7 +6,6 @@ import { Theme } from 'app/providers/ThemeProvider'
 const meta: Meta<typeof PageError> = {
   title: 'widgets/PageError',
   component: PageError,
-  tags: ['autodocs'],
   argTypes: {
 
   },

@@ -6,7 +6,6 @@ import { Theme } from 'app/providers/ThemeProvider'
 const meta: Meta<typeof LangSwitcher> = {
   title: 'widgets/LangSwitcher',
   component: LangSwitcher,
-  tags: ['autodocs'],
 }
 
 export default meta

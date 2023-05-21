@@ -6,7 +6,6 @@ import { Theme } from 'app/providers/ThemeProvider'
 const meta: Meta<typeof NotFoundPage> = {
   title: 'pages/NotFoundPage',
   component: NotFoundPage,
-  tags: ['autodocs'],
   argTypes: {
 
   },
