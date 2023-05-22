@@ -6,5 +6,6 @@
   "unexpected-error": "An unexpected error has occurred",
   "reload-page": "Reload",
   "nav-main": "Main",
-  "nav-about": "About Us"
+  "nav-about": "About Us",
+  "login-account": "Login"
 }
