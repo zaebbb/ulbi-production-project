@@ -6,5 +6,6 @@
   "unexpected-error": "Произошла непредвиденная ошибка",
   "reload-page": "Перезагрузить",
   "nav-main": "Главная",
-  "nav-about": "О нас"
+  "nav-about": "О нас",
+  "login-account": "Войти"
 }

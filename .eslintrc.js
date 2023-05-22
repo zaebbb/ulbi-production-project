@@ -15,7 +15,11 @@ module.exports = {
     sourceType: 'module',
     project: 'tsconfig.json'
   },
-  plugins: ['react', "i18next"],
+  plugins: [
+    'react',
+    "i18next",
+    "react-hooks"
+  ],
   rules: {
     // отступы 2 пробела
     "react/jsx-indent": [2, 2],
@@ -74,6 +78,9 @@ module.exports = {
     "@typescript-eslint/explicit-function-return-type": ['warn'],
     "react/display-name": ['warn'],
     'linebreak-style': 0,
+    'jsx-ally/click-events-have-key-events': 'off',
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error"
   },
   globals: {
     '__IS_DEV__': true

@@ -2,6 +2,8 @@
   "about": "about",
   "language": "language",
   "language-short": "",
+  "login": "login",
+  "login-account": "login-account",
   "main": "main",
   "nav-about": "nav-about",
   "nav-main": "nav-main",
