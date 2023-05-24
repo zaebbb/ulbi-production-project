@@ -3,9 +3,12 @@ import { render, type RenderResult } from '@testing-library/react'
 import { MemoryRouter } from 'react-router-dom'
 import i18ForTests from 'shared/config/i18n/i18ForTests'
 import { I18nextProvider } from 'react-i18next'
+import { type StateSchema, StoreProvider } from 'app/providers/StoreProvider'
+import { type DeepPartial } from '@reduxjs/toolkit'
 
 export interface componentRenderOptions {
   route?: string
+  initialState?: DeepPartial<StateSchema>
 }
 
 export function componentRender (
@@ -14,13 +17,16 @@ export function componentRender (
 ): RenderResult {
   const {
     route = '/',
+    initialState,
   } = options
 
   return render(
-    <MemoryRouter initialEntries={[route]}>
-      <I18nextProvider i18n={i18ForTests}>
-        {component}
-      </I18nextProvider>
-    </MemoryRouter>
+    <StoreProvider initialState={initialState}>
+      <MemoryRouter initialEntries={[route]}>
+        <I18nextProvider i18n={i18ForTests}>
+          {component}
+        </I18nextProvider>
+      </MemoryRouter>
+    </StoreProvider>
   )
 }
