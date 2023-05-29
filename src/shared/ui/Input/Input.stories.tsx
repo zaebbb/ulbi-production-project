@@ -1,6 +1,4 @@
 import type { ComponentStory, Meta } from '@storybook/react'
-import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from 'app/providers/ThemeProvider'
 import { Input } from './Input'
 
 const meta: Meta<typeof Input> = {
