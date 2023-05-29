@@ -1,5 +1,8 @@
 {
   "about": "about",
+  "btn-auth": "btn-auth",
+  "input-login": "input-login",
+  "input-password": "input-password",
   "language": "language",
   "language-short": "",
   "login": "login",
