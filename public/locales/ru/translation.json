@@ -7,5 +7,8 @@
   "reload-page": "Перезагрузить",
   "nav-main": "Главная",
   "nav-about": "О нас",
-  "login-account": "Войти"
+  "login-account": "Войти",
+  "btn-auth": "Войти",
+  "input-login": "Введите логин",
+  "input-password": "Введите пароль"
 }

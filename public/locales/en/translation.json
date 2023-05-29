@@ -7,5 +7,8 @@
   "reload-page": "Reload",
   "nav-main": "Main",
   "nav-about": "About Us",
-  "login-account": "Login"
+  "login-account": "Login",
+  "btn-auth": "Login",
+  "input-login": "Enter Login",
+  "input-password": "Enter Password"
 }
