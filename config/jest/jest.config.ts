@@ -85,6 +85,8 @@ export default {
     'src',
   ],
 
+  transformIgnorePatterns: ['node_modules/(?!axios)'],
+
   // An array of file extensions your modules use
   moduleFileExtensions: [
     'js',

@@ -10,5 +10,8 @@
   "login-account": "Войти",
   "btn-auth": "Войти",
   "input-login": "Введите логин",
-  "input-password": "Введите пароль"
+  "input-password": "Введите пароль",
+  "modal-auth-title": "Авторизация",
+  "error-auth": "Неправильный логин или пароль",
+  "btn-logout": "Выйти"
 }
