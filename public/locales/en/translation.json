@@ -10,5 +10,8 @@
   "login-account": "Login",
   "btn-auth": "Login",
   "input-login": "Enter Login",
-  "input-password": "Enter Password"
+  "input-password": "Enter Password",
+  "modal-auth-title": "Authorization",
+  "error-auth": "Error login or password",
+  "btn-logout": "Logout"
 }

@@ -1,6 +1,8 @@
 {
   "about": "about",
   "btn-auth": "btn-auth",
+  "btn-logout": "btn-logout",
+  "error-auth": "",
   "input-login": "input-login",
   "input-password": "input-password",
   "language": "language",
@@ -8,6 +10,7 @@
   "login": "login",
   "login-account": "login-account",
   "main": "main",
+  "modal-auth-title": "modal-auth-title",
   "nav-about": "nav-about",
   "nav-main": "nav-main",
   "not-found": "not-found",

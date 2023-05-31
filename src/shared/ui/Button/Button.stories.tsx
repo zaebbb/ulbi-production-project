@@ -109,3 +109,11 @@ ButtonSizeXL.args = {
   theme: ThemeButton.BACKGROUND_INVERTED,
   size: SizeButton.XL,
 }
+
+export const ButtonDisabled = Template.bind({})
+ButtonDisabled.args = {
+  children: 'Text',
+  theme: ThemeButton.BACKGROUND_INVERTED,
+  size: SizeButton.L,
+  disabled: true,
+}
