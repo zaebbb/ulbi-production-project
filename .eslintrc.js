@@ -80,7 +80,8 @@ module.exports = {
     'linebreak-style': 0,
     'jsx-ally/click-events-have-key-events': 'off',
     "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error"
+    "react-hooks/exhaustive-deps": "error",
+    "@typescript-eslint/no-misused-promises": ['warn']
   },
   globals: {
     '__IS_DEV__': true

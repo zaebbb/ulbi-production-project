@@ -39,6 +39,12 @@
     }
   ],
   "profile": {
-    "name": "typicode"
+    "first": "Vladimir",
+    "lastname": "Mihailov",
+    "age": 20,
+    "currency": "RUB",
+    "country": "Russia",
+    "username": "admin",
+    "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg"
   }
 }
