@@ -19,9 +19,6 @@ export const SidebarLight: Story = {
 
   },
 }
-SidebarLight.decorators = [
-  ThemeDecorator(Theme.DARK),
-]
 
 export const SidebarDark: Story = {
   args: {

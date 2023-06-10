@@ -81,7 +81,10 @@ module.exports = {
     'jsx-ally/click-events-have-key-events': 'off',
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-    "@typescript-eslint/no-misused-promises": ['warn']
+    "@typescript-eslint/no-misused-promises": ['warn'],
+    "@typescript-eslint/no-invalid-void-type": ['warn'],
+    "@typescript-eslint/no-floating-promises": ['warn'],
+    "@typescript-eslint/no-non-null-assertion": ['warn']
   },
   globals: {
     __IS_DEV__: true,
