@@ -2,18 +2,26 @@
   position: relative;
   padding: 20px;
   border: 2px solid var(--inverted-bg-color);
-}
 
-.header {
-  display: flex;
-  align-items: center;
-  margin-bottom: 30px;
-
-  .edit-btn {
-    margin-left: auto;
+  &.editing {
+    border: 2px solid var(--red-light);
   }
 }
 
 .input {
   margin-top: 10px;
+}
+
+.loading {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 300px;
+}
+
+.avatar {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
 }

@@ -39,11 +39,12 @@
     }
   ],
   "profile": {
-    "first": "Vladimir",
+    "first": "Vladimir111",
     "lastname": "Mihailov",
-    "age": 20,
+    "age": 2021,
     "currency": "RUB",
-    "country": "Russia",
+    "country": "Belarus",
+    "city": "Ekb",
     "username": "admin",
     "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg"
   }
