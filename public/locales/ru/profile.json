@@ -2,5 +2,15 @@
   "profile-edit": "Редактировать",
   "profile": "Профиль пользователя",
   "profile-input-firstname": "Ваше имя",
-  "profile-input-lastname": "Ваша фамилия"
+  "profile-input-lastname": "Ваша фамилия",
+  "error-load-data": "Ошибка загрузки данных",
+  "please-reload-page": "Попробуйте перезагрузить страницу",
+  "profile-save": "Сохранить",
+  "profile-escape": "Отменить",
+  "profile-input-age": "Ваш возраст",
+  "profile-input-country": "Ваша страна",
+  "profile-input-currency": "Ваша валюта",
+  "profile-input-city": "Ваш город",
+  "profile-input-username": "Ваш логин",
+  "profile-input-avatar": "Ваш аватар"
 }

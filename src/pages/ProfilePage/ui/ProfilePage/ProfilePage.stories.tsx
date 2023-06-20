@@ -1,8 +1,9 @@
-import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import ProfilePage from './ProfilePage'
+import { ComponentMeta } from '@storybook/react'
+import type { ComponentStory } from '@storybook/react'
 import { ThemeDecorator } from 'shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
+import ProfilePage from './ProfilePage'
 
 export default {
   title: 'pages/ProfilePage',
@@ -10,7 +11,7 @@ export default {
   argTypes: {
 
   },
-} as ComponentMeta<typeof ProfilePage>
+} satisfies ComponentMeta<typeof ProfilePage>
 
 const Template: ComponentStory<typeof ProfilePage> =
   (args) => <ProfilePage {...args} />

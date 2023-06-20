@@ -26,6 +26,13 @@
   background: transparent;
   border: 1px solid var(--primary-color);
   border-radius: 10px;
+
+  &_red {
+    color: var(--red-light);
+    background: transparent;
+    border: 1px solid var(--red-light);
+    border-radius: 10px;
+  }
 }
 
 .background {

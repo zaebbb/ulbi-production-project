@@ -2,5 +2,15 @@
   "profile-edit": "Edit",
   "profile": "Profile",
   "profile-input-firstname": "Your name",
-  "profile-input-lastname": "Your surname"
+  "profile-input-lastname": "Your surname",
+  "error-load-data": "Error loading data",
+  "please-reload-page": "Use reload page",
+  "profile-save": "Save",
+  "profile-escape": "Cancel",
+  "profile-input-age": "Your age",
+  "profile-input-country": "Your country",
+  "profile-input-currency": "Your currency",
+  "profile-input-city": "Your city",
+  "profile-input-username": "Your login",
+  "profile-input-avatar": "Your avatar"
 }

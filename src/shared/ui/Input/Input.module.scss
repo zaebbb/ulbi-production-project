@@ -12,9 +12,16 @@
   color: transparent;
   text-shadow: 0 0 0 var(--primary-color);
 
+  appearance: none;
   background: transparent;
   border: none;
   outline: none;
+
+  &::-webkit-outer-spin-button,
+  &::-webkit-inner-spin-button {
+    margin: 0;
+    appearance: none;
+  }
 
   &:focus {
     outline: none;
@@ -37,6 +44,10 @@
   background: var(--primary-color);
 
   animation: blink 0.7s forwards infinite;
+}
+
+.readonly {
+  opacity: 0.5;
 }
 
 @keyframes blink {

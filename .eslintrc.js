@@ -84,7 +84,8 @@ module.exports = {
     "@typescript-eslint/no-misused-promises": ['warn'],
     "@typescript-eslint/no-invalid-void-type": ['warn'],
     "@typescript-eslint/no-floating-promises": ['warn'],
-    "@typescript-eslint/no-non-null-assertion": ['warn']
+    "@typescript-eslint/no-non-null-assertion": ['warn'],
+    "multiline-ternary": ['off']
   },
   globals: {
     __IS_DEV__: true,
