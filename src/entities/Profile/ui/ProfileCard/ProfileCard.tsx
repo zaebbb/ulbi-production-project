@@ -71,9 +71,9 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
 
   return (
     <div className={classNames(cls.ProfileCard, mods, [className])}>
-
       <div className={cls.info}>
         {data?.avatar && <Avatar src={data?.avatar} />}
+
         <Input
           value={data?.first}
           placeholder={t('profile-input-firstname')}

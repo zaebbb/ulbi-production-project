@@ -1,0 +1,12 @@
+{
+  "INTERNAL_SERVER_ERROR": "Server Error",
+  "INCORRECT_FIRSTNAME": "Incorrect firstname",
+  "INCORRECT_AGE": "Incorrect age",
+  "INCORRECT_AVATAR": "Incorrect avatar",
+  "INCORRECT_CITY": "Incorrect city",
+  "INCORRECT_COUNTRY": "Incorrect country",
+  "INCORRECT_CURRENCY": "Incorrect currency",
+  "INCORRECT_LASTNAME": "Incorrect lastname",
+  "INCORRECT_USERNAME": "Incorrect username",
+  "NO_DATA": "No data"
+}
