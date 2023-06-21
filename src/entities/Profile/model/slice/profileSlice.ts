@@ -26,6 +26,7 @@ export const profileSlice = createSlice({
     cancelEdit: (state) => {
       state.readonly = true
       state.form = state.data
+      state.validate = undefined
     },
   },
   extraReducers: (builder) => {
@@ -35,7 +36,6 @@ export const profileSlice = createSlice({
         (
           state
         ) => {
-          state.error = undefined
           state.isLoading = true
         }
       )
@@ -65,7 +65,7 @@ export const profileSlice = createSlice({
         (
           state
         ) => {
-          state.error = undefined
+          state.validate = undefined
           state.isLoading = true
         }
       )
@@ -79,6 +79,7 @@ export const profileSlice = createSlice({
           state.data = action.payload
           state.form = action.payload
           state.readonly = true
+          state.validate = undefined
         }
       )
       .addCase(
@@ -88,7 +89,7 @@ export const profileSlice = createSlice({
           action
         ) => {
           state.isLoading = false
-          state.error = action.payload
+          state.validate = action.payload
         }
       )
   },

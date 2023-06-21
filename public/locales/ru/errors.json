@@ -1,0 +1,12 @@
+{
+  "INTERNAL_SERVER_ERROR": "Ошибка сервера",
+  "INCORRECT_FIRSTNAME": "Некорректное имя",
+  "INCORRECT_AGE": "Некорректный возраст",
+  "INCORRECT_AVATAR": "Некорректный аватар",
+  "INCORRECT_CITY": "Некорректный город",
+  "INCORRECT_COUNTRY": "Некорректная страна",
+  "INCORRECT_CURRENCY": "Некорректная валюта",
+  "INCORRECT_LASTNAME": "Некорректная фамилия",
+  "INCORRECT_USERNAME": "Некорректный логин",
+  "NO_DATA": "Нет данных"
+}
