@@ -89,7 +89,8 @@ module.exports = {
   },
   globals: {
     __IS_DEV__: true,
-    __API__: true
+    __API__: true,
+    __PROJECT__: true
   },
   overrides: [{
     files: ['**/src**/*.test.{tsx,ts}'],
