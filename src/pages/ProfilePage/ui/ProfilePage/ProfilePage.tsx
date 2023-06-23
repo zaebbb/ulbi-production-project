@@ -20,7 +20,6 @@ import { ProfilePageHeader } from '../ProfilePageHeader/ProfilePageHeader'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country/model/types/country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
-
 import { useTranslation } from 'react-i18next'
 
 const reducers: ReducerList = {
@@ -55,7 +54,9 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
   }
 
   React.useEffect(() => {
-    dispatch(fetchProfileData())
+    if (__PROJECT__ !== 'storybook') {
+      dispatch(fetchProfileData())
+    }
   }, [dispatch])
 
   const onChangeFirstname = React.useCallback((value?: string) => {
