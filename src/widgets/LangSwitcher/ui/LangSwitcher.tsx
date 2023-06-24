@@ -29,7 +29,7 @@ export const LangSwitcher: React.FC<LangSwitcherProps> = memo((props: LangSwitch
           [className])
       }
       onClick={toggle}
-      theme={ThemeButton.CLEAR}
+      theme={ThemeButton.CLEAR_INVERTED}
     >
       {t(!short ? 'language' : 'language-short')}
     </Button>
