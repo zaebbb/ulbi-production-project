@@ -3,6 +3,7 @@
   "language": "Русский",
   "language-short": "Рус.",
   "not-found": "Страница не найдена",
+  "article-not-found": "Статья не найдена",
   "unexpected-error": "Произошла непредвиденная ошибка",
   "reload-page": "Перезагрузить",
   "nav-main": "Главная",
@@ -15,5 +16,6 @@
   "input-password": "Введите пароль",
   "modal-auth-title": "Авторизация",
   "error-auth": "Неправильный логин или пароль",
-  "btn-logout": "Выйти"
+  "btn-logout": "Выйти",
+  "error-loading-article": "Ошибка загрузки статьи"
 }
