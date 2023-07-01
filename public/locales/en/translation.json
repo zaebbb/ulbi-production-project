@@ -3,6 +3,7 @@
   "language": "English",
   "language-short": "Eng.",
   "not-found": "Page Not Found",
+  "article-not-found": "Article Not Found",
   "unexpected-error": "An unexpected error has occurred",
   "reload-page": "Reload",
   "nav-main": "Main",
@@ -15,5 +16,6 @@
   "input-password": "Enter Password",
   "modal-auth-title": "Authorization",
   "error-auth": "Error login or password",
-  "btn-logout": "Logout"
+  "btn-logout": "Logout",
+  "error-loading-article": "Error Loading Article"
 }
