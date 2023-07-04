@@ -17,5 +17,7 @@
   "modal-auth-title": "Авторизация",
   "error-auth": "Неправильный логин или пароль",
   "btn-logout": "Выйти",
-  "error-loading-article": "Ошибка загрузки статьи"
+  "error-loading-article": "Ошибка загрузки статьи",
+  "article-comments": "Комментарии",
+  "comments-not-found": "Комментарии не обнаружены"
 }
