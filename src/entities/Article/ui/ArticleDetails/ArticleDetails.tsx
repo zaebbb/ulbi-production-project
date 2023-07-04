@@ -109,8 +109,7 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo((props: Articl
           title={article?.title}
           text={article?.subtitle}
           className={cls.title}
-          size={TextSize
-            .L}
+          size={TextSize.L}
         />
         <div className={cls.articleInfo}>
           <Icon Svg={EyeIcon} />

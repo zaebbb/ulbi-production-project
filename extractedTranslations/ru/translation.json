@@ -1,4 +1,5 @@
 {
+  "": "",
   "INCORRECT_AGE": "INCORRECT_AGE",
   "INCORRECT_AVATAR": "INCORRECT_AVATAR",
   "INCORRECT_CITY": "INCORRECT_CITY",
@@ -10,9 +11,12 @@
   "INTERNAL_SERVER_ERROR": "INTERNAL_SERVER_ERROR",
   "NO_DATA": "NO_DATA",
   "about": "about",
+  "article-comments": "article-comments",
   "article-not-found": "article-not-found",
   "btn-auth": "btn-auth",
   "btn-logout": "btn-logout",
+  "comment-not-found": "comment-not-found",
+  "comments-not-found": "comments-not-found",
   "error-article": "error-article",
   "error-auth": "error-auth",
   "error-load-data": "error-load-data",

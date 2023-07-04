@@ -17,5 +17,7 @@
   "modal-auth-title": "Authorization",
   "error-auth": "Error login or password",
   "btn-logout": "Logout",
-  "error-loading-article": "Error Loading Article"
+  "error-loading-article": "Error Loading Article",
+  "article-comments": "Comments",
+  "comments-not-found": "Comments not found"
 }
