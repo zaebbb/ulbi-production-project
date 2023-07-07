@@ -27,7 +27,7 @@ export const updateProfileData =
 
       try {
         const response = await extra.api.put<Profile>(
-          '/profile',
+          `/profile/${formData?.id || ''}`,
           formData
         )
 

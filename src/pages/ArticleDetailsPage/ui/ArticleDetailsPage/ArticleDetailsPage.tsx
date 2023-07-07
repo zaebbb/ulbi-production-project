@@ -20,6 +20,10 @@ import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import {
   fetchCommentsArticleById,
 } from '../../model/services/fetchCommentsArticleById/fetchCommentsArticleById'
+import { AddCommentForm } from 'features/addCommentForm'
+import {
+  addCommentForArticle,
+} from '../../model/services/addCommentForArticle/addCommentForArticle'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -36,6 +40,10 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   const comments = useSelector(getArticleComments.selectAll)
   const commentIsLoading = useSelector(getArticleDetailsCommentsIsLoading)
   const dispatch = useAppDispatch()
+
+  const onSendComment = React.useCallback((text: string) => {
+    dispatch(addCommentForArticle(text))
+  }, [dispatch])
 
   useInitialEffect(() => {
     dispatch(fetchCommentsArticleById(id))
@@ -54,6 +62,7 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetails id={id}/>
         <Text className={cls.commentTitle} title={t('article-comments')} />
+        <AddCommentForm onSendComment={onSendComment} />
         <CommentList
           comments={comments}
           isLoading={commentIsLoading}
