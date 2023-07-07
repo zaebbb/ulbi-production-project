@@ -39,7 +39,10 @@
       "image": "https://randomwordgenerator.com/img/picture-generator/55e1d6464b57ac14f1dc8460962e33791c3ad6e04e507440722d72d5924ec7_640.jpg",
       "views": 1022,
       "createdAt": "26.06.2023",
-      "type": ["IT", "JS"],
+      "type": [
+        "IT",
+        "JS"
+      ],
       "blocks": [
         {
           "id": "1",
@@ -120,6 +123,24 @@
       "text": "comment 3",
       "articleId": "1",
       "userId": "2"
+    },
+    {
+      "articleId": "1",
+      "text": "тестовый коммент",
+      "userId": "1",
+      "id": "1VoY9ob"
+    },
+    {
+      "articleId": "1",
+      "text": "тестинг",
+      "userId": "1",
+      "id": "D46_zIE"
+    },
+    {
+      "articleId": "1",
+      "text": "тестик",
+      "userId": "1",
+      "id": "-y-UfwW"
     }
   ],
   "users": [
@@ -134,18 +155,32 @@
       "id": "2",
       "username": "user",
       "password": "123",
-      "avatar":  "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg",
+      "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg",
       "role": "USER"
     }
   ],
-  "profile": {
-    "first": "",
-    "lastname": "Mihailov",
-    "age": 2021,
-    "currency": "RUB",
-    "country": "Belarus",
-    "city": "Ekb",
-    "username": "admin",
-    "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg"
-  }
+  "profile": [
+    {
+      "id": "1",
+      "first": "владимир",
+      "lastname": "Mihailov",
+      "age": 2021,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Ekb",
+      "username": "admin",
+      "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg"
+    },
+    {
+      "id": "2",
+      "first": "",
+      "lastname": "Mihailov",
+      "age": 2021,
+      "currency": "RUB",
+      "country": "Belarus",
+      "city": "Ekb",
+      "username": "владимир",
+      "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg"
+    }
+  ]
 }

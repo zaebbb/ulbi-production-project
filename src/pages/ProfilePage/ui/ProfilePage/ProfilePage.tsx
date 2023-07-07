@@ -21,6 +21,8 @@ import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country/model/types/country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
+import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { useParams } from 'react-router-dom'
 
 const reducers: ReducerList = {
   profile: profileReducer,
@@ -39,6 +41,7 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
   const readonly = useSelector(getProfileReadonly)
   const validate = useSelector(getProfileValidateErrors)
   const { t } = useTranslation('errors')
+  const { id } = useParams<{ id: string }>()
 
   const validateErrorTranslates = {
     [ValidateProfileError.INTERNAL_SERVER_ERROR]: t('INTERNAL_SERVER_ERROR'),
@@ -53,11 +56,11 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
     [ValidateProfileError.NO_DATA]: t('NO_DATA'),
   }
 
-  React.useEffect(() => {
-    if (__PROJECT__ !== 'storybook') {
-      dispatch(fetchProfileData())
+  useInitialEffect(() => {
+    if (id) {
+      dispatch(fetchProfileData(id))
     }
-  }, [dispatch])
+  })
 
   const onChangeFirstname = React.useCallback((value?: string) => {
     dispatch(profileActions.updateProfile({
