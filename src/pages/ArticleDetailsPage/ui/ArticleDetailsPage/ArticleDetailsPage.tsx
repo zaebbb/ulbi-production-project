@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetails } from 'entities/Article'
-import { useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { CommentList } from 'entities/Comment'
@@ -12,9 +12,7 @@ import {
   getArticleComments,
 } from '../../model/slice/articleDetailsComments'
 import { useSelector } from 'react-redux'
-import {
-  getArticleDetailsCommentsIsLoading,
-} from '../../model/selectors/comments'
+import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments'
 import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import {
@@ -24,6 +22,8 @@ import { AddCommentForm } from 'features/addCommentForm'
 import {
   addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle'
+import { Button, ThemeButton } from 'shared/ui/Button/Button'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -40,6 +40,7 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   const comments = useSelector(getArticleComments.selectAll)
   const commentIsLoading = useSelector(getArticleDetailsCommentsIsLoading)
   const dispatch = useAppDispatch()
+  const navigate = useNavigate()
 
   const onSendComment = React.useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
@@ -48,6 +49,10 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   useInitialEffect(() => {
     dispatch(fetchCommentsArticleById(id))
   })
+
+  const onBackToList = React.useCallback(() => {
+    navigate(RoutePath.articles)
+  }, [navigate])
 
   if (!id) {
     return (
@@ -60,6 +65,13 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <div className={classNames(cls.ArticleDetailsPage, {}, [className])}>
+        <Button
+          theme={ThemeButton.OUTLINE}
+          onClick={onBackToList}
+        >
+          {t('button-back')}
+        </Button>
+
         <ArticleDetails id={id}/>
         <Text className={cls.commentTitle} title={t('article-comments')} />
         <AddCommentForm onSendComment={onSendComment} />

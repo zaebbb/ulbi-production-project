@@ -19,5 +19,7 @@
   "btn-logout": "Logout",
   "error-loading-article": "Error Loading Article",
   "article-comments": "Comments",
-  "comments-not-found": "Comments not found"
+  "comments-not-found": "Comments not found",
+  "article-read-more": "Read More",
+  "button-back": "Back"
 }
