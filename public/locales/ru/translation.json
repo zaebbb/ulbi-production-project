@@ -19,5 +19,7 @@
   "btn-logout": "Выйти",
   "error-loading-article": "Ошибка загрузки статьи",
   "article-comments": "Комментарии",
-  "comments-not-found": "Комментарии не обнаружены"
+  "comments-not-found": "Комментарии не обнаружены",
+  "article-read-more": "Читать далее",
+  "button-back": "Вернуться"
 }

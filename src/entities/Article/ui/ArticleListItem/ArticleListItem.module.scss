@@ -1,0 +1,112 @@
+.ArticleListItem {
+  position: relative;
+}
+
+.BIG {
+  .views {
+    margin-left: auto;
+  }
+
+  .img {
+    width: 100%;
+    max-height: 250px;
+    margin: 16px 0;
+    object-fit: cover;
+  }
+
+  .header {
+    display: flex;
+    align-items: center;
+  }
+
+  .username {
+    margin-left: 8px;
+  }
+
+  .date {
+    margin-left: auto;
+  }
+
+  .title {
+    margin-top: 8px;
+  }
+
+  .types {
+    margin-top: 8px;
+  }
+
+  .footer {
+    display: flex;
+    align-items: center;
+  }
+
+  .block {
+    overflow-y: hidden;
+    max-height: 200px;
+    margin-bottom: 15px;
+  }
+}
+
+.SMALL {
+  cursor: pointer;
+  width: 230px;
+  transition: opacity 0.3s, transform 0.3s;
+
+  .imageWrapper {
+    position: relative;
+    width: 200px;
+    height: 200px;
+  }
+
+  .img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+
+  .date {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+  }
+
+  .infoWrapper {
+    display: flex;
+    align-items: center;
+    margin-top: 8px;
+  }
+
+  .types,
+  .types p {
+    overflow: hidden;
+    width: 115px;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  .views {
+    margin-right: 8px;
+    margin-left: auto;
+  }
+
+  .title,
+  .title p {
+    overflow: hidden;
+
+    width: 200px;
+    margin-top: 8px;
+
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+
+  &:hover {
+    transform: scale(1.01);
+    opacity: 0.8;
+
+    .date {
+      display: block;
+    }
+  }
+}
