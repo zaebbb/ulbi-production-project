@@ -9,3 +9,12 @@ export const getArticlePageError =
 
 export const getArticlePageView =
   (state: StateSchema) => state.articlesPage?.view || ArticleView.SMALL
+
+export const getArticlePagePage =
+  (state: StateSchema) => state.articlesPage?.page || 1
+
+export const getArticlePageLimit =
+  (state: StateSchema) => state.articlesPage?.limit
+
+export const getArticlePageHasMore =
+  (state: StateSchema) => state.articlesPage?.hasMore
