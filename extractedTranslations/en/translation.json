@@ -23,6 +23,7 @@
   "comments-not-found": "comments-not-found",
   "error-article": "",
   "error-auth": "",
+  "error-load-article-data": "error-load-article-data",
   "error-load-data": "error-load-data",
   "error-loading-article": "",
   "input-login": "input-login",

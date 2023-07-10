@@ -25,7 +25,7 @@ export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
   }
 
   return (
-    <div
+    <aside
       data-testid={'sidebar'}
       className={
         classNames(
@@ -63,6 +63,6 @@ export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
           short={collapsed}
         />
       </div>
-    </div>
+    </aside>
   )
 })

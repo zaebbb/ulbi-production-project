@@ -32,14 +32,6 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
     view = ArticleView.SMALL,
   } = props
 
-  if (isLoading) {
-    return (
-      <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-        {getSkeleton(view)}
-      </div>
-    )
-  }
-
   const renderArticle = (article: Article) => {
     return (
       <ArticleListItem
@@ -57,6 +49,9 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
         articles.length ? (
           articles.map(renderArticle)
         ) : null
+      }
+      {
+        isLoading && getSkeleton(view)
       }
     </div>
   )

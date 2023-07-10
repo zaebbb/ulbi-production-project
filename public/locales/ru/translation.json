@@ -21,5 +21,6 @@
   "article-comments": "Комментарии",
   "comments-not-found": "Комментарии не обнаружены",
   "article-read-more": "Читать далее",
-  "button-back": "Вернуться"
+  "button-back": "Вернуться",
+  "error-load-article-data": "Произошла ошибка при загрузке данных"
 }

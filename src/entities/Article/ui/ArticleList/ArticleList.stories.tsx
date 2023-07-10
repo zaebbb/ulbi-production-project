@@ -55,10 +55,12 @@ PrimaryBig.args = {
 export const LoadSmall = Template.bind({})
 LoadSmall.args = {
   isLoading: true,
+  articles: [],
 }
 
 export const LoadBig = Template.bind({})
 LoadBig.args = {
   isLoading: true,
   view: ArticleView.BIG,
+  articles: [],
 }

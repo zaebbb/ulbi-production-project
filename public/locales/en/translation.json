@@ -21,5 +21,6 @@
   "article-comments": "Comments",
   "comments-not-found": "Comments not found",
   "article-read-more": "Read More",
-  "button-back": "Back"
+  "button-back": "Back",
+  "error-load-article-data": "Error Loading Articles"
 }

@@ -7,9 +7,9 @@ import { RequireAuth } from 'app/providers/router/ui/RequireAuth'
 const AppRouter: React.FC = () => {
   const renderWithWrapper = React.useCallback((route: AppRoutesProps) => {
     const element = (
-      <div className={'page-wrapper'}>
+      <>
         {route.element}
-      </div>
+      </>
     )
 
     return (
