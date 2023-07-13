@@ -17,7 +17,7 @@ import {
   getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors'
 import { ArticleViewSelector } from 'features/ArticleViewSelector'
-import { Page } from 'shared/ui/Page/Page'
+import { Page } from 'widgets/Page'
 import {
   FetchNextArticlePage,
 } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage'
