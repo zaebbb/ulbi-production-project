@@ -1,9 +1,10 @@
 import { createEntityAdapter, createSlice, type PayloadAction } from '@reduxjs/toolkit'
 import { type StateSchema } from 'app/providers/StoreProvider'
-import { type Article, ArticleView } from 'entities/Article'
+import { type Article, ArticleSortField, ArticleType, ArticleView } from 'entities/Article'
 import { type ArticlesPageSchema } from '../../types/articlesPageSchema'
 import { fetchArticles } from '../../services/fetchArticles/fetchArticles'
 import { LOCAL_STORAGE_ARTICLE_VIEW } from '../../types/articlesPage'
+import { type SortOrder } from 'shared/types'
 
 const articlesPageAdapter = createEntityAdapter<Article>({
   selectId: (article) => article.id,
@@ -25,6 +26,11 @@ const articlesPageSlice = createSlice({
     page: 1,
     hasMore: true,
     _mounted: false,
+    limit: 9,
+    order: 'asc',
+    search: '',
+    sort: ArticleSortField.CREATED,
+    type: ArticleType.ALL,
   }),
   reducers: {
     setView: (state, action: PayloadAction<ArticleView>) => {
@@ -36,6 +42,18 @@ const articlesPageSlice = createSlice({
     },
     setPage: (state, action: PayloadAction<number>) => {
       state.page = action.payload
+    },
+    setOrder: (state, action: PayloadAction<SortOrder>) => {
+      state.order = action.payload
+    },
+    setSearch: (state, action: PayloadAction<string>) => {
+      state.search = action.payload
+    },
+    setSort: (state, action: PayloadAction<ArticleSortField>) => {
+      state.sort = action.payload
+    },
+    setType: (state, action: PayloadAction<ArticleType>) => {
+      state.type = action.payload
     },
     initState: (state) => {
       const view = localStorage.getItem(LOCAL_STORAGE_ARTICLE_VIEW) as ArticleView
@@ -49,21 +67,31 @@ const articlesPageSlice = createSlice({
       .addCase(
         fetchArticles.pending,
         (
-          state
+          state,
+          action
         ) => {
           state.error = undefined
           state.isLoading = true
+
+          if (action.meta.arg.replace) {
+            articlesPageAdapter.removeAll(state)
+          }
         }
       )
       .addCase(
         fetchArticles.fulfilled,
         (
           state,
-          action: PayloadAction<Article[]>
+          action
         ) => {
           state.isLoading = false
-          articlesPageAdapter.addMany(state, action.payload)
-          state.hasMore = action.payload.length > 0
+          state.hasMore = action.payload.length >= state.limit
+
+          if (action.meta.arg.replace) {
+            articlesPageAdapter.setAll(state, action.payload)
+          } else {
+            articlesPageAdapter.addMany(state, action.payload)
+          }
         }
       )
       .addCase(

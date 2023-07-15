@@ -6,7 +6,7 @@ const meta: Meta<typeof Select> = {
   component: Select,
 }
 
-const options: SelectOption[] = [
+const options: Array<SelectOption<string>> = [
   { value: '123', content: '123' },
   { value: '1234', content: '1234' },
   { value: '1235', content: '1235' },

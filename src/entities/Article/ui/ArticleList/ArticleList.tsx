@@ -6,6 +6,8 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import {
   ArticleListItemSkeleton,
 } from '../ArticleListItem/ArticleListItem.skeleton'
+import { Text } from 'shared/ui/Text/Text'
+import { useTranslation } from 'react-i18next'
 
 interface ArticleListProps {
   className?: string
@@ -31,6 +33,7 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
     isLoading,
     view = ArticleView.SMALL,
   } = props
+  const { t } = useTranslation()
 
   const renderArticle = (article: Article) => {
     return (
@@ -40,6 +43,14 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
         view={view}
         className={cls.card}
       />
+    )
+  }
+
+  if (!isLoading && !articles.length) {
+    return (
+      <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
+        <Text text={t('articles-not-found')} />
+      </div>
     )
   }
 

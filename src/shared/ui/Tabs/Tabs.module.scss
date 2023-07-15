@@ -1,0 +1,10 @@
+.Tabs {
+  position: relative;
+  display: flex;
+  gap: 8px;
+}
+
+.tab {
+  cursor: pointer;
+  display: inline-block;
+}
