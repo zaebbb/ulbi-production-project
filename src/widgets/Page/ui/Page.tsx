@@ -56,7 +56,9 @@ export const Page: React.FC<PageProps> = memo((props: PageProps) => {
       onScroll={onScroll}
     >
       {children}
-      <div ref={triggerRef} />
+      {
+        onScrollEnd && isSaveScroll ? <div className={cls.trigger} ref={triggerRef} /> : null
+      }
     </section>
   )
 })

@@ -1,10 +1,9 @@
 import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticlesPage.module.scss'
-import { ArticleList, type ArticleView } from 'entities/Article'
+import { ArticleList } from 'entities/Article'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
 import {
-  articlesPageActions,
   articlesPageReducer,
   getArticles,
 } from '../../model/slice/articlePageSlice/articlePageSlice'
@@ -16,7 +15,6 @@ import {
   getArticlePageIsLoading,
   getArticlePageView,
 } from '../../model/selectors/articlesPageSelectors'
-import { ArticleViewSelector } from 'features/ArticleViewSelector'
 import { Page } from 'widgets/Page'
 import {
   FetchNextArticlePage,
@@ -24,6 +22,8 @@ import {
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { ArticlePageMounted } from '../../model/services/articlePageMounted/articlePageMounted'
+import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters'
+import { useSearchParams } from 'react-router-dom'
 
 interface ArticlesPageProps {
   className?: string
@@ -41,19 +41,18 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
   const view = useSelector(getArticlePageView)
   const error = useSelector(getArticlePageError)
   const { t } = useTranslation()
+  const [searchParams] = useSearchParams()
 
   useInitialEffect(() => {
-    dispatch(ArticlePageMounted())
+    dispatch(ArticlePageMounted({
+      urlSearchParams: searchParams,
+    }))
   })
 
   const onLoadNextPage = React.useCallback(() => {
     if (__PROJECT__ !== 'storybook') {
       dispatch(FetchNextArticlePage())
     }
-  }, [dispatch])
-
-  const onChangeView = React.useCallback((view: ArticleView) => {
-    dispatch(articlesPageActions.setView(view))
   }, [dispatch])
 
   return (
@@ -67,11 +66,12 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
             <Text title={t('error-load-article-data')} theme={TextTheme.ERROR} />
           )
         }
-        <ArticleViewSelector view={view} onViewClick={onChangeView} />
+        <ArticlePageFilters />
         <ArticleList
           isLoading={isLoading}
           view={view}
           articles={articles}
+          className={cls.list}
         />
       </Page>
     </DynamicModuleLoader>

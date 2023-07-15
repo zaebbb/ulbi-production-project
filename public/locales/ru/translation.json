@@ -22,5 +22,18 @@
   "comments-not-found": "Комментарии не обнаружены",
   "article-read-more": "Читать далее",
   "button-back": "Вернуться",
-  "error-load-article-data": "Произошла ошибка при загрузке данных"
+  "error-load-article-data": "Произошла ошибка при загрузке данных",
+  "article-sorting": "Сортировать по",
+  "article-search": "Поиск",
+  "article-sorting-to": "По",
+  "article-sort-asc": "Возрастанию",
+  "article-sort-desc": "Убыванию",
+  "article-sort-date": "Дате создания",
+  "article-sort-title": "Заголовку",
+  "article-sort-views": "Просмотрам",
+  "articles-not-found": "Статьи не обнаружены",
+  "article-type-it": "Айти",
+  "article-type-economic": "Экономика",
+  "article-type-science": "ИИ",
+  "article-type-all": "Все"
 }

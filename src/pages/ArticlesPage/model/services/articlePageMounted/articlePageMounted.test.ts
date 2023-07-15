@@ -15,11 +15,11 @@ describe('Тест articlePageMounted.test', () => {
         },
       })
 
-      await thunk.callThunk()
+      await thunk.callThunk({})
 
       expect(thunk.dispatch).toBeCalledTimes(4)
       expect(thunk.getState).toBeCalledTimes(1)
-      expect(fetchArticles).toBeCalledWith({ page: 1 })
+      expect(fetchArticles).toBeCalledWith({})
     }
   )
 
@@ -33,7 +33,7 @@ describe('Тест articlePageMounted.test', () => {
         },
       })
 
-      await thunk.callThunk()
+      await thunk.callThunk({})
 
       expect(thunk.dispatch).toBeCalledTimes(2)
       expect(thunk.getState).toBeCalledTimes(1)

@@ -1,0 +1,14 @@
+.ArticlePageFilters {
+  position: relative;
+}
+
+.sortWrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.types,
+.search {
+  margin-top: 10px;
+}

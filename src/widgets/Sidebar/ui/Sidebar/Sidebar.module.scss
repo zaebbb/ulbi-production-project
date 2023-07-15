@@ -1,5 +1,6 @@
 .Sidebar {
   position: relative;
+  z-index: 10;
 
   width: var(--sidebar-width);
   height: calc(100vh - var(--navbar-height));

@@ -22,5 +22,19 @@
   "comments-not-found": "Comments not found",
   "article-read-more": "Read More",
   "button-back": "Back",
-  "error-load-article-data": "Error Loading Articles"
+  "error-load-article-data": "Error Loading Articles",
+  "article-sorting": "Sorting",
+  "article-search": "Search",
+  "article-sorting-to": "To",
+  "article-sort-asc": "Ascending",
+  "article-sort-desc": "Descending",
+  "article-sort-date": "Date of creation",
+  "article-sort-title": "To the title",
+  "article-sort-views": "Views",
+  "articles-not-found": "Articles not found",
+  "article": "article",
+  "article-type-it": "IT",
+  "article-type-economic": "Economic",
+  "article-type-science": "Science",
+  "article-type-all": "All"
 }
