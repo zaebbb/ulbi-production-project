@@ -36,5 +36,6 @@
   "article-type-it": "IT",
   "article-type-economic": "Economic",
   "article-type-science": "Science",
-  "article-type-all": "All"
+  "article-type-all": "All",
+  "article-recommendations": "Recommendations list"
 }
