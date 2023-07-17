@@ -1,4 +1,7 @@
-import React, { memo } from 'react'
+import React, {
+  type HTMLAttributeAnchorTarget,
+  memo,
+} from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
@@ -14,6 +17,7 @@ interface ArticleListProps {
   articles: Article[]
   isLoading?: boolean
   view?: ArticleView
+  target?: HTMLAttributeAnchorTarget
 }
 
 const getSkeleton = (view: ArticleView) => {
@@ -32,6 +36,7 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
     articles,
     isLoading,
     view = ArticleView.SMALL,
+    target,
   } = props
   const { t } = useTranslation()
 
@@ -42,6 +47,7 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
         article={article}
         view={view}
         className={cls.card}
+        target={target}
       />
     )
   }
