@@ -37,5 +37,9 @@
   "article-type-economic": "Economic",
   "article-type-science": "Science",
   "article-type-all": "All",
-  "article-recommendations": "Recommendations list"
+  "article-recommendations": "Recommendations list",
+  "button-article-edit": "Edit",
+  "edit-article": "Edit article",
+  "create-article": "Create article",
+  "logo-text": "DEV-PROGER"
 }

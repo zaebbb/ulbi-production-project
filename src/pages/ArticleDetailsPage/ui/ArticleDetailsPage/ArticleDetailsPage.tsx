@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetails, ArticleList } from 'entities/Article'
-import { useNavigate, useParams } from 'react-router-dom'
+import { useParams } from 'react-router-dom'
 import { Text, TextSize } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { CommentList } from 'entities/Comment'
@@ -19,8 +19,6 @@ import { AddCommentForm } from 'features/addCommentForm'
 import {
   addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle'
-import { Button, ThemeButton } from 'shared/ui/Button/Button'
-import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { Page } from 'widgets/Page'
 import {
   getArticleRecommendations,
@@ -31,7 +29,8 @@ import {
 import {
   fetchRecommendations,
 } from '../../model/services/fetchRecommendations/fetchRecommendations'
-import { articleDetailsPageReducer } from 'pages/ArticleDetailsPage/model/slice'
+import { articleDetailsPageReducer } from '../../model/slice'
+import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -50,7 +49,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   const recommendationsIsLoading = useSelector(getArticleDetailsRecommendationsIsLoading)
   const commentIsLoading = useSelector(getArticleDetailsCommentsIsLoading)
   const dispatch = useAppDispatch()
-  const navigate = useNavigate()
 
   const onSendComment = React.useCallback((text: string) => {
     dispatch(addCommentForArticle(text))
@@ -60,10 +58,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
     dispatch(fetchCommentsArticleById(id))
     dispatch(fetchRecommendations())
   })
-
-  const onBackToList = React.useCallback(() => {
-    navigate(RoutePath.articles)
-  }, [navigate])
 
   if (!id) {
     return (
@@ -76,13 +70,7 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <Button
-          theme={ThemeButton.OUTLINE}
-          onClick={onBackToList}
-        >
-          {t('button-back')}
-        </Button>
-
+        <ArticleDetailsPageHeader />
         <ArticleDetails id={id}/>
         <Text
           size={TextSize.L}
