@@ -6,6 +6,9 @@ import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { LoginModal } from 'features/AuthByUsername'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, userActions } from 'entities/User'
+import { RoutePath } from 'shared/config/routeConfig/routeConfig'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
 
 interface NavbarProps {
   className?: string
@@ -33,13 +36,22 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
   if (authData) {
     return (
       <header className={classNames(cls.Navbar, {}, [className])}>
-        <Button
-          theme={ThemeButton.CLEAR_INVERTED}
-          className={cls.links}
-          onClick={onLogout}
-        >
-          {t('btn-logout')}
-        </Button>
+        <Text text={t('logo-text')} theme={TextTheme.PRIMARY_INVERTED} />
+
+        <div className={cls.links}>
+          <AppLink
+            to={RoutePath.article_create}
+            theme={AppLinkTheme.SECONDARY}
+          >
+            {t('create-article')}
+          </AppLink>
+          <Button
+            theme={ThemeButton.CLEAR_INVERTED}
+            onClick={onLogout}
+          >
+            {t('btn-logout')}
+          </Button>
+        </div>
       </header>
     )
   }
