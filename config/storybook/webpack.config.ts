@@ -10,6 +10,8 @@ export default ({ config }: { config: webpack.Configuration }) => {
   }: BuildPaths = {
     build: '',
     html: '',
+    locales: '',
+    buildLocales: '',
     entry: '',
     src: path.resolve(__dirname, '..', '..', 'src'),
   }
