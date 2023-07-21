@@ -17,6 +17,8 @@ interface PageProps {
   isSaveScroll?: boolean
 }
 
+export const PAGE_ID = 'PAGE_ID'
+
 export const Page: React.FC<PageProps> = memo((props: PageProps) => {
   const {
     className,
@@ -54,6 +56,7 @@ export const Page: React.FC<PageProps> = memo((props: PageProps) => {
       ref={wrapperRef}
       className={classNames(cls.Page, {}, [className])}
       onScroll={onScroll}
+      id={PAGE_ID}
     >
       {children}
       {

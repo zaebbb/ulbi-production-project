@@ -1,16 +1,13 @@
-import React, {
-  type HTMLAttributeAnchorTarget,
-  memo,
-} from 'react'
+import React, { type HTMLAttributeAnchorTarget, memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './ArticleList.module.scss'
 import { type Article, ArticleView } from '../../model/types/article'
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
-import {
-  ArticleListItemSkeleton,
-} from '../ArticleListItem/ArticleListItem.skeleton'
+import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skeleton'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
+import { List, type ListRowProps, WindowScroller } from 'react-virtualized'
+import { PAGE_ID } from 'widgets/Page/ui/Page'
 
 interface ArticleListProps {
   className?: string
@@ -40,15 +37,36 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
   } = props
   const { t } = useTranslation()
 
-  const renderArticle = (article: Article) => {
+  const isBig = view === ArticleView.BIG
+
+  const itemsPerRow = isBig ? 1 : 3
+  const rowCount = isBig ? articles.length : Math.ceil(articles.length / itemsPerRow)
+
+  const rowRenderer = ({ index, isScrolling, isVisible, key, style }: ListRowProps) => {
+    const items = []
+    const fromIndex = index * itemsPerRow
+    const toIndex = Math.min(fromIndex * itemsPerRow, articles.length)
+
+    for (let i = fromIndex; i < toIndex; i++) {
+      items.push(
+        <ArticleListItem
+          article={articles[i]}
+          view={view}
+          className={cls.card}
+          target={target}
+          key={articles[i].id}
+        />
+      )
+    }
+
     return (
-      <ArticleListItem
-        key={article.id}
-        article={article}
-        view={view}
-        className={cls.card}
-        target={target}
-      />
+      <div
+        key={key}
+        className={cls.row}
+        style={style}
+      >
+        {items}
+      </div>
     )
   }
 
@@ -61,15 +79,40 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
   }
 
   return (
-    <div className={classNames(cls.ArticleList, {}, [className, cls[view]])}>
-      {
-        articles.length ? (
-          articles.map(renderArticle)
-        ) : null
-      }
-      {
-        isLoading && getSkeleton(view)
-      }
-    </div>
+    <WindowScroller
+      scrollElement={document.getElementById(PAGE_ID) as Element}
+    >
+      {({
+        width,
+        height,
+        registerChild,
+        scrollTop,
+        onChildScroll,
+        isScrolling,
+      }) => (
+        <div
+          ref={registerChild}
+          className={
+            classNames(cls.ArticleList, {}, [className, cls[view]])
+          }
+        >
+          <List
+            height={height ?? 700}
+            rowCount={rowCount}
+            rowHeight={isBig ? 700 : 330}
+            rowRenderer={rowRenderer}
+            width={width ? width - 80 : 700}
+            autoHeight
+            onScroll={onChildScroll}
+            isScrolling={isScrolling}
+            scrollTop={scrollTop}
+          />
+          {
+            isLoading && getSkeleton(view)
+          }
+        </div>
+      )}
+    </WindowScroller>
+
   )
 })
