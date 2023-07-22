@@ -54,7 +54,13 @@ module.exports = {
     '@typescript-eslint/naming-convention': 'warn',
     "i18next/no-literal-string": ['warn', {
       markupOnly: true,
-      ignoreAttribute: ['data-testid']
+      ignoreAttribute: [
+        'data-testid',
+        'justify',
+        'align',
+        'wrap',
+        'direction',
+      ]
     }],
     "@typescript-eslint/dot-notation": ['warn'],
     "max-len": ['error', {
