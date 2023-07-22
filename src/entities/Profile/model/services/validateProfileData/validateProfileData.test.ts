@@ -1,5 +1,5 @@
 import { validateProfileData } from './validateProfileData'
-import { type Profile, ValidateProfileError } from 'entities/Profile/model/type/profile'
+import { type Profile, ValidateProfileError } from '../../type/profile'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
 
