@@ -18,7 +18,8 @@ module.exports = {
   plugins: [
     'react',
     "i18next",
-    "react-hooks"
+    "react-hooks",
+    "dev-proger-plugin"
   ],
   rules: {
     // отступы 2 пробела
@@ -76,7 +77,7 @@ module.exports = {
       "functions": "never"
     }],
     "@typescript-eslint/explicit-function-return-type": ['warn'],
-    "react/display-name": ['warn'],
+    "react/display-name": ['off'],
     'linebreak-style': 0,
     'jsx-ally/click-events-have-key-events': 'off',
     "react-hooks/rules-of-hooks": "error",
@@ -85,7 +86,8 @@ module.exports = {
     "@typescript-eslint/no-invalid-void-type": ['warn'],
     "@typescript-eslint/no-floating-promises": ['warn'],
     "@typescript-eslint/no-non-null-assertion": ['warn'],
-    "multiline-ternary": ['off']
+    "multiline-ternary": ['off'],
+    "dev-proger-plugin/path-checker": 'error'
   },
   globals: {
     __IS_DEV__: true,

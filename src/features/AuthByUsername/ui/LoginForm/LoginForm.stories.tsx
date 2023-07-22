@@ -1,5 +1,5 @@
 import type { ComponentStory, Meta } from '@storybook/react'
-import LoginForm from 'features/AuthByUsername/ui/LoginForm/LoginForm'
+import LoginForm from './LoginForm'
 import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDecorator'
 
 const meta: Meta<typeof LoginForm> = {

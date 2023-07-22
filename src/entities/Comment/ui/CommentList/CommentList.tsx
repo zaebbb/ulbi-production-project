@@ -3,7 +3,7 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import cls from './CommentList.module.scss'
 import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { CommentCard } from 'entities/Comment/ui/CommentCard/CommentCard'
+import { CommentCard } from '../CommentCard/CommentCard'
 import { type Comment } from '../../model/types/comment'
 
 interface CommentListProps {
