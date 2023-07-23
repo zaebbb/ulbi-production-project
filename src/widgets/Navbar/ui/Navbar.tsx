@@ -57,7 +57,7 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
   }
 
   return (
-    <div className={classNames(cls.Navbar, {}, [className])}>
+    <header className={classNames(cls.Navbar, {}, [className])}>
       <Button
         theme={ThemeButton.CLEAR_INVERTED}
         className={cls.links}
@@ -71,6 +71,6 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
           onClose={onCloseModal}
         />
       )}
-    </div>
+    </header>
   )
 })
