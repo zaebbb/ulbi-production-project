@@ -47,7 +47,7 @@ export const Sidebar: React.FC<SidebarProps> = memo((props: SidebarProps) => {
         {collapsed ? '>' : '<'}
       </Button>
 
-      <VStack className={cls.items} gap={8}>
+      <VStack className={cls.items} gap={8} role={'navigation'}>
         {sidebarItems.map((item: SidebarItemType) => (
           <SidebarItem
             key={item.path}

@@ -52,7 +52,7 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     // использование camelCase
     '@typescript-eslint/naming-convention': 'warn',
-    "i18next/no-literal-string": ['warn', {
+    "i18next/no-literal-string": ['error', {
       markupOnly: true,
       ignoreAttribute: [
         'data-testid',
@@ -60,6 +60,9 @@ module.exports = {
         'align',
         'wrap',
         'direction',
+        'role',
+        'target',
+        'border',
       ]
     }],
     "@typescript-eslint/dot-notation": ['warn'],
@@ -100,10 +103,12 @@ module.exports = {
     __API__: true,
     __PROJECT__: true
   },
-  overrides: [{
-    files: ['**/src**/*.test.{tsx,ts}'],
-    rules: {
-      "i18next/no-literal-string": 'off'
+  overrides: [
+    {
+      files: ['**/src/**/*.{test,stories}.{ts,tsx}'],
+      rules: {
+        'i18next/no-literal-string': 'off',
+      }
     }
-  }]
+  ]
 };

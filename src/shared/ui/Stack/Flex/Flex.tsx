@@ -21,7 +21,9 @@ export type FlexDirection =
 export type FlexGap =
   4 | 8 | 16 | 32 | 64
 
-export interface FlexProps {
+type DivProps = React.DetailedHTMLProps<React.HTMLAttributes<HTMLDivElement>, HTMLDivElement>
+
+export interface FlexProps extends DivProps {
   className?: string
   children: React.ReactNode
   justify?: FlexJustify
