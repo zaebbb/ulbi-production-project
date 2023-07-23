@@ -1,7 +1,7 @@
 import React from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import { Select } from 'shared/ui/Select/Select'
 import { Country } from '../../model/types/country'
+import { ListBox } from 'shared/ui/ListBox/ListBox'
 
 interface CountrySelectProps {
   className?: string
@@ -31,7 +31,7 @@ export const CountrySelect: React.FC<CountrySelectProps> = (props) => {
   }, [onChange])
 
   return (
-    <Select
+    <ListBox
       className={classNames(
         '', {}, [className]
       )}
@@ -39,7 +39,8 @@ export const CountrySelect: React.FC<CountrySelectProps> = (props) => {
       value={value}
       readonly={readonly}
       onChange={onChangeHandler}
-      options={options}
+      items={options}
+      direction={'top'}
     />
   )
 }

@@ -121,7 +121,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         readonly={readonly}
       />
       <CurrencySelect
-        className={cls.input}
+        className={classNames(cls.input, {}, [cls.select])}
         value={data?.currency}
         onChange={onChangeCurrency}
         label={t('profile-input-currency')}

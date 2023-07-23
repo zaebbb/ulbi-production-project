@@ -63,6 +63,7 @@ module.exports = {
         'role',
         'target',
         'border',
+        'as',
       ]
     }],
     "@typescript-eslint/dot-notation": ['warn'],
