@@ -40,7 +40,7 @@ export const CountrySelect: React.FC<CountrySelectProps> = (props) => {
       readonly={readonly}
       onChange={onChangeHandler}
       items={options}
-      direction={'top'}
+      direction={'top-left'}
     />
   )
 }
