@@ -9,6 +9,9 @@ import { getUserAuthData, userActions } from 'entities/User'
 import { RoutePath } from 'shared/config/routeConfig/routeConfig'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { AppLink, AppLinkTheme } from 'shared/ui/AppLink/AppLink'
+import { Menu } from 'shared/ui/Menu/Menu'
+import { Avatar } from 'shared/ui/Avatar/Avatar'
+import { HStack } from 'shared/ui/Stack/Hstack/HStack'
 
 interface NavbarProps {
   className?: string
@@ -38,20 +41,28 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
       <header className={classNames(cls.Navbar, {}, [className])}>
         <Text text={t('logo-text')} theme={TextTheme.PRIMARY_INVERTED} />
 
-        <div className={cls.links}>
+        <HStack align={'center'} className={cls.links}>
           <AppLink
             to={RoutePath.article_create}
             theme={AppLinkTheme.SECONDARY}
           >
             {t('create-article')}
           </AppLink>
-          <Button
-            theme={ThemeButton.CLEAR_INVERTED}
-            onClick={onLogout}
-          >
-            {t('btn-logout')}
-          </Button>
-        </div>
+          <Menu
+            items={[
+              {
+                content: t('nav-profile'),
+                href: RoutePath.profile + authData.id,
+              },
+              {
+                content: t('btn-logout'),
+                onClick: onLogout,
+              },
+            ]}
+            trigger={<Avatar size={30} src={authData.avatar} />}
+            direction={'bottom-right'}
+          />
+        </HStack>
       </header>
     )
   }

@@ -1,10 +1,10 @@
-.list {
+.Menu {
   position: relative;
-  max-width: 400px;
 }
 
-.trigger {
-  width: 100%;
+.button {
+  cursor: pointer;
+
   margin: 0;
   padding: 0;
 
@@ -13,23 +13,29 @@
   outline: none;
 }
 
-.button {
-  width: 100%;
-}
-
-.options {
+.items {
   position: absolute;
-  z-index: 100;
+  z-index: 1000;
 
-  background: var(--list-box-bg);
-  border-radius: 12px;
-  box-shadow: 0 0 15px rgb(0 0 0 / 40%);
+  overflow: hidden;
+
+  background: var(--card-bg);
+  border-radius: 8px;
 }
 
-.option {
+.item {
   cursor: pointer;
-  padding: 10px 20px;
-  list-style: none;
+
+  width: 100%;
+  padding: 10px 25px;
+
+  color: var(--primary-color);
+  text-align: left;
+  list-style-type: none;
+
+  background: none;
+  border: none;
+  outline: none;
 }
 
 .active {
@@ -37,10 +43,6 @@
 }
 
 .disabled {
-  opacity: 0.5;
-}
-
-.readonly {
   opacity: 0.5;
 }
 

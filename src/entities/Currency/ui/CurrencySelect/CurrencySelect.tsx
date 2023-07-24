@@ -41,7 +41,7 @@ export const CurrencySelect: React.FC<CurrencySelectProps> = memo((props: Curren
       onChange={onChangeHandler}
       defaultValue={t('profile-change-currency')}
       readonly={readonly}
-      direction={'top'}
+      direction={'top-left'}
     />
   )
 })
