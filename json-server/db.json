@@ -2404,6 +2404,18 @@
       "text": "comment",
       "userId": "1",
       "id": "wYU5Tta"
+    },
+    {
+      "articleId": "3",
+      "text": "dhfgdfgdgfg",
+      "userId": "1",
+      "id": "EgwC9Is"
+    },
+    {
+      "articleId": "4",
+      "text": "dfghjkl;",
+      "userId": "1",
+      "id": "EXOCwll"
     }
   ],
   "users": [
@@ -2428,8 +2440,8 @@
       "first": "владимир",
       "lastname": "Mihailov",
       "age": 2021,
-      "currency": "EUR",
-      "country": "Belarus",
+      "currency": "USD",
+      "country": "Armenia",
       "city": "Ekb",
       "username": "admin",
       "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg"

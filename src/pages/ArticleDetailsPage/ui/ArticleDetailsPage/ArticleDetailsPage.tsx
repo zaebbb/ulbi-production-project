@@ -1,36 +1,16 @@
-import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
-import cls from './ArticleDetailsPage.module.scss'
-import { ArticleDetails, ArticleList } from 'entities/Article'
+import { ArticleDetails } from 'entities/Article'
 import { useParams } from 'react-router-dom'
-import { Text, TextSize } from 'shared/ui/Text/Text'
+import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { CommentList } from 'entities/Comment'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
-import { getArticleComments } from '../../model/slice/articleDetailsComments'
-import { useSelector } from 'react-redux'
-import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments'
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import {
-  fetchCommentsArticleById,
-} from '../../model/services/fetchCommentsArticleById/fetchCommentsArticleById'
-import { AddCommentForm } from 'features/addCommentForm'
-import {
-  addCommentForArticle,
-} from '../../model/services/addCommentForArticle/addCommentForArticle'
 import { Page } from 'widgets/Page'
-import {
-  getArticleRecommendations,
-} from '../../model/slice/articleDetailsRecommendationsSlice'
-import {
-  getArticleDetailsRecommendationsIsLoading,
-} from '../../model/selectors/recommendations'
-import {
-  fetchRecommendations,
-} from '../../model/services/fetchRecommendations/fetchRecommendations'
+import { ArticleRecommendationsList } from 'features/articleRecommendationsList'
+import React, { memo } from 'react'
 import { articleDetailsPageReducer } from '../../model/slice'
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
+import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
+import cls from './ArticleDetailsPage.module.scss'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -44,20 +24,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   const { className } = props
   const { id } = useParams<{ id: string }>()
   const { t } = useTranslation()
-  const comments = useSelector(getArticleComments.selectAll)
-  const recommendations = useSelector(getArticleRecommendations.selectAll)
-  const recommendationsIsLoading = useSelector(getArticleDetailsRecommendationsIsLoading)
-  const commentIsLoading = useSelector(getArticleDetailsCommentsIsLoading)
-  const dispatch = useAppDispatch()
-
-  const onSendComment = React.useCallback((text: string) => {
-    dispatch(addCommentForArticle(text))
-  }, [dispatch])
-
-  useInitialEffect(() => {
-    dispatch(fetchCommentsArticleById(id))
-    dispatch(fetchRecommendations())
-  })
 
   if (!id) {
     return (
@@ -72,27 +38,8 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <ArticleDetailsPageHeader />
         <ArticleDetails id={id}/>
-        <Text
-          size={TextSize.L}
-          className={cls.commentTitle}
-          title={t('article-recommendations')}
-        />
-        <ArticleList
-          articles={recommendations}
-          isLoading={recommendationsIsLoading}
-          className={cls.recommendations}
-          target={'_blank'}
-        />
-        <Text
-          size={TextSize.L}
-          className={cls.commentTitle}
-          title={t('article-comments')}
-        />
-        <AddCommentForm onSendComment={onSendComment} />
-        <CommentList
-          comments={comments}
-          isLoading={commentIsLoading}
-        />
+        <ArticleRecommendationsList />
+        <ArticleDetailsComments id={id} />
       </Page>
     </DynamicModuleLoader>
   )

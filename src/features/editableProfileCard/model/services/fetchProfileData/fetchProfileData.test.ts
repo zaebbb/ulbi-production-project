@@ -1,5 +1,5 @@
-import { fetchProfileData } from './fetchProfileData'
 import { TestAsyncThunk } from 'shared/lib/tests/TestAsync/TestAsyncThunk'
+import { fetchProfileData } from './fetchProfileData'
 
 const data = {
   first: '',

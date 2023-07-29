@@ -1,3 +1,4 @@
+import * as path from 'path'
 import type webpack from 'webpack'
 import { buildWebpackConfig } from './config/build/buildWebpackConfig'
 import {
@@ -5,7 +6,6 @@ import {
   type BuildMode,
   type BuildPaths,
 } from './config/build/types/config'
-import * as path from 'path'
 
 export default (env: BuildEnv): webpack.Configuration => {
   const paths: BuildPaths = {

@@ -1,6 +1,6 @@
 import type { ComponentStory, Meta } from '@storybook/react'
-import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from 'app/providers/ThemeProvider'
+import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
 import { Text, TextSize, TextTheme } from './Text'
 
 const meta: Meta<typeof Text> = {

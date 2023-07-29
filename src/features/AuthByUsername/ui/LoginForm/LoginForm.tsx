@@ -1,19 +1,19 @@
 import React, { memo } from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import cls from './LoginForm.module.scss'
 import { Button, ThemeButton } from 'shared/ui/Button/Button'
 import { Input } from 'shared/ui/Input/Input'
 import { useSelector } from 'react-redux'
+import { Text, TextTheme } from 'shared/ui/Text/Text'
+import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
+import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { loginActions, loginReducer } from '../../model/slice/loginSlice'
 import { loginByUsername } from '../../model/services/loginByUsername/loginByUsername'
-import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { getLoginUsername } from '../../model/selectors/getLoginUsername/getLoginUsername'
 import { getLoginPassword } from '../../model/selectors/getLoginPassword/getLoginPassword'
 import { getLoginError } from '../../model/selectors/getLoginError/getLoginError'
 import { getLoginIsLoading } from '../../model/selectors/getLoginIsLoading/getLoginIsLoading'
-import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
+import cls from './LoginForm.module.scss'
 
 export interface LoginFormProps {
   className?: string

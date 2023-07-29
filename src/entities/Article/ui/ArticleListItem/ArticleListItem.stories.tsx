@@ -1,7 +1,7 @@
 import type { ComponentStory } from '@storybook/react'
 import { ComponentMeta } from '@storybook/react'
-import { ArticleListItem } from './ArticleListItem'
 import { type Article, ArticleBlockType, ArticleView } from '../../model/types/article'
+import { ArticleListItem } from './ArticleListItem'
 
 const article: Article = {
   id: '1',

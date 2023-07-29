@@ -5,6 +5,8 @@ module.exports = {
     jest: true
   },
   extends: [
+    "eslint:recommended",
+    "plugin:import/recommended",
     "plugin:react/recommended",
     "standard-with-typescript",
     "plugin:i18next/recommended",
@@ -19,7 +21,8 @@ module.exports = {
     'react',
     "i18next",
     "react-hooks",
-    "dev-proger-plugin"
+    "dev-proger-plugin",
+    'import'
   ],
   rules: {
     // отступы 2 пробела
@@ -97,7 +100,17 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": ['warn'],
     "@typescript-eslint/no-non-null-assertion": ['warn'],
     "multiline-ternary": ['off'],
-    "dev-proger-plugin/path-checker": 'error'
+    "dev-proger-plugin/path-checker": 'error',
+    "import/no-duplicates": "off",
+    "import/prefer-default-export": 0,
+    "no-duplicate-imports": "off",
+    "@typescript-eslint/no-duplicate-imports": ["error"],
+    "import/no-unresolved": 'off',
+    "import/named": 'off',
+    "import/namespace": 'off',
+    "import/order": ['error'],
+    "import/default": 'off',
+    "import/export": 2,
   },
   globals: {
     __IS_DEV__: true,
@@ -111,5 +124,15 @@ module.exports = {
         'i18next/no-literal-string': 'off',
       }
     }
-  ]
+  ],
+  settings: {
+    "import/parsers": {
+      "@typescript-eslint/parser": [".ts", ".tsx"]
+    },
+    "import/resolver": {
+      "node": {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    }
+  }
 };
