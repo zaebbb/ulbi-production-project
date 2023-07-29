@@ -1,6 +1,6 @@
 import type { ComponentStory, Meta } from '@storybook/react'
-import { Tabs } from './Tabs'
 import { action } from '@storybook/addon-actions'
+import { Tabs } from './Tabs'
 
 const meta: Meta<typeof Tabs> = {
   title: 'shared/Tabs',

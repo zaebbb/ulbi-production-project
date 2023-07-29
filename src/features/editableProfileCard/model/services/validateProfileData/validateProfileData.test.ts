@@ -1,9 +1,9 @@
-import { validateProfileData } from './validateProfileData'
-import { type Profile, ValidateProfileError } from '../../type/profile'
 import { Currency } from 'entities/Currency'
 import { Country } from 'entities/Country'
+import { ValidateProfileError } from '../../types/editableProfileCardSchema'
+import { validateProfileData } from './validateProfileData'
 
-const data: Profile = {
+const data = {
   first: '123',
   lastname: 'Mihailov',
   age: 2021,

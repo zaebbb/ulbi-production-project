@@ -2,8 +2,8 @@ import React, { type MutableRefObject } from 'react'
 import {
   classNames, type Mods,
 } from 'shared/lib/classNames/classNames'
-import cls from './Modal.module.scss'
 import { Portal } from '../Portal/Portal'
+import cls from './Modal.module.scss'
 
 interface ModalProps {
   className?: string
