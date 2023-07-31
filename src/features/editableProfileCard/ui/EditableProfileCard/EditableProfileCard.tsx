@@ -9,6 +9,7 @@ import { Country } from 'entities/Country'
 import { Text, TextTheme } from 'shared/ui/Text/Text'
 import { ProfileCard } from 'entities/Profile'
 import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
+import { EditableProfileCardHeader } from '../EditableProfileCardHeader/EditableProfileCardHeader'
 import { getProfileForm } from '../../model/selectors/getProfileForm/getProfileForm'
 import {
   getProfileIsLoading,
@@ -113,13 +114,21 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
   }, [dispatch])
 
   return (
-    <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.EditableProfileCard, {}, [className])}>
+    <DynamicModuleLoader
+      reducers={reducers}
+    >
+      <EditableProfileCardHeader />
+
+      <div
+        className={classNames(cls.EditableProfileCard, {}, [className])}
+        data-testid={'editable-profile-card'}
+      >
         {validate?.length && validate.map(err => (
           <Text
             key={err}
             text={validateErrorTranslates[err]}
             theme={TextTheme.ERROR}
+            data-testid={'editable-profile-card-error'}
           />
         ))}
 

@@ -1,7 +1,7 @@
 import React from 'react'
 import { classNames } from 'shared/lib/classNames/classNames'
 import { Page } from 'widgets/Page'
-import { EditableProfileCard, EditableProfileCardHeader } from 'features/editableProfileCard'
+import { EditableProfileCard } from 'features/editableProfileCard'
 import { useParams } from 'react-router-dom'
 import cls from './ProfilePage.module.scss'
 
@@ -15,7 +15,6 @@ const ProfilePage: React.FC<ProfilePageProps> = (props) => {
 
   return (
     <Page className={classNames(cls.ProfilePage, {}, [className])}>
-      <EditableProfileCardHeader />
       <EditableProfileCard id={String(id)} />
     </Page>
   )
