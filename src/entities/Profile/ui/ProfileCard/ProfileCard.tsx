@@ -68,6 +68,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
           theme={TextTheme.ERROR}
           title={t('error-load-data')}
           text={t('please-reload-page')}
+          data-testid={'profile-card-error'}
         />
       </div>
     )
@@ -83,6 +84,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         className={cls.input}
         onChange={onChangeFirstname}
         readonly={readonly}
+        data-testid={'profile-card-firstname'}
       />
       <Input
         value={data?.lastname}
@@ -90,6 +92,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         className={cls.input}
         onChange={onChangeLastname}
         readonly={readonly}
+        data-testid={'profile-card-lastname'}
       />
       <Input
         value={data?.age}
@@ -98,6 +101,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         onChange={onChangeAge}
         readonly={readonly}
         type={'number'}
+        data-testid={'profile-card-age'}
       />
       <Input
         value={data?.city}
@@ -105,6 +109,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         className={cls.input}
         onChange={onChangeCity}
         readonly={readonly}
+        data-testid={'profile-card-city'}
       />
       <Input
         value={data?.username}
@@ -112,6 +117,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         className={cls.input}
         onChange={onChangeUsername}
         readonly={readonly}
+        data-testid={'profile-card-username'}
       />
       <Input
         value={data?.avatar}
@@ -119,6 +125,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         className={cls.input}
         onChange={onChangeAvatar}
         readonly={readonly}
+        data-testid={'profile-card-avatar'}
       />
       <CurrencySelect
         className={classNames(cls.input, {}, [cls.select])}
@@ -126,6 +133,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         onChange={onChangeCurrency}
         label={t('profile-input-currency')}
         readonly={readonly}
+        data-testid={'profile-card-currency'}
       />
       <CountrySelect
         className={cls.input}
@@ -133,6 +141,7 @@ export const ProfileCard: React.FC<ProfileCardProps> = memo((props: ProfileCardP
         onChange={onChangeCountry}
         label={t('profile-input-country')}
         readonly={readonly}
+        data-testid={'profile-card-country'}
       />
     </div>
   )

@@ -27,6 +27,7 @@ interface TextProps {
   theme?: TextTheme
   align?: TextAlign
   size?: TextSize
+  'data-testid'?: string
 }
 
 type HeaderTagType = 'h1' | 'h2' | 'h3'
@@ -45,6 +46,7 @@ export const Text: React.FC<TextProps> = memo((props: TextProps) => {
     theme = TextTheme.PRIMARY,
     align = TextAlign.LEFT,
     size = TextSize.M,
+    'data-testid': testId = '',
   } = props
 
   const HeaderTag = mapSizeToHeader[size]
@@ -57,8 +59,21 @@ export const Text: React.FC<TextProps> = memo((props: TextProps) => {
         [className, cls[theme], cls[align], cls[size]]
       )}
     >
-      {title && <HeaderTag className={cls.title}>{title}</HeaderTag>}
-      {text && <p className={cls.text}>{text}</p>}
+      {
+        title && <HeaderTag
+          data-testid={`${testId}-header`}
+          className={cls.title}
+        >
+          {title}
+        </HeaderTag>
+      }
+      {
+        text && <p
+          data-testid={`${testId}-text`}
+          className={cls.text}
+        >
+          {text}
+        </p>}
     </div>
   )
 })
