@@ -11,7 +11,9 @@
   "INTERNAL_SERVER_ERROR": "",
   "NO_DATA": "NO_DATA",
   "about": "about",
+  "access-denied": "access-denied",
   "add-comment": "add-comment",
+  "admin-page": "admin-page",
   "article-comments": "",
   "article-not-found": "",
   "article-read-mor": "",
@@ -56,6 +58,7 @@
   "main": "main",
   "modal-auth-title": "modal-auth-title",
   "nav-about": "nav-about",
+  "nav-admin": "nav-admin",
   "nav-main": "nav-main",
   "nav-profile": "nav-profile",
   "not-found": "not-found",
@@ -75,5 +78,6 @@
   "profile-input-username": "profile-input-username",
   "profile-save": "profile-save",
   "reload-page": "reload-page",
+  "to-main-page": "to-main-page",
   "unexpected-error": "unexpected-error"
 }

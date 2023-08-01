@@ -41,5 +41,9 @@
   "edit-article": "Редактирование статьи",
   "create-article": "Добавление статьи",
   "logo-text": "DEV-PROGER",
-  "profile-change-currency": "profile-change-currency"
+  "profile-change-currency": "profile-change-currency",
+  "admin-page": "Страница администратора",
+  "nav-admin": "Админка",
+  "to-main-page": "На главную",
+  "access-denied": "Доступ запрещен"
 }

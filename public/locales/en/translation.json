@@ -42,5 +42,9 @@
   "edit-article": "Edit article",
   "create-article": "Create article",
   "logo-text": "DEV-PROGER",
-  "profile-change-currency": "profile-change-currency"
+  "profile-change-currency": "profile-change-currency",
+  "admin-page": "Admin Panel",
+  "nav-admin": "Adminka",
+  "to-main-page": "To go main page",
+  "access-denied": "Access Denied"
 }

@@ -3,7 +3,6 @@ import { classNames } from 'shared/lib/classNames/classNames'
 import { Modal } from 'shared/ui/Modal/Modal'
 import { Loader } from 'shared/ui/Loader/Loader'
 import { LoginFormAsync } from '../LoginForm/LoginForm.async'
-import cls from './LoginModal.module.scss'
 
 interface LoginModalProps {
   className?: string
@@ -20,7 +19,7 @@ export const LoginModal: React.FC<LoginModalProps> = (props) => {
 
   return (
     <Modal
-      className={classNames(cls.LoginModal, {}, [className])}
+      className={classNames('', {}, [className])}
       onClose={onClose}
       isOpen={isOpen}
       lazy
