@@ -10,6 +10,7 @@ const defaultTheme = localStorage
 
 interface ThemeProviderProps {
   initialTheme?: Theme
+  children: React.ReactNode
 }
 
 const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
