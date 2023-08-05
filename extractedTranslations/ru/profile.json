@@ -1,0 +1,16 @@
+{
+  "error-load-data": "error-load-data",
+  "please-reload-page": "please-reload-page",
+  "profile": "profile",
+  "profile-edit": "profile-edit",
+  "profile-escape": "profile-escape",
+  "profile-input-age": "profile-input-age",
+  "profile-input-avatar": "profile-input-avatar",
+  "profile-input-city": "profile-input-city",
+  "profile-input-country": "profile-input-country",
+  "profile-input-currency": "profile-input-currency",
+  "profile-input-firstname": "profile-input-firstname",
+  "profile-input-lastname": "profile-input-lastname",
+  "profile-input-username": "profile-input-username",
+  "profile-save": "profile-save"
+}
