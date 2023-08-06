@@ -3,7 +3,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { ArticlePageFilters } from './ArticlePageFilters'
 
 const meta: Meta<typeof ArticlePageFilters> = {
-  title: 'pages/ArticlePageFilters',
+  title: 'pages/ArticlePage/ArticlePageFilters',
   component: ArticlePageFilters,
 }
 

@@ -6,6 +6,14 @@
   fill: var(--primary-color);
 }
 
+.fill_inverted {
+  fill: var(--inverted-primary-color);
+}
+
 .stroke {
   stroke: var(--primary-color);
+}
+
+.stroke_inverted {
+  stroke: var(--inverted-primary-color);
 }
