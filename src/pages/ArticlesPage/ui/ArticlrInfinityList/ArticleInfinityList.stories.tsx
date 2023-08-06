@@ -3,7 +3,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import { ArticleInfinityList } from './ArticleInfinityList'
 
 const meta: Meta<typeof ArticleInfinityList> = {
-  title: 'CHANGE/ArticleInfinityList',
+  title: 'pages/ArticlePage/ArticleInfinityList',
   component: ArticleInfinityList,
 }
 

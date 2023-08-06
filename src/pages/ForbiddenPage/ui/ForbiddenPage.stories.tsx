@@ -3,7 +3,7 @@ import { StoreDecorator } from 'shared/config/storybook/StoreDecorator/StoreDeco
 import ForbiddenPage from './ForbiddenPage'
 
 const meta: Meta<typeof ForbiddenPage> = {
-  title: 'CHANGE/ForbiddenPage',
+  title: 'pages/ForbiddenPage',
   component: ForbiddenPage,
 }
 

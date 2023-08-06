@@ -34,7 +34,7 @@ const article: Article = {
 } satisfies Article
 
 export default {
-  title: 'entities/ArticleListItem',
+  title: 'entities/Article/ArticleListItem',
   component: ArticleListItem,
 } satisfies ComponentMeta<typeof ArticleListItem>
 
