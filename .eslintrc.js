@@ -111,6 +111,7 @@ module.exports = {
     "import/order": ['error'],
     "import/default": 'off',
     "import/export": 2,
+    "@typescript-eslint/consistent-type-imports": ['warn'],
   },
   globals: {
     __IS_DEV__: true,
