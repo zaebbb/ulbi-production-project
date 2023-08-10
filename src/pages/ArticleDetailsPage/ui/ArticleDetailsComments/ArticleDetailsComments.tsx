@@ -1,11 +1,5 @@
 import React, { memo } from 'react'
-import { useInitialEffect } from 'shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { Text, TextSize } from 'shared/ui/Text/Text'
-import { AddCommentForm } from 'features/addCommentForm'
-import { CommentList } from 'entities/Comment'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
 import {
   addCommentForArticle,
@@ -16,6 +10,12 @@ import {
   fetchCommentsArticleById,
 } from '../../model/services/fetchCommentsArticleById/fetchCommentsArticleById'
 import cls from './ArticleDetailsComments.module.scss'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { CommentList } from '@/entities/Comment'
+import { AddCommentForm } from '@/features/addCommentForm'
+import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 
 interface ArticleDetailsCommentsProps {
   className?: string

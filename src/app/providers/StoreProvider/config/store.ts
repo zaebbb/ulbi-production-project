@@ -4,13 +4,13 @@ import {
   type Reducer,
   type ReducersMapObject,
 } from '@reduxjs/toolkit'
-import { counterReducer } from 'entities/Counter'
-import { userReducer } from 'entities/User'
-import { $api } from 'shared/api/api'
-import { saveScrollReducer } from 'features/ScrollSave'
-import { rtkApi } from 'shared/api/rtkApi'
 import { createReducerManager } from './reducerManager'
 import { type StateSchema, type ThunkExtraArguments } from './StateSchema'
+import { counterReducer } from '@/entities/Counter'
+import { userReducer } from '@/entities/User'
+import { $api } from '@/shared/api/api'
+import { saveScrollReducer } from '@/features/ScrollSave'
+import { rtkApi } from '@/shared/api/rtkApi'
 
 export function createReduxStore (
   initialState?: StateSchema,

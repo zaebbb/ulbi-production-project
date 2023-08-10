@@ -1,5 +1,5 @@
-import { type StateSchema } from 'app/providers/StoreProvider'
 import { createSelector } from '@reduxjs/toolkit'
+import { type StateSchema } from '@/app/providers/StoreProvider'
 
 export const getSaveScroll =
   (state: StateSchema) => state.saveScroll.scroll

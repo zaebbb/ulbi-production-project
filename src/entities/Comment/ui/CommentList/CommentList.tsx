@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
 import { CommentCard } from '../CommentCard/CommentCard'
 import { type Comment } from '../../model/types/comment'
 import cls from './CommentList.module.scss'
+import { Text } from '@/shared/ui/Text/Text'
+import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface CommentListProps {
   className?: string

@@ -1,16 +1,16 @@
-import { classNames } from 'shared/lib/classNames/classNames'
-import { ArticleDetails } from 'entities/Article'
 import { useParams } from 'react-router-dom'
-import { Text } from 'shared/ui/Text/Text'
 import { useTranslation } from 'react-i18next'
-import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
-import { Page } from 'widgets/Page'
-import { ArticleRecommendationsList } from 'features/articleRecommendationsList'
 import React, { memo } from 'react'
 import { articleDetailsPageReducer } from '../../model/slice'
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetailsComments'
 import cls from './ArticleDetailsPage.module.scss'
+import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
+import { Page } from '@/widgets/Page'
+import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { Text } from '@/shared/ui/Text/Text'
+import { ArticleDetails } from '@/entities/Article'
+import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface ArticleDetailsPageProps {
   className?: string

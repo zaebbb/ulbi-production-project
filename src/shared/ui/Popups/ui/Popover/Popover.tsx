@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
-import { type Additional, classNames } from 'shared/lib/classNames/classNames'
 import { Popover as HPopover } from '@headlessui/react'
 import popupsCls from '../../styles/popup.module.scss'
 import { type DirectionType } from '../../../../types/ui'
 import cls from './Popover.module.scss'
+import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 
 interface PopoverProps {
   className?: string

@@ -1,5 +1,5 @@
-import { type StateSchema } from 'app/providers/StoreProvider'
 import { getProfileForm } from './getProfileForm'
+import { type StateSchema } from '@/app/providers/StoreProvider'
 
 describe('Тест getProfileForm.test', () => {
   test(
