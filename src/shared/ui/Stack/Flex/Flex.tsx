@@ -1,6 +1,6 @@
 import React from 'react'
-import { type Additional, classNames } from 'shared/lib/classNames/classNames'
 import cls from './Flex.module.scss'
+import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 
 export type FlexJustify =
   'center' | 'space-between' | 'space-around' | 'space-evenly' |

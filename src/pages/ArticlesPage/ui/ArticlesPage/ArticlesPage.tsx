@@ -1,8 +1,4 @@
 import React, { memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
-import { DynamicModuleLoader, type ReducerList } from 'shared/lib/components/DynamicModuleLoader'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Page } from 'widgets/Page'
 import { ArticleInfinityList } from '../ArticlrInfinityList/ArticleInfinityList'
 import {
   FetchNextArticlePage,
@@ -12,6 +8,10 @@ import {
   articlesPageReducer,
 } from '../../model/slice/articlePageSlice/articlePageSlice'
 import cls from './ArticlesPage.module.scss'
+import { Page } from '@/widgets/Page'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface ArticlesPageProps {
   className?: string

@@ -1,20 +1,6 @@
 import React, { memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { ArticleViewSelector } from 'features/ArticleViewSelector'
-import {
-  type ArticleSortField,
-  ArticleSortSelector,
-  type ArticleView,
-  type ArticleType,
-  ArticleTabs,
-} from 'entities/Article'
-import { useAppDispatch } from 'shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useSelector } from 'react-redux'
-import { Input } from 'shared/ui/Input/Input'
-import { type SortOrder } from 'shared/types'
-import { useDebounce } from 'shared/lib/hooks/useDebounce/useDebounce'
-import { type TabItem } from 'shared/ui/Tabs/Tabs'
 import { fetchArticles } from '../../model/services/fetchArticles/fetchArticles'
 import {
   getArticlePageOrder,
@@ -25,6 +11,20 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { articlesPageActions } from '../../model/slice/articlePageSlice/articlePageSlice'
 import cls from './ArticlePageFilters.module.scss'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { ArticleViewSelector } from '@/features/ArticleViewSelector'
+import {
+  type ArticleSortField,
+  ArticleSortSelector,
+  type ArticleView,
+  type ArticleType,
+  ArticleTabs,
+} from '@/entities/Article'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Input } from '@/shared/ui/Input/Input'
+import { type SortOrder } from '@/shared/types'
+import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
+import { type TabItem } from '@/shared/ui/Tabs/Tabs'
 
 interface ArticlePageFiltersProps {
   className?: string

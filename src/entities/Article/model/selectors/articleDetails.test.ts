@@ -1,9 +1,9 @@
-import { type StateSchema } from 'app/providers/StoreProvider'
 import {
   getArticleDetailsIsLoading,
   getArticleDetailsData,
   getArticleDetailsError,
 } from './articleDetails'
+import { type StateSchema } from '@/app/providers/StoreProvider'
 
 describe('Тест articleDetails.test', () => {
   test(

@@ -1,9 +1,9 @@
 import React, { memo } from 'react'
-import { classNames } from 'shared/lib/classNames/classNames'
 import { useTranslation } from 'react-i18next'
-import { Text, TextSize } from 'shared/ui/Text/Text'
-import { Page } from 'widgets/Page'
 import cls from './AdminPage.module.scss'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { Page } from '@/widgets/Page'
 
 interface AdminPageProps {
   className?: string

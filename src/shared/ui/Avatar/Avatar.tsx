@@ -1,6 +1,6 @@
 import React, { type CSSProperties, memo, useMemo } from 'react'
-import { classNames, type Mods } from 'shared/lib/classNames/classNames'
 import cls from './Avatar.module.scss'
+import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
 
 export enum AvatarSize {
   MEDIUM = 'medium',

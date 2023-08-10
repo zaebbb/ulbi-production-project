@@ -124,7 +124,7 @@ module.exports = {
       rules: {
         'i18next/no-literal-string': 'off',
       }
-    }
+    },
   ],
   settings: {
     "import/parsers": {
@@ -135,5 +135,9 @@ module.exports = {
         "extensions": [".js", ".jsx", ".ts", ".tsx"]
       }
     }
-  }
+  },
+  ignorePatterns: [
+    '.eslintrc.js',
+    'updateImports.ts'
+  ]
 };
