@@ -43,7 +43,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
       </HMenu.Button>
       <HMenu.Items className={classNames(cls.items, {}, additionalOptions)}>
         {
-          items.map((item) => {
+          items.map((item, i) => {
             const content = ({ active }: { active: boolean }) => (
               <Button
                 disabled={item?.disabled}
@@ -65,7 +65,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
             if (item.href) {
               return (
                 <HMenu.Item
-                  key={item.href}
+                  key={i}
                   as={AppLink}
                   to={item.href}
                   disabled={item?.disabled}
@@ -77,7 +77,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
 
             return (
               <HMenu.Item
-                key={item.href}
+                key={i}
                 as={Fragment}
                 disabled={item?.disabled}
               >

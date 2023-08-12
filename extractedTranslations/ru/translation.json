@@ -79,5 +79,8 @@
   "profile-save": "profile-save",
   "reload-page": "reload-page",
   "to-main-page": "to-main-page",
-  "unexpected-error": "unexpected-error"
+  "unexpected-error": "unexpected-error",
+  "your-feedback": "your-feedback",
+  "close-rating-modal": "close-rating-modal",
+  "send-rating": "send-rating"
 }
