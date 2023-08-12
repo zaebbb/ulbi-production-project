@@ -45,5 +45,8 @@
   "admin-page": "Страница администратора",
   "nav-admin": "Админка",
   "to-main-page": "На главную",
-  "access-denied": "Доступ запрещен"
+  "access-denied": "Доступ запрещен",
+  "your-feedback": "Ваш отзыв",
+  "close-rating-modal": "Закрыть",
+  "send-rating": "Отправить"
 }

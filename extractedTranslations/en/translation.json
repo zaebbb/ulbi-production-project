@@ -37,6 +37,7 @@
   "btn-logout": "btn-logout",
   "button-article-edit": "button-article-edit",
   "button-back": "",
+  "close-rating-modal": "close-rating-modal",
   "comment-not-found": "",
   "comments-not-found": "comments-not-found",
   "create-article": "",
@@ -78,6 +79,8 @@
   "profile-input-username": "profile-input-username",
   "profile-save": "profile-save",
   "reload-page": "reload-page",
+  "send-rating": "send-rating",
   "to-main-page": "to-main-page",
-  "unexpected-error": "unexpected-error"
+  "unexpected-error": "unexpected-error",
+  "your-feedback": "your-feedback"
 }

@@ -46,5 +46,8 @@
   "admin-page": "Admin Panel",
   "nav-admin": "Adminka",
   "to-main-page": "To go main page",
-  "access-denied": "Access Denied"
+  "access-denied": "Access Denied",
+  "your-feedback": "Your feedback",
+  "close-rating-modal": "Close",
+  "send-rating": "Send"
 }

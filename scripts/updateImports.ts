@@ -26,11 +26,3 @@ files.forEach(sourceFile => {
 })
 
 project.save()
-
-// Добавить скрипт
-// Правка eslint
-// правка конфига resolvers
-// tsconfig
-// удалить виртуализацию
-// update jest config
-// update storybook config
