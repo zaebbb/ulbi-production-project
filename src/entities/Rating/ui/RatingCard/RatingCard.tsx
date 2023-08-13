@@ -20,6 +20,7 @@ interface RatingCardProps {
   hasFeedback?: boolean
   onCancel?: (starsCount: number) => void
   onAccept?: (starsCount: number, feedback?: string) => void
+  rate?: number
 }
 
 export const RatingCard: React.FC<RatingCardProps> = memo((props: RatingCardProps) => {
@@ -30,11 +31,12 @@ export const RatingCard: React.FC<RatingCardProps> = memo((props: RatingCardProp
     hasFeedback,
     onCancel,
     onAccept,
+    rate = 0,
   } = props
   const { t } = useTranslation()
 
   const [isOpenFeedback, setIsOpenFeedback] = React.useState(false)
-  const [starsCount, setStarsCount] = React.useState(0)
+  const [starsCount, setStarsCount] = React.useState(rate)
   const [feedback, setFeedback] = React.useState('')
 
   const onSelectStarts = React.useCallback((selectStartCount: number) => {
@@ -72,7 +74,7 @@ export const RatingCard: React.FC<RatingCardProps> = memo((props: RatingCardProp
     <Card className={classNames(cls.RatingCard, {}, [className])}>
       <VStack align={'center'} gap={16}>
         <Text title={title} />
-        <StarRating size={50} onSelect={onSelectStarts} />
+        <StarRating size={50} onSelect={onSelectStarts} selectedStars={starsCount} />
       </VStack>
 
       <BrowserView>

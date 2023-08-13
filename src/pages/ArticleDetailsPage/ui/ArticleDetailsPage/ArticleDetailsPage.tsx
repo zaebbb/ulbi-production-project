@@ -11,6 +11,8 @@ import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/D
 import { Text } from '@/shared/ui/Text/Text'
 import { ArticleDetails } from '@/entities/Article'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { ArticleRating } from '@/features/articleRating'
+import { VStack } from '@/shared/ui/Stack/VStack/VStack'
 
 interface ArticleDetailsPageProps {
   className?: string
@@ -36,10 +38,13 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
-        <ArticleDetailsPageHeader />
-        <ArticleDetails id={id}/>
-        <ArticleRecommendationsList />
-        <ArticleDetailsComments id={id} />
+        <VStack gap={32}>
+          <ArticleDetailsPageHeader />
+          <ArticleDetails id={id}/>
+          <ArticleRating id={id} />
+          <ArticleRecommendationsList />
+          <ArticleDetailsComments id={id} />
+        </VStack>
       </Page>
     </DynamicModuleLoader>
   )

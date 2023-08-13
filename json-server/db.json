@@ -2519,5 +2519,70 @@
       "username": "владимир",
       "avatar": "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg"
     }
+  ],
+  "article-ratings": [
+    {
+      "id": "1",
+      "articleId": "1",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "Отличная статья"
+    },
+    {
+      "id": "2",
+      "articleId": "2",
+      "userId": "1",
+      "rate": 3,
+      "feedback": "Отличная статья"
+    },
+    {
+      "id": "3",
+      "articleId": "3",
+      "userId": "1",
+      "rate": 1,
+      "feedback": "Отличная статья"
+    },
+    {
+      "articleId": "10",
+      "userId": "1",
+      "rate": 3,
+      "id": "yu8LdFn"
+    },
+    {
+      "articleId": "11",
+      "userId": "1",
+      "rate": 4,
+      "feedback": "клевая статья",
+      "id": "Ls4pLYG"
+    },
+    {
+      "articleId": "12",
+      "userId": "1",
+      "rate": 2,
+      "id": "9AMnxBM"
+    }
+  ],
+  "profile-ratings": [
+    {
+      "id": "1",
+      "profileId": "1",
+      "userId": "1",
+      "rate": 4,
+      "feedback": ""
+    },
+    {
+      "id": "2",
+      "articleId": "2",
+      "userId": "1",
+      "rate": 3,
+      "feedback": ""
+    },
+    {
+      "id": "3",
+      "articleId": "3",
+      "userId": "1",
+      "rate": 1,
+      "feedback": ""
+    }
   ]
 }
