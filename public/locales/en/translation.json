@@ -49,5 +49,8 @@
   "access-denied": "Access Denied",
   "your-feedback": "Your feedback",
   "close-rating-modal": "Close",
-  "send-rating": "Send"
+  "send-rating": "Send",
+  "like-rating": "Comment on the article",
+  "add-feedback-title": "Leave a review",
+  "you-use-like-rating": "Thank you for the review!"
 }

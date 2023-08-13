@@ -82,5 +82,9 @@
   "unexpected-error": "unexpected-error",
   "your-feedback": "your-feedback",
   "close-rating-modal": "close-rating-modal",
-  "send-rating": "send-rating"
+  "send-rating": "send-rating",
+  "like-rating": "like-rating",
+  "add-feedback-title": "add-feedback-title",
+  "error-send-rating": "error-send-rating",
+  "you-use-like-rating": "you-use-like-rating"
 }

@@ -13,6 +13,7 @@
   "about": "about",
   "access-denied": "access-denied",
   "add-comment": "add-comment",
+  "add-feedback-title": "add-feedback-title",
   "admin-page": "admin-page",
   "article-comments": "",
   "article-not-found": "",
@@ -47,11 +48,13 @@
   "error-load-article-data": "error-load-article-data",
   "error-load-data": "error-load-data",
   "error-loading-article": "",
+  "error-send-rating": "error-send-rating",
   "input-login": "input-login",
   "input-password": "input-password",
   "input-placeholder": "input-placeholder",
   "language": "language",
   "language-short": "",
+  "like-rating": "like-rating",
   "load-comment": "load-comment",
   "login": "login",
   "login-account": "login-account",
@@ -82,5 +85,6 @@
   "send-rating": "send-rating",
   "to-main-page": "to-main-page",
   "unexpected-error": "unexpected-error",
+  "you-use-like-rating": "you-use-like-rating",
   "your-feedback": "your-feedback"
 }
