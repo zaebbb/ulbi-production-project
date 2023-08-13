@@ -100,7 +100,9 @@ module.exports = {
     "@typescript-eslint/no-floating-promises": ['warn'],
     "@typescript-eslint/no-non-null-assertion": ['warn'],
     "multiline-ternary": ['off'],
-    "dev-proger-plugin/path-checker": 'error',
+    "dev-proger-plugin/path-checker": ['error', {
+      alias: '@'
+    }],
     "import/no-duplicates": "off",
     "import/prefer-default-export": 0,
     "no-duplicate-imports": "off",
