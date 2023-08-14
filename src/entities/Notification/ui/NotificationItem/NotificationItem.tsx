@@ -3,8 +3,7 @@ import { type Notification } from '../../model/types/notifications'
 import cls from './NotificationItem.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Text, TextSize } from '@/shared/ui/Text/Text'
-import { Card } from '@/widgets/Card'
-import { CardTheme } from '@/widgets/Card/ui/Card'
+import { Card, CardTheme } from '@/widgets/Card'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
 
 interface NotificationItemProps {
