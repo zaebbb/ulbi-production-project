@@ -12,5 +12,4 @@ export {
   type ArticleDetailsSchema,
 } from './model/types/articleDetailsSchema'
 export { ArticleDetails } from './ui/ArticleDetails/ArticleDetails'
-export { articleDetailsReducer } from './model/slice/articleDetailsSlice'
 export { ArticleBlockType } from './model/types/article'
