@@ -15,7 +15,7 @@ import {
 } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import cls from './ArticleDetails.module.scss'
-import { Icon } from '@/widgets/Icon/Icon'
+import { Icon } from '@/widgets/Icon'
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
 import { Avatar, AvatarSize } from '@/shared/ui/Avatar/Avatar'
