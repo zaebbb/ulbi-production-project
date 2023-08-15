@@ -12,6 +12,5 @@ export {
 } from './model/services/fetchProfileData/fetchProfileData'
 export {
   profileActions,
-  profileReducer,
 } from './model/slice/profileSlice'
 export { ValidateProfileError } from './model/const/consts'

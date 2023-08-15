@@ -104,7 +104,12 @@ module.exports = {
       alias: '@'
     }],
     "dev-proger-plugin/public-api-imports": ['error', {
-      alias: '@'
+      alias: '@',
+      testFilesPatterns: [
+        '**/*.test.*',
+        '**/*.stories.*',
+        '**/StoreDecorator.tsx'
+      ]
     }],
     "import/no-duplicates": "off",
     "import/prefer-default-export": 0,

@@ -5,4 +5,3 @@ export {
   getAddCommentFormText,
 } from './model/selectors/addCommentFormSelectos'
 export type { AddCommentFormSchema } from './model/types/addCommentForm'
-export { addCommentFormReducer } from './model/slices/addCommentFormSlice'
