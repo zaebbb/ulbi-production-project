@@ -6,12 +6,12 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import { LoginModal } from '@/features/AuthByUsername'
 import { getUserAuthData } from '@/entities/User'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Text, TextTheme } from '@/shared/ui/Text/Text'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink/AppLink'
 import { HStack } from '@/shared/ui/Stack/Hstack/HStack'
 import { NotificationButton } from '@/features/notificationButton'
 import { AvatarMenu } from '@/features/avatarMenu'
+import { RoutePath } from '@/shared/const'
 
 interface NavbarProps {
   className?: string
