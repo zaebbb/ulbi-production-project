@@ -4,9 +4,9 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { Text, TextSize } from '@/shared/ui/Text/Text'
 import { Button, ThemeButton } from '@/shared/ui/Button/Button'
 import { AppLink } from '@/shared/ui/AppLink/AppLink'
-import { RoutePath } from '@/shared/config/routeConfig/routeConfig'
 import { Page } from '@/widgets/Page'
 import { VStack } from '@/shared/ui/Stack/VStack/VStack'
+import { RoutePath } from '@/shared/const'
 
 interface ForbiddenPageProps {
   className?: string
