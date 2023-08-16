@@ -111,6 +111,13 @@ module.exports = {
         '**/StoreDecorator.tsx'
       ]
     }],
+    "dev-proger-plugin/layer-imports": ['error', {
+      alias: '@',
+      ignoreImportPatterns: [
+        '**/StoreProvider',
+        '**/testing',
+      ]
+    }],
     "import/no-duplicates": "off",
     "import/prefer-default-export": 0,
     "no-duplicate-imports": "off",
@@ -149,6 +156,7 @@ module.exports = {
   ignorePatterns: [
     '.eslintrc.js',
     'vite.config.ts',
-    'updateImports.ts'
+    'updateImports.ts',
+    'preview.ts'
   ]
 };

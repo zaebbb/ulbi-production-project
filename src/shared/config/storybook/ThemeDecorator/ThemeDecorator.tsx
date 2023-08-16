@@ -1,5 +1,7 @@
 import { type Story } from '@storybook/react'
-import { type Theme, ThemeProvider } from '@/app/providers/ThemeProvider'
+// eslint-disable-next-line dev-proger-plugin/layer-imports
+import { ThemeProvider } from '@/app/providers/ThemeProvider'
+import { type Theme } from '@/shared/const'
 
 export const ThemeDecorator = (theme: Theme) => (StoryComponent: Story) => {
   return (

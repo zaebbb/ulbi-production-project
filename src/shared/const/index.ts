@@ -23,3 +23,4 @@ export const RoutePath: Record<AppRoutes, string> = {
   [AppRoutes.ACCESS_DENIED]: '/access-denied',
   [AppRoutes.NOT_FOUND]: '*',
 }
+export { Theme } from '@/shared/const/theme'
