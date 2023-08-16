@@ -5,13 +5,13 @@ import {
 import {
   ThemeDecorator,
 } from '../../src/shared/config/storybook/ThemeDecorator/ThemeDecorator'
-import { Theme } from '../../src/app/providers/ThemeProvider'
 import {
   BrowserRouterDecorator,
 } from '../../src/shared/config/storybook/BrowserRouterDecorator/BrowserRouterDecorator'
 import {
   SuspenseDecorator,
 } from '../../src/shared/config/storybook/SuspenceDecorator/SuspenceDecorator'
+import {Theme} from "@/shared/const";
 
 const preview = {
   parameters: {

@@ -15,7 +15,6 @@ import {
 } from '../ArticleImageBlockComponent/ArticleImageBlockComponent'
 import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleTextBlockComponent'
 import cls from './ArticleDetails.module.scss'
-import { Icon } from '@/widgets/Icon'
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
 import { Avatar, AvatarSize } from '@/shared/ui/Avatar/Avatar'
@@ -24,6 +23,7 @@ import { Text, TextSize, TextTheme } from '@/shared/ui/Text/Text'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { Icon } from '@/shared/ui/Icon'
 
 interface ArticleDetailsProps {
   className?: string
