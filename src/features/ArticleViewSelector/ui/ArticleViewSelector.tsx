@@ -4,7 +4,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { ArticleView } from '@/entities/Article'
 import ListIcon from '@/shared/assets/icons/bi_list.svg'
 import TiledIcon from '@/shared/assets/icons/fe_tiled.svg'
-import { Button, ThemeButton } from '@/shared/ui/Button/Button'
+import { Button, ThemeButton } from '@/shared/ui/Button'
 import { Icon } from '@/shared/ui/Icon'
 
 interface ArticleViewSelectorProps {

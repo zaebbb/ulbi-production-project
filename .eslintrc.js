@@ -157,6 +157,7 @@ module.exports = {
     '.eslintrc.js',
     'vite.config.ts',
     'updateImports.ts',
-    'preview.ts'
+    'preview.ts',
+    'createPublicApiForSharedUI.ts'
   ]
 };

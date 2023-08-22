@@ -21,10 +21,10 @@ import {
   ArticleTabs,
 } from '@/entities/Article'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Input } from '@/shared/ui/Input/Input'
+import { Input } from '@/shared/ui/Input'
 import { type SortOrder } from '@/shared/types'
 import { useDebounce } from '@/shared/lib/hooks/useDebounce/useDebounce'
-import { type TabItem } from '@/shared/ui/Tabs/Tabs'
+import { type TabItem } from '@/shared/ui/Tabs'
 
 interface ArticlePageFiltersProps {
   className?: string
