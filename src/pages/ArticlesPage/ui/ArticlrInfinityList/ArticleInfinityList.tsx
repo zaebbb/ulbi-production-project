@@ -10,7 +10,7 @@ import {
 } from '../../model/selectors/articlesPageSelectors'
 import { getArticles } from '../../model/slice/articlePageSlice/articlePageSlice'
 import cls from './ArticleInfinityList.module.scss'
-import { Text, TextTheme } from '@/shared/ui/Text/Text'
+import { Text, TextTheme } from '@/shared/ui/Text'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 import { ArticleList } from '@/entities/Article'

@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import cls from './AdminPage.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { Text, TextSize } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page'
 
 interface AdminPageProps {

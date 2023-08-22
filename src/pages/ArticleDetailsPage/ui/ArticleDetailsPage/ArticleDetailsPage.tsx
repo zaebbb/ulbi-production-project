@@ -8,11 +8,11 @@ import cls from './ArticleDetailsPage.module.scss'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
 import { Page } from '@/widgets/Page'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 import { ArticleDetails } from '@/entities/Article'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ArticleRating } from '@/features/articleRating'
-import { VStack } from '@/shared/ui/Stack/VStack/VStack'
+import { VStack } from '@/shared/ui/Stack'
 
 interface ArticleDetailsPageProps {
   className?: string

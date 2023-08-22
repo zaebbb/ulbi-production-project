@@ -2,7 +2,7 @@ import React, { memo, useMemo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { ArticleType } from '../../model/types/article'
 import cls from './ArticleTabs.module.scss'
-import { type TabItem, Tabs } from '@/shared/ui/Tabs/Tabs'
+import { type TabItem, Tabs } from '@/shared/ui/Tabs'
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface ArticleTabsProps {

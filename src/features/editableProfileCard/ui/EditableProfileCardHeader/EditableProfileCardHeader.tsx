@@ -8,9 +8,9 @@ import { updateProfileData } from '../../model/services/updateProfileData/update
 import cls from './EditableProfileCardHeader.module.scss'
 import { getUserAuthData } from '@/entities/User'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Button, ThemeButton } from '@/shared/ui/Button/Button'
-import { HStack } from '@/shared/ui/Stack/Hstack/HStack'
-import { Text } from '@/shared/ui/Text/Text'
+import { Button, ThemeButton } from '@/shared/ui/Button'
+import { HStack } from '@/shared/ui/Stack'
+import { Text } from '@/shared/ui/Text'
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface EditableProfileCardHeaderProps {

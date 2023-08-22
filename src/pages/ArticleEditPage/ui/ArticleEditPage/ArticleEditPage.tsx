@@ -4,7 +4,7 @@ import { useParams } from 'react-router-dom'
 import cls from './ArticleEditPage.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Page } from '@/widgets/Page'
-import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { Text, TextSize } from '@/shared/ui/Text'
 
 interface ArticleEditPageProps {
   className?: string

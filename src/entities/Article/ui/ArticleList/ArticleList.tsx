@@ -4,7 +4,7 @@ import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skel
 import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { type Article, ArticleView } from '../../model/types/article'
 import cls from './ArticleList.module.scss'
-import { Text } from '@/shared/ui/Text/Text'
+import { Text } from '@/shared/ui/Text'
 import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface ArticleListProps {

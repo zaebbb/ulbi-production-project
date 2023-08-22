@@ -13,7 +13,7 @@ import cls from './ArticleDetailsComments.module.scss'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { CommentList } from '@/entities/Comment'
 import { AddCommentForm } from '@/features/addCommentForm'
-import { Text, TextSize } from '@/shared/ui/Text/Text'
+import { Text, TextSize } from '@/shared/ui/Text'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
 
