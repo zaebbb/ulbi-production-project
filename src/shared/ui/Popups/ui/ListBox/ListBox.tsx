@@ -1,12 +1,12 @@
-import React, { Fragment, memo } from 'react'
 import { Listbox as HListBox } from '@headlessui/react'
-import { Text } from '../../../Text/Text'
-import { HStack } from '../../../Stack/Hstack/HStack'
+import React, { Fragment, memo } from 'react'
 import { Button, ThemeButton } from '../../../Button/Button'
+import { HStack } from '../../../Stack/Hstack/HStack'
+import { Text } from '../../../Text/Text'
 import popupsCls from '../../styles/popup.module.scss'
 import cls from './ListBox.module.scss'
-import { type DirectionType } from '@/shared/types/ui'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
+import { type DirectionType } from '@/shared/types/ui'
 
 export interface ListBoxItem {
   value: string

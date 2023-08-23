@@ -1,5 +1,5 @@
-import type { ComponentStory, Meta } from '@storybook/react'
 import { action } from '@storybook/addon-actions'
+import type { ComponentStory, Meta } from '@storybook/react'
 import { Tabs } from './Tabs'
 
 const meta: Meta<typeof Tabs> = {

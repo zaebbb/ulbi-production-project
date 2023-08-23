@@ -1,17 +1,17 @@
 import React, { memo } from 'react'
-import { ArticleInfinityList } from '../ArticlrInfinityList/ArticleInfinityList'
 import {
   FetchNextArticlePage,
 } from '../../model/services/fetchNextArticlePage/fetchNextArticlePage'
-import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters'
 import {
   articlesPageReducer,
 } from '../../model/slice/articlePageSlice/articlePageSlice'
+import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters'
+import { ArticleInfinityList } from '../ArticlrInfinityList/ArticleInfinityList'
 import cls from './ArticlesPage.module.scss'
-import { Page } from '@/widgets/Page'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
+import { Page } from '@/widgets/Page'
 
 interface ArticlesPageProps {
   className?: string

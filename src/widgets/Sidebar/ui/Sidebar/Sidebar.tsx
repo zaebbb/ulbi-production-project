@@ -1,14 +1,14 @@
 import React, { memo } from 'react'
 import { useSelector } from 'react-redux'
-import { SidebarItem } from '../SidebarItem/SidebarItem'
 import { getSidebarItems } from '../../model/selectors/getSidebarItems'
 import { type SidebarItemType } from '../../model/types/sidebar'
+import { SidebarItem } from '../SidebarItem/SidebarItem'
 import cls from './Sidebar.module.scss'
+import { LangSwitcher } from '@/features/LangSwitcher'
+import { ThemeSwitcher } from '@/features/ThemeSwicher'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Button, SizeButton, ThemeButton } from '@/shared/ui/Button'
 import { VStack } from '@/shared/ui/Stack'
-import { ThemeSwitcher } from '@/features/ThemeSwicher'
-import { LangSwitcher } from '@/features/LangSwitcher'
 
 interface SidebarProps {
   className?: string

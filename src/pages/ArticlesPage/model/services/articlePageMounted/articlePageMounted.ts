@@ -3,11 +3,11 @@ import {
   getArticlePageMounted,
 } from '../../selectors/articlesPageSelectors'
 import { articlesPageActions } from '../../slice/articlePageSlice/articlePageSlice'
-import { fetchArticles } from '../fetchArticles/fetchArticles'
 import { ArticlePageUrlParams } from '../../types/articlesPage'
+import { fetchArticles } from '../fetchArticles/fetchArticles'
+import { type ThunkConfig } from '@/app/providers/StoreProvider'
 import { type ArticleSortField, type ArticleType } from '@/entities/Article'
 import { type SortOrder } from '@/shared/types'
-import { type ThunkConfig } from '@/app/providers/StoreProvider'
 
 interface ArticlePageMountedProps {
   urlSearchParams?: URLSearchParams

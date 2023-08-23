@@ -17,13 +17,13 @@ import { ArticleTextBlockComponent } from '../ArticleTextBlockComponent/ArticleT
 import cls from './ArticleDetails.module.scss'
 import CalendarIcon from '@/shared/assets/icons/calendar-20-20.svg'
 import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
+import { classNames } from '@/shared/lib/classNames/classNames'
+import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Avatar, AvatarSize } from '@/shared/ui/Avatar'
+import { Icon } from '@/shared/ui/Icon'
 import { Skeleton } from '@/shared/ui/Skeleton'
 import { Text, TextSize, TextTheme } from '@/shared/ui/Text'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { Icon } from '@/shared/ui/Icon'
 
 interface ArticleDetailsProps {
   className?: string

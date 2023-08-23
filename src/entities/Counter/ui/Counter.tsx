@@ -1,7 +1,7 @@
 import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
-import { counterActions } from '../model/slice/counterSlice'
 import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
+import { counterActions } from '../model/slice/counterSlice'
 import { Button } from '@/shared/ui/Button'
 
 export const Counter: React.FC = () => {

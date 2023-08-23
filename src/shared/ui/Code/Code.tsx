@@ -2,8 +2,8 @@ import React, { memo } from 'react'
 import { Button } from '../Button/Button'
 import { Icon } from '../Icon'
 import cls from './Code.module.scss'
-import { classNames } from '@/shared/lib/classNames/classNames'
 import CopyIcon from '@/shared/assets/icons/copy-20-20.svg'
+import { classNames } from '@/shared/lib/classNames/classNames'
 
 interface CodeProps {
   className?: string
