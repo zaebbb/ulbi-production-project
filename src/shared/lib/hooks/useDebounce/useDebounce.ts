@@ -1,5 +1,10 @@
 import React, { useCallback } from 'react'
 
+/**
+ * Хук, который позволяет отменять предыдущий вызов функции пока не истечет delay
+ * @param callback
+ * @param delay - задержка в мс
+ */
 export const useDebounce = (callback: (...args: any[]) => void, delay: number) => {
   const timer = React.useRef<any>()
 
