@@ -1,10 +1,10 @@
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
-import { Avatar } from '@/shared/ui/Avatar'
-import { Menu } from '@/shared/ui/Popups'
 import { getUserAuthData, isAdmin, isManager, userActions } from '@/entities/User'
 import { RoutePath } from '@/shared/const'
+import { Avatar } from '@/shared/ui/Avatar'
+import { Menu } from '@/shared/ui/Popups'
 
 interface AvatarMenuProps {
   className?: string

@@ -1,21 +1,21 @@
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
+import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments'
 import {
   addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle'
-import { getArticleComments } from '../../model/slice/articleDetailsComments'
-import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments'
 import {
   fetchCommentsArticleById,
 } from '../../model/services/fetchCommentsArticleById/fetchCommentsArticleById'
+import { getArticleComments } from '../../model/slice/articleDetailsComments'
 import cls from './ArticleDetailsComments.module.scss'
-import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { CommentList } from '@/entities/Comment'
 import { AddCommentForm } from '@/features/addCommentForm'
-import { Text, TextSize } from '@/shared/ui/Text'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
+import { Text, TextSize } from '@/shared/ui/Text'
 
 interface ArticleDetailsCommentsProps {
   className?: string

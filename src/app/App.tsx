@@ -1,12 +1,12 @@
 import React, { Suspense } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { AppRouter } from './providers/router'
-import { classNames } from '@/shared/lib/classNames/classNames'
-import { Navbar } from '@/widgets/Navbar'
-import { Sidebar } from '@/widgets/Sidebar'
-import { PageLoader } from '@/widgets/PageLoader'
 import { getUserMounted, userActions } from '@/entities/User'
+import { classNames } from '@/shared/lib/classNames/classNames'
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
+import { Navbar } from '@/widgets/Navbar'
+import { PageLoader } from '@/widgets/PageLoader'
+import { Sidebar } from '@/widgets/Sidebar'
 
 export const App: React.FC = () => {
   const { theme } = useTheme()

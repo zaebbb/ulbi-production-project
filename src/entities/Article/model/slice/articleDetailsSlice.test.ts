@@ -1,5 +1,5 @@
-import { type ArticleDetailsSchema } from '../types/articleDetailsSchema'
 import { fetchArticleById } from '../services/fetchArticleById/fetchArticleById'
+import { type ArticleDetailsSchema } from '../types/articleDetailsSchema'
 import { articleDetailsReducer } from './articleDetailsSlice'
 
 describe('Тест articleDetailsSlice.test', () => {

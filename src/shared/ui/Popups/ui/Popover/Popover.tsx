@@ -1,7 +1,7 @@
-import React, { memo } from 'react'
 import { Popover as HPopover } from '@headlessui/react'
-import popupsCls from '../../styles/popup.module.scss'
+import React, { memo } from 'react'
 import { type DirectionType } from '../../../../types/ui'
+import popupsCls from '../../styles/popup.module.scss'
 import cls from './Popover.module.scss'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 

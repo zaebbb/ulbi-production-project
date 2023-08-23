@@ -1,8 +1,8 @@
 import { ValidateProfileError } from '../../const/consts'
 import { updateProfileData } from './updateProfileData'
-import { TestAsyncThunk } from '@/shared/lib/tests/TestAsync/TestAsyncThunk'
-import { Currency } from '@/entities/Currency'
 import { Country } from '@/entities/Country'
+import { Currency } from '@/entities/Currency'
+import { TestAsyncThunk } from '@/shared/lib/tests/TestAsync/TestAsyncThunk'
 
 const data = {
   id: '1',

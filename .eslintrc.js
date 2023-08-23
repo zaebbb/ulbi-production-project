@@ -22,7 +22,8 @@ module.exports = {
     "i18next",
     "react-hooks",
     "dev-proger-plugin",
-    'import'
+    'import',
+    "unused-imports"
   ],
   rules: {
     // отступы 2 пробела
@@ -36,7 +37,7 @@ module.exports = {
     // ошибка именованного экспорта
     // "import/prefer-default-export": "off",
     // переменная нигде не используется
-    "no-unused-vars": ["warn"],
+    "no-unused-vars": 'off',
     'react/require-default-props': 'off',
     // отключение требования импорта react / рекомендуется от 17 версии react
     // 'react/react/in-jsx-scope': 'off',
@@ -125,10 +126,25 @@ module.exports = {
     "import/no-unresolved": 'off',
     "import/named": 'off',
     "import/namespace": 'off',
-    "import/order": ['error'],
+    "import/order": [
+      'error', {
+        "pathGroups": [
+          {
+            "pattern": "@/**",
+            "group": "internal",
+            "position": "after"
+          }
+        ],
+        "alphabetize": {
+          "order": "asc",
+          "caseInsensitive": false
+        }
+      }
+    ],
     "import/default": 'off',
     "import/export": 2,
     "@typescript-eslint/consistent-type-imports": ['warn'],
+    "unused-imports/no-unused-imports": "error",
   },
   globals: {
     __IS_DEV__: true,

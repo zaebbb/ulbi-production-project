@@ -1,10 +1,10 @@
-import { type ReactNode } from 'react'
-import { render, type RenderResult } from '@testing-library/react'
-import { MemoryRouter } from 'react-router-dom'
-import { I18nextProvider } from 'react-i18next'
 import { type ReducersMapObject } from '@reduxjs/toolkit'
-import i18ForTests from '@/shared/config/i18n/i18ForTests'
+import { render, type RenderResult } from '@testing-library/react'
+import { type ReactNode } from 'react'
+import { I18nextProvider } from 'react-i18next'
+import { MemoryRouter } from 'react-router-dom'
 import { type StateSchema, StoreProvider } from '@/app/providers/StoreProvider'
+import i18ForTests from '@/shared/config/i18n/i18ForTests'
 
 export interface componentRenderOptions {
   route?: string
