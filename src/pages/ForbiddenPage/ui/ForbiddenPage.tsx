@@ -1,6 +1,6 @@
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
-import { RoutePath } from '@/shared/const'
+import { getRouteMain } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppLink } from '@/shared/ui/AppLink'
 import { Button, ThemeButton } from '@/shared/ui/Button'
@@ -23,7 +23,7 @@ const ForbiddenPage: React.FC<ForbiddenPageProps> = memo((props: ForbiddenPagePr
           size={TextSize.L}
           title={t('access-denied')}
         />
-        <AppLink to={RoutePath.main}>
+        <AppLink to={getRouteMain()}>
           <Button
             theme={ThemeButton.OUTLINE}
           >
