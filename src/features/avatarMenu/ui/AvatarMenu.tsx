@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, isAdmin, isManager, userActions } from '@/entities/User'
-import { RoutePath } from '@/shared/const'
+import { getRouteAdminPanel, getRouteProfile } from '@/shared/const'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Menu } from '@/shared/ui/Popups'
 
@@ -33,11 +33,11 @@ export const AvatarMenu: React.FC<AvatarMenuProps> = memo((props: AvatarMenuProp
       items={[
         ...(isAdminPanel ? [{
           content: t('nav-admin'),
-          href: RoutePath.admin_panel,
+          href: getRouteAdminPanel(),
         }] : []),
         {
           content: t('nav-profile'),
-          href: RoutePath.profile + authData.id,
+          href: getRouteProfile(authData.id),
         },
         {
           content: t('btn-logout'),
