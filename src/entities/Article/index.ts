@@ -1,5 +1,3 @@
-export { ArticleTabs } from './ui/ArticleTabs/ArticleTabs'
-export { ArticleSortSelector } from './ui/ArticleSortSelector/ArticleSortSelector'
 export { ArticleList } from './ui/ArticleList/ArticleList'
 export { getArticleDetailsData } from './model/selectors/articleDetails'
 export {
