@@ -1,20 +1,14 @@
 import React from 'react'
-import { useDispatch, useSelector } from 'react-redux'
-import { getCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
-import { counterActions } from '../model/slice/counterSlice'
+import { useCounterValue } from '../model/selectors/getCounterValue/getCounterValue'
+import { useCounterActions } from '../model/slice/counterSlice'
 import { Button } from '@/shared/ui/Button'
 
 export const Counter: React.FC = () => {
-  const dispatch = useDispatch()
-  const counterValue = useSelector(getCounterValue)
-
-  const increment = () => {
-    dispatch(counterActions.increment())
-  }
-
-  const decrement = () => {
-    dispatch(counterActions.decrement())
-  }
+  const counterValue = useCounterValue()
+  const {
+    increment,
+    decrement,
+  } = useCounterActions()
 
   return (
     <div>
