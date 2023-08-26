@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 jobs:
   build-and-ui-testing:
-    runs-on: [ windows-2019 ]
+    runs-on: ubuntu-latest
     concurrency: ci-${{ github.ref }}
     environment:
       name: github-pages
@@ -35,14 +35,15 @@ jobs:
 
       - name: build production project
         run: npm run build:prod
+        if: always()
 
       - name: Сборка Storybook
-        if: always()
         run: npm run storybook:build
+        if: always()
 
       - name: UI-testing (Regressive testing)
-        if: always()
         run: npm run test:ui:ci
+        if: always()
 
       - name: Generate HTML report
         run: npm run test:ui:report
