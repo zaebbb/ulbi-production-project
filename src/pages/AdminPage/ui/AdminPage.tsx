@@ -14,7 +14,7 @@ const AdminPage: React.FC<AdminPageProps> = memo((props: AdminPageProps) => {
   const { t } = useTranslation()
 
   return (
-    <Page className={classNames(cls.AdminPage, {}, [className])}>
+    <Page data-testid={'AdminPage'} className={classNames(cls.AdminPage, {}, [className])}>
       <Text size={TextSize.L} title={t('admin-page')} />
     </Page>
   )
