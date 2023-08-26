@@ -2,17 +2,18 @@ import type { ComponentStory } from '@storybook/react'
 import { ComponentMeta } from '@storybook/react'
 import { type Article, ArticleBlockType, ArticleView } from '../../model/types/article'
 import { ArticleList } from './ArticleList'
+import ImageStorybook from '@/shared/assets/images/storybook.png'
 
 const article: Article = {
   id: '1',
   title: '55e1d6464b57ac14f1dc8460962e33791c3ad6e04e507440722d72d5924ec7_640',
   subtitle: 'new js 2023',
   user: {
-    avatar: 'https://27sysday.ru/wp-content/uploads/2021/05/js_thumb.jpg',
+    avatar: ImageStorybook,
     id: '1',
     username: 'admin',
   },
-  image: 'https://27sysday.ru/wp-content/uploads/2021/05/js_thumb.jpg',
+  image: ImageStorybook,
   views: 1022,
   createdAt: '26.06.2023',
   type: [],
