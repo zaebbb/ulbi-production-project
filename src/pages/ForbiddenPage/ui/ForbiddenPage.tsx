@@ -17,7 +17,7 @@ const ForbiddenPage: React.FC<ForbiddenPageProps> = memo((props: ForbiddenPagePr
   const { t } = useTranslation()
 
   return (
-    <Page className={classNames('', {}, [className])}>
+    <Page data-testid={'ForbiddenPage'} className={classNames('', {}, [className])}>
       <VStack gap={16}>
         <Text
           size={TextSize.L}
