@@ -30,7 +30,7 @@ jobs:
         if: always()
         run: npm run test:ui:ci
 
-  checks:
+  linting:
     runs-on: [ windows-2019 ]
     strategy:
       matrix:
