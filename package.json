@@ -20,7 +20,7 @@
     "test:coverage": "jest --config ./config/jest/jest.config.ts --coverage",
     "test:ui": "npx loki test",
     "test:ui:ok": "npx loki approve",
-    "test:ui:ci": "npx loki test --requireReference --reactUri file:./storybook-static",
+    "test:ui:ci": "npx loki update --requireReference --reactUri file:./storybook-static",
     "test:ui:report": "npm run test:ui:report:json && npm run test:ui:report:html",
     "test:ui:report:json": "node scripts/generate-visual-json-report.js",
     "test:ui:report:html": "reg-cli --from .loki/report.json --report .loki/report.html",
