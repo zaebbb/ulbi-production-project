@@ -5,20 +5,9 @@ on:
     branches: [ main ]
   pull_request:
     branches: [ main ]
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-concurrency:
-  group: "pages"
-  cancel-in-progress: true
 jobs:
   build-and-ui-testing:
-    runs-on: ubuntu-latest
-    concurrency: ci-${{ github.ref }}
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: [ windows-2019 ]
     strategy:
       matrix:
         node-version: [ 16.x ]
@@ -35,34 +24,14 @@ jobs:
 
       - name: build production project
         run: npm run build:prod
-        if: always()
 
       - name: Сборка Storybook
-        run: npm run storybook:build
         if: always()
+        run: npm run storybook:build
 
       - name: UI-testing (Regressive testing)
+        if: always()
         run: npm run test:ui:ci
-        if: always()
-
-      - name: Generate HTML report
-        run: npm run test:ui:report
-        if: always()
-
-      - name: Setup Pages
-        uses: actions/configure-pages@v2
-        if: always()
-
-      - name: Upload artifact
-        uses: actions/upload-pages-artifact@v1
-        if: always()
-        with:
-          path: '.loki'
-
-      - name: Deploy to GitHub Pages
-        id: deployment
-        if: always()
-        uses: actions/deploy-pages@v1
 
   checks:
     runs-on: [ windows-2019 ]
@@ -91,3 +60,42 @@ jobs:
       - name: unit testing
         if: always()
         run: npm run test:unit
+
+  unit-testing:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install modules
+        run: npm ci --force
+
+      - name: unit testing
+        if: always()
+        run: npm run test:unit
+
+  build-production:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install modules
+        run: npm ci --force
+
+      - name: build production project
+        run: npm run build:prod
