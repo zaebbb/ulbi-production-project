@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  build-and-ui-testing:
+  ui-testing:
     runs-on: [ windows-2019 ]
     strategy:
       matrix:
