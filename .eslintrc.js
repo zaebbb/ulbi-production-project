@@ -104,19 +104,19 @@ module.exports = {
     "dev-proger-plugin/path-checker": ['error', {
       alias: '@'
     }],
+    "dev-proger-plugin/layer-imports": ['error', {
+      alias: '@',
+      ignoreImportPatterns: [
+        '**/StoreProvider',
+        '**/testing',
+      ]
+    }],
     "dev-proger-plugin/public-api-imports": ['error', {
       alias: '@',
       testFilesPatterns: [
         '**/*.test.*',
         '**/*.stories.*',
         '**/StoreDecorator.tsx'
-      ]
-    }],
-    "dev-proger-plugin/layer-imports": ['error', {
-      alias: '@',
-      ignoreImportPatterns: [
-        '**/StoreProvider',
-        '**/testing',
       ]
     }],
     "import/no-duplicates": "off",
