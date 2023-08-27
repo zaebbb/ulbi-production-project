@@ -1,12 +1,13 @@
 import type { ComponentStory, Meta } from '@storybook/react'
 import { Avatar, AvatarSize } from './Avatar'
+import ImageStorybook from '@/shared/assets/images/storybook.png'
 
 const meta: Meta<typeof Avatar> = {
   title: 'shared/Avatar',
   component: Avatar,
 }
 
-const src: string = 'https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg'
+const src: string = ImageStorybook
 
 export default meta
 const Template: ComponentStory<typeof Avatar> = (args) => <Avatar {...args} />

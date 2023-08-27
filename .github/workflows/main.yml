@@ -6,7 +6,7 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  pipeline:
+  ui-testing:
     runs-on: [ windows-2019 ]
     strategy:
       matrix:
@@ -20,10 +20,31 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: install modules
-        run: npm install
+        run: npm ci --force
 
-      - name: build production project
-        run: npm run build:prod
+      - name: Сборка Storybook
+        if: always()
+        run: npm run storybook:build
+
+      - name: UI-testing (Regressive testing)
+        if: always()
+        run: npm run test:ui:ci
+
+  linting:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install modules
+        run: npm ci --force
 
       - name: linting typescript
         if: always()
@@ -33,13 +54,41 @@ jobs:
         if: always()
         run: npm run lint:scss
 
+  unit-testing:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install modules
+        run: npm ci --force
+
       - name: unit testing
         if: always()
         run: npm run test:unit
 
-      - name: Сборка Storybook
-        run: npm run storybook:build
+  build-production:
+    runs-on: [ windows-2019 ]
+    strategy:
+      matrix:
+        node-version: [ 16.x ]
 
-      - name: UI-testing (Regressive testing)
-        if: always()
-        run: npm run test:ui:ci
+    steps:
+      - uses: actions/checkout@v2
+      - name: Setup Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v1
+        with:
+          node-version: ${{ matrix.node-version }}
+
+      - name: install modules
+        run: npm ci --force
+
+      - name: build production project
+        run: npm run build:prod

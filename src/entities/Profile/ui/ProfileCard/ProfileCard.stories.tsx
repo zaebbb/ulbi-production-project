@@ -3,6 +3,7 @@ import { ComponentMeta } from '@storybook/react'
 import { ProfileCard } from './ProfileCard'
 import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
+import ImageStorybook from '@/shared/assets/images/storybook.png'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from '@/shared/const'
@@ -28,7 +29,7 @@ Primary.args = {
     country: Country.Russia,
     city: 'Ekb',
     username: 'admin',
-    avatar: 'https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg',
+    avatar: ImageStorybook,
   },
 }
 
