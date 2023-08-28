@@ -2469,6 +2469,15 @@
       ]
     },
     {
+      "id": "5",
+      "username": "testUser",
+      "password": "testPassword",
+      "avatar": "https://avatarko.ru/img/kartinka/14/Iron_man_13295.jpg",
+      "roles": [
+        "ADMIN"
+      ]
+    },
+    {
       "id": "2",
       "username": "user",
       "password": "123",
