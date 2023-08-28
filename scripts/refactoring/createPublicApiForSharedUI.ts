@@ -1,5 +1,5 @@
-import * as path from 'path';
-import {Project} from 'ts-morph'
+import * as path from 'path'
+import { Project } from 'ts-morph'
 
 const project = new Project({})
 
@@ -14,7 +14,7 @@ const componentDirs = sharedUiDirectory?.getDirectories()
 const isAbsolute = (value: string) => {
   const layers = ['app', 'features', 'shared', 'widgets', 'entities', 'pages']
 
-  return layers.some(layer => value.startsWith(layer));
+  return layers.some(layer => value.startsWith(layer))
 }
 
 componentDirs?.forEach(directory => {
@@ -23,7 +23,7 @@ componentDirs?.forEach(directory => {
 
   if (!indexFile) {
     const code = `export * from './${directory.getBaseName()}'`
-    const file = directory.createSourceFile('index.ts', code, {overwrite: true})
+    const file = directory.createSourceFile('index.ts', code, { overwrite: true })
 
     file.save()
   }
