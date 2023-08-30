@@ -66,6 +66,8 @@ export const StarRating: React.FC<StarRatingProps> = memo((props: StarRatingProp
           }
           width={size}
           height={size}
+          data-testid={`star-rating-${star}`}
+          data-selected={currentStartCount >= star}
         />
       ))}
     </div>

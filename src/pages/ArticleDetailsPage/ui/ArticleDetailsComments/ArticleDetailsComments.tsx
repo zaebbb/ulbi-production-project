@@ -1,14 +1,18 @@
 import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useSelector } from 'react-redux'
-import { getArticleDetailsCommentsIsLoading } from '../../model/selectors/comments'
+import {
+  getArticleDetailsCommentsIsLoading,
+} from '../../model/selectors/comments'
 import {
   addCommentForArticle,
 } from '../../model/services/addCommentForArticle/addCommentForArticle'
 import {
   fetchCommentsArticleById,
 } from '../../model/services/fetchCommentsArticleById/fetchCommentsArticleById'
-import { getArticleComments } from '../../model/slice/articleDetailsComments'
+import {
+  getArticleComments,
+} from '../../model/slice/articleDetailsComments'
 import cls from './ArticleDetailsComments.module.scss'
 import { CommentList } from '@/entities/Comment'
 import { AddCommentForm } from '@/features/addCommentForm'

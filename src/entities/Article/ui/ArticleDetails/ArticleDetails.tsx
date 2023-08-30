@@ -98,7 +98,7 @@ export const ArticleDetails: React.FC<ArticleDetailsProps> = memo((props: Articl
   } else {
     content = (
       <>
-        <div className={cls.avatarWrapper}>
+        <div className={cls.avatarWrapper} data-testid={'ArticleDetails'}>
           <Avatar
             className={cls.avatar}
             src={article?.image}

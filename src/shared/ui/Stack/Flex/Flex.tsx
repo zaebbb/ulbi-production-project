@@ -42,6 +42,7 @@ export const Flex: React.FC<FlexProps> = (props: FlexProps) => {
     wrap = 'nowrap',
     direction = 'row',
     gap = 32,
+    ...otherProps
   } = props
 
   const additional: Additional = [
@@ -54,7 +55,7 @@ export const Flex: React.FC<FlexProps> = (props: FlexProps) => {
   ]
 
   return (
-    <div className={classNames(cls.Flex, {}, additional)}>
+    <div className={classNames(cls.Flex, {}, additional)} {...otherProps}>
       {children}
     </div>
   )

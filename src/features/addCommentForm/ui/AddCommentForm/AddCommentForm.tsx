@@ -46,17 +46,22 @@ const AddCommentForm: React.FC<AddCommentFormProps> = memo((props: AddCommentFor
 
   return (
     <DynamicModuleLoader reducers={reducers}>
-      <div className={classNames(cls.AddCommentForm, {}, [className])}>
+      <div
+        data-testid={'AddCommentForm'}
+        className={classNames(cls.AddCommentForm, {}, [className])}
+      >
         <Input
           className={cls.input}
           placeholder={t('input-placeholder')}
           value={text}
           onChange={onCommentTextChange}
           readonly={isLoading}
+          data-testid={'add-comment-form-input'}
         />
         <Button
           onClick={onSendHandler}
           theme={ThemeButton.OUTLINE}
+          data-testid={'add-comment-form-button'}
         >
           {
             isLoading ? t('load-comment') : t('add-comment')

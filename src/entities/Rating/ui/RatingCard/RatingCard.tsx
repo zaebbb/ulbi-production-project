@@ -65,13 +65,17 @@ export const RatingCard: React.FC<RatingCardProps> = memo((props: RatingCardProp
         placeholder={t('your-feedback')}
         onChange={setFeedback}
         value={feedback}
+        data-testid={'rating-card-input'}
       />
     </>
 
   )
 
   return (
-    <Card className={classNames(cls.RatingCard, {}, [className])}>
+    <Card
+      data-testid={'RatingCard'}
+      className={classNames(cls.RatingCard, {}, [className])}
+    >
       <VStack align={'center'} gap={16}>
         <Text title={title} />
         <StarRating size={50} onSelect={onSelectStarts} selectedStars={starsCount} />
@@ -86,12 +90,14 @@ export const RatingCard: React.FC<RatingCardProps> = memo((props: RatingCardProp
                 onClick={acceptHandler}
                 theme={ThemeButton.BACKGROUND_INVERTED}
                 className={cls.sendBtn}
+                data-testid={'rating-card-send'}
               >
                 {t('send-rating')}
               </Button>
               <Button
                 onClick={cancelHandler}
                 theme={ThemeButton.OUTLINE}
+                data-testid={'rating-card-close'}
               >
                 {t('close-rating-modal')}
               </Button>
