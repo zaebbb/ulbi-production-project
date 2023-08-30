@@ -48,6 +48,7 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
       className={
         classNames(cls.ArticleList, {}, [className, cls[view]])
       }
+      data-testid={'ArticleList'}
     >
       { articles.map(article => (
         <ArticleListItem
