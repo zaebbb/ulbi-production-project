@@ -11,7 +11,7 @@ describe('Пользователь заходит на страницу стат
 
   it('Загрузка списка статей на стабах (фикстурах)', () => {
     cy.intercept('GET', '**/articles?*', {
-      fixture: 'articles-list.json'
+      fixture: 'articles-list.json',
     })
 
     cy.visit('/articles').should('exist')

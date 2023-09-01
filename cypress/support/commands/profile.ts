@@ -1,4 +1,4 @@
-import { User } from "../../../src/entities/User";
+import { type User } from '../../../src/entities/User'
 
 export const updateProfile = (firstname: string = 'new data', lastname: string = 'new data') => {
   cy.getByTestId('editable-profile-card-header-edit-button').click()
@@ -12,18 +12,19 @@ export const resetProfile = (profileId: string) => {
     method: 'PUT',
     url: `http://localhost:8000/profile/${profileId}`,
     headers: {
-      authorization: 'test-token'
+      authorization: 'test-token',
     },
     body: {
-      id: "5",
-      first: "test",
-      lastname: "test",
+      id: '5',
+      first: 'test',
+      lastname: 'test',
       age: 2021,
-      currency: "RUB",
-      country: "Russia",
-      city: "Ekb",
-      username: "test",
-      avatar: "https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg"
+      currency: 'RUB',
+      country: 'Russia',
+      city: 'Ekb',
+      username: 'test',
+      // eslint-disable-next-line max-len
+      avatar: 'https://randomwordgenerator.com/img/picture-generator/53e0d3424353ac14f1dc8460962e33791c3ad6e04e50744172277fd7924fcd_640.jpg',
     },
   })
 }

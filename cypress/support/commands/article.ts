@@ -1,24 +1,25 @@
-import {Article} from "../../../src/entities/Article";
+import { type Article } from '../../../src/entities/Article'
 
 const articleData = {
-  "title": "Научная статья - Биология",
-  "subtitle": "БиологиЯ",
-  "image": "https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200",
-  "views": 1022,
-  "createdAt": "26.02.2022",
-  "userId": "1",
-  "type": [
-    "SCIENCE"
+  title: 'Научная статья - Биология',
+  subtitle: 'БиологиЯ',
+  // eslint-disable-next-line max-len
+  image: 'https://avatars.mds.yandex.net/get-zen_doc/2746556/pub_5f50dd7e1a1ddf4776aa5569_5f50decd2506f211d1de6284/scale_1200',
+  views: 1022,
+  createdAt: '26.02.2022',
+  userId: '1',
+  type: [
+    'SCIENCE',
   ],
-  "blocks": []
+  blocks: [],
 }
 
 export const createArticle = (article?: Article) => {
   return cy.request({
     method: 'POST',
-    url: `http://localhost:8000/articles`,
+    url: 'http://localhost:8000/articles',
     headers: {
-      authorization: 'test-token'
+      authorization: 'test-token',
     },
     body: article ?? articleData,
   }).then(({ body }) => {
@@ -31,7 +32,7 @@ export const removeArticle = (articleId: string) => {
     method: 'DELETE',
     url: `http://localhost:8000/articles/${articleId}`,
     headers: {
-      authorization: 'test-token'
+      authorization: 'test-token',
     },
   })
 }

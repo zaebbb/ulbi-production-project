@@ -1,6 +1,6 @@
+import { type User } from '../../../src/entities/User'
 import { USER_LOCAL_STORAGE_KEY } from '../../../src/shared/const/localstorage'
-import { User } from "../../../src/entities/User";
-import {selectByTestId} from "../../helpers/selectByTestId";
+import { selectByTestId } from '../../helpers/selectByTestId'
 
 export const commandLogin = (username: string = 'test', password: string = 'test') => {
   return cy.request({
