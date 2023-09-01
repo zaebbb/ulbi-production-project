@@ -167,6 +167,7 @@ module.exports = {
         'dev-proger-plugin/layer-imports': 'off',
         'dev-proger-plugin/public-api-imports': 'off',
         '@typescript-eslint/no-namespace': 'off',
+        '@typescript-eslint/method-signature-style': 'off',
       }
     },
   ],
@@ -186,7 +187,6 @@ module.exports = {
     'updateImports.ts',
     'preview.ts',
     'cypress.config.ts',
-    '**/cypress/**/*.ts',
     '**/scripts/**/*.{ts,js}',
   ]
 };
