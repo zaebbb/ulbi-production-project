@@ -10,6 +10,7 @@ import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { getFeatureFlags } from '@/shared/lib/features'
 import { VStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page'
@@ -26,6 +27,7 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   const { className } = props
   const { id } = useParams<{ id: string }>()
   const { t } = useTranslation()
+  const isArticleRatingEnabled = getFeatureFlags('isArticleRatingEnabled')
 
   if (!id) {
     return (
@@ -41,7 +43,8 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
         <VStack gap={32}>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id}/>
-          <ArticleRating id={id} />
+          {/* обнаружился баг */}
+          {isArticleRatingEnabled && <ArticleRating id={id}/>}
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
