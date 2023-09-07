@@ -6,11 +6,12 @@ import { ArticleDetailsComments } from '../ArticleDetailsComments/ArticleDetails
 import { ArticleDetailsPageHeader } from '../ArticleDetailsPageHeader/ArticleDetailsPageHeader'
 import cls from './ArticleDetailsPage.module.scss'
 import { ArticleDetails } from '@/entities/Article'
+import { Counter } from '@/entities/Counter'
 import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-import { getFeatureFlags } from '@/shared/lib/features'
+import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features'
 import { VStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page'
@@ -37,13 +38,27 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
     )
   }
 
+  const counter = toggleFeatures({
+    name: 'isArticleCounterEnabled',
+    on: () => <Counter />,
+    off: () => <Counter />,
+  })
+
+  toggleFeatures({
+    name: 'isArticleCounterEnabled',
+    // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+    on: () => console.log('new'),
+    // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
+    off: () => console.log('old'),
+  })
+
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <VStack gap={32}>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id}/>
-          {/* обнаружился баг */}
+          {counter}
           {isArticleRatingEnabled && <ArticleRating id={id}/>}
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
