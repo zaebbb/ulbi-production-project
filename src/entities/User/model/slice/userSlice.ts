@@ -1,4 +1,5 @@
 import { createSlice, type PayloadAction } from '@reduxjs/toolkit'
+import { initAuthData } from '../services/initAuthData'
 import { saveJsonSettings } from '../services/saveJsonSettings'
 import { type JsonSettings } from '../types/jsonSettings'
 import { type User, type UserSchema } from '../types/user'
@@ -16,16 +17,11 @@ export const userSlice = createSlice({
     setAuthData: (state, action: PayloadAction<User>) => {
       state.authData = action.payload
       setFeatureFlags(action.payload.features)
-    },
-    initAuthData: (state) => {
-      const user = localStorage.getItem(USER_LOCAL_STORAGE_KEY)
 
-      if (user) {
-        const userData = JSON.parse(user) as User
-        state.authData = userData
-        setFeatureFlags(userData.features)
-      }
-      state._mounted = true
+      localStorage.setItem(
+        USER_LOCAL_STORAGE_KEY,
+        action.payload.id
+      )
     },
     logout: (state) => {
       localStorage.removeItem(USER_LOCAL_STORAGE_KEY)
@@ -43,6 +39,25 @@ export const userSlice = createSlice({
           if (state.authData) {
             state.authData.jsonSettings = action.payload
           }
+        }
+      )
+      .addCase(
+        initAuthData.fulfilled,
+        (
+          state,
+          action: PayloadAction<User>
+        ) => {
+          state.authData = action.payload
+          setFeatureFlags(action.payload.features)
+          state._mounted = true
+        }
+      )
+      .addCase(
+        initAuthData.rejected,
+        (
+          state
+        ) => {
+          state._mounted = true
         }
       )
   },

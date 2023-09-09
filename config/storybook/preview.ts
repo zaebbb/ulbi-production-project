@@ -12,6 +12,9 @@ import {
   SuspenseDecorator,
 } from '../../src/shared/config/storybook/SuspenceDecorator/SuspenceDecorator'
 import {Theme} from "@/shared/const";
+import {
+  StoreDecorator,
+} from "../../src/shared/config/storybook/StoreDecorator/StoreDecorator";
 
 export const parameters = {
   actions: { argTypesRegex: '^on[A-Z].*' },
@@ -35,5 +38,6 @@ export const parameters = {
 addDecorator(BrowserRouterDecorator)
 addDecorator(StyleDecorator)
 addDecorator(SuspenseDecorator)
+addDecorator(StoreDecorator({}))
 addDecorator(ThemeDecorator(Theme.LIGHT))
 
