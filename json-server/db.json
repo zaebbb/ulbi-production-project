@@ -2634,7 +2634,7 @@
         "isArticleCounterEnabled": true
       },
       "jsonSettings": {
-        "theme": "app_blue_theme",
+        "theme": "app_dark_theme",
         "isFirstVisit": true,
         "settingsPageHasBeenOpen": false
       }

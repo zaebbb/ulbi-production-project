@@ -17,9 +17,6 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
     theme: defaultTheme = Theme.BLUE,
   } = useJsonSettings()
 
-  console.log(defaultTheme)
-  console.log(initialTheme)
-
   const [isThemeInited, setIsThemeInited] = React.useState(false)
 
   const [theme, setTheme] = React.useState<Theme>(initialTheme || defaultTheme)

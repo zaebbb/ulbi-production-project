@@ -8,3 +8,4 @@ export {
   useJsonSettings,
 } from './model/selectors/getJsonSettings'
 export { saveJsonSettings } from './model/services/saveJsonSettings'
+export { initAuthData } from './model/services/initAuthData'
