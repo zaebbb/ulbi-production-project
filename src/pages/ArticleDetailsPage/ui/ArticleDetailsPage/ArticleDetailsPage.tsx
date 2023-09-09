@@ -44,14 +44,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
     off: () => <Counter />,
   })
 
-  toggleFeatures({
-    name: 'isArticleCounterEnabled',
-    // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-    on: () => console.log('new'),
-    // eslint-disable-next-line @typescript-eslint/no-confusing-void-expression
-    off: () => console.log('old'),
-  })
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
