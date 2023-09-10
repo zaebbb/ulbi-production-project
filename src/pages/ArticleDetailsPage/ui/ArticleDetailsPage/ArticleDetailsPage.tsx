@@ -11,7 +11,7 @@ import { ArticleRating } from '@/features/articleRating'
 import { ArticleRecommendationsList } from '@/features/articleRecommendationsList'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
-import { getFeatureFlags, toggleFeatures } from '@/shared/lib/features'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { VStack } from '@/shared/ui/Stack'
 import { Text } from '@/shared/ui/Text'
 import { Page } from '@/widgets/Page'
@@ -28,8 +28,6 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
   const { className } = props
   const { id } = useParams<{ id: string }>()
   const { t } = useTranslation()
-  const isArticleRatingEnabled = getFeatureFlags('isArticleRatingEnabled')
-
   if (!id) {
     return (
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
@@ -38,20 +36,18 @@ const ArticleDetailsPage: React.FC<ArticleDetailsPageProps> = (props: ArticleDet
     )
   }
 
-  const counter = toggleFeatures({
-    name: 'isArticleCounterEnabled',
-    on: () => <Counter />,
-    off: () => <Counter />,
-  })
-
   return (
     <DynamicModuleLoader reducers={reducers} removeAfterUnmount>
       <Page className={classNames(cls.ArticleDetailsPage, {}, [className])}>
         <VStack gap={32}>
           <ArticleDetailsPageHeader />
           <ArticleDetails id={id}/>
-          {counter}
-          {isArticleRatingEnabled && <ArticleRating id={id}/>}
+          <ToggleFeatures
+            feature={'isArticleCounterEnabled'}
+            on={<Counter />}
+            off={<Counter />}
+          />
+          <ArticleRating id={id} />
           <ArticleRecommendationsList />
           <ArticleDetailsComments id={id} />
         </VStack>
