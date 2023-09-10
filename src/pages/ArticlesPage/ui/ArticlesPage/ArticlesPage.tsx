@@ -8,6 +8,7 @@ import {
 import { ArticlePageFilters } from '../ArticlePageFilters/ArticlePageFilters'
 import { ArticleInfinityList } from '../ArticlrInfinityList/ArticleInfinityList'
 import cls from './ArticlesPage.module.scss'
+import { ArticlePageGreeting } from '@/features/articlePageGreeting'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
@@ -40,6 +41,7 @@ const ArticlesPage: React.FC<ArticlesPageProps> = (props: ArticlesPageProps) => 
       >
         <ArticlePageFilters />
         <ArticleInfinityList />
+        <ArticlePageGreeting />
       </Page>
     </DynamicModuleLoader>
   )

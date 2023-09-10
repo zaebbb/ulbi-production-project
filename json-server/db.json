@@ -2636,7 +2636,7 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isArticlesPageHasOpened": true
       }
     },
     {
@@ -2654,7 +2654,7 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isArticlesPageHasOpened": false
       }
     },
     {
@@ -2672,7 +2672,7 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isArticlesPageHasOpened": false
       }
     },
     {
@@ -2690,7 +2690,7 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isArticlesPageHasOpened": false
       }
     },
     {
@@ -2708,7 +2708,7 @@
       "jsonSettings": {
         "theme": "app_dark_theme",
         "isFirstVisit": true,
-        "settingsPageHasBeenOpen": false
+        "isArticlesPageHasOpened": false
       }
     }
   ],
