@@ -86,5 +86,7 @@
   "to-main-page": "to-main-page",
   "unexpected-error": "unexpected-error",
   "you-use-like-rating": "you-use-like-rating",
-  "your-feedback": "your-feedback"
+  "your-feedback": "your-feedback",
+  "article-modal-first-visit-title": "article-modal-first-visit-title",
+  "article-modal-first-visit-text": "article-modal-first-visit-text"
 }
