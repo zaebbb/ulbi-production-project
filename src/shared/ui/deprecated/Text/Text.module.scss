@@ -1,0 +1,61 @@
+.title {
+  color: var(--primary-color);
+}
+
+.text {
+  color: var(--secondary-color);
+}
+
+.primary_inverted {
+  .title {
+    color: var(--inverted-primary-color);
+  }
+
+  .text {
+    color: var(--inverted-secondary-color);
+  }
+}
+
+.error {
+  .title {
+    color: var(--red-light);
+  }
+
+  .text {
+    color: var(--red-dark);
+  }
+}
+
+.size_s {
+  .title {
+    font: var(--font-m-redesigned);
+  }
+
+  .text {
+    font: var(--font-m-redesigned);
+  }
+}
+
+.size_m {
+  .title {
+    font: var(--font-m-redesigned);
+  }
+
+  .text {
+    font: var(--font-m-redesigned);
+  }
+}
+
+.size_l {
+  .title {
+    font: var(--font-m-redesigned);
+  }
+
+  .text {
+    font: var(--font-m-redesigned);
+  }
+}
+
+.left { text-align: left; }
+.right { text-align: right; }
+.center { text-align: center; }

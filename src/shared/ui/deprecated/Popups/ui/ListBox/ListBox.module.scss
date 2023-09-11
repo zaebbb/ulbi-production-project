@@ -1,0 +1,37 @@
+.list {
+  position: relative;
+  max-width: 400px;
+}
+
+.trigger {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+
+  background: none;
+  border: none;
+  outline: none;
+}
+
+.button {
+  width: 100%;
+}
+
+.options {
+  position: absolute;
+  z-index: 100;
+
+  background: var(--list-box-bg);
+  border-radius: 12px;
+  box-shadow: 0 0 15px rgb(0 0 0 / 40%);
+}
+
+.option {
+  cursor: pointer;
+  padding: 10px 20px;
+  list-style: none;
+}
+
+.readonly {
+  opacity: 0.5;
+}
