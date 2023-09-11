@@ -2673,9 +2673,9 @@
         "isAppRedesigned": false
       },
       "jsonSettings": {
-        "theme": "app_dark_theme",
+        "theme": "app_light_theme",
         "isFirstVisit": true,
-        "isArticlesPageHasOpened": false
+        "isArticlesPageHasOpened": true
       }
     },
     {
