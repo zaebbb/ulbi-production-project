@@ -8,6 +8,7 @@ import { AvatarMenu } from '@/features/avatarMenu'
 import { NotificationButton } from '@/features/notificationButton'
 import { getRouteArticleCreate } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { AppLink, AppLinkTheme } from '@/shared/ui/AppLink'
 import { Button, ThemeButton } from '@/shared/ui/Button'
 import { HStack } from '@/shared/ui/Stack'
@@ -33,41 +34,76 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
 
   if (authData) {
     return (
-      <header className={classNames(cls.Navbar, {}, [className])}>
-        <Text text={t('logo-text')} theme={TextTheme.PRIMARY_INVERTED} />
+      <ToggleFeatures
+        feature={'isAppRedesigned'}
+        off={
+          <header className={classNames(cls.Navbar, {}, [className])}>
+            <Text text={t('logo-text')} theme={TextTheme.PRIMARY_INVERTED} />
 
-        <HStack align={'center'} className={cls.links}>
-          <AppLink
-            to={getRouteArticleCreate()}
-            theme={AppLinkTheme.SECONDARY}
-          >
-            {t('create-article')}
-          </AppLink>
-          <HStack gap={16} className={cls.actions} align={'center'}>
-            <NotificationButton />
-            <AvatarMenu />
-          </HStack>
+            <HStack align={'center'} className={cls.links}>
+              <AppLink
+                to={getRouteArticleCreate()}
+                theme={AppLinkTheme.SECONDARY}
+              >
+                {t('create-article')}
+              </AppLink>
+              <HStack gap={16} className={cls.actions} align={'center'}>
+                <NotificationButton />
+                <AvatarMenu />
+              </HStack>
 
-        </HStack>
-      </header>
+            </HStack>
+          </header>
+        }
+        on={
+          <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
+            <HStack gap={16} className={cls.actions} align={'center'}>
+              <NotificationButton />
+              <AvatarMenu />
+            </HStack>
+          </header>
+        }
+      />
     )
   }
 
   return (
-    <header className={classNames(cls.Navbar, {}, [className])}>
-      <Button
-        theme={ThemeButton.CLEAR_INVERTED}
-        className={cls.links}
-        onClick={onShowModal}
-      >
-        {t('login-account')}
-      </Button>
-      {isAuthModal && (
-        <LoginModal
-          isOpen={isAuthModal}
-          onClose={onCloseModal}
-        />
-      )}
-    </header>
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={
+        <header className={classNames(cls.Navbar, {}, [className])}>
+          <Button
+            theme={ThemeButton.CLEAR_INVERTED}
+            className={cls.links}
+            onClick={onShowModal}
+          >
+            {t('login-account')}
+          </Button>
+          {isAuthModal && (
+            <LoginModal
+              isOpen={isAuthModal}
+              onClose={onCloseModal}
+            />
+          )}
+        </header>
+      }
+      on={
+        <header className={classNames(cls.Navbar, {}, [className])}>
+          <Button
+            theme={ThemeButton.CLEAR_INVERTED}
+            className={cls.links}
+            onClick={onShowModal}
+          >
+            {t('login-account')}
+          </Button>
+          {isAuthModal && (
+            <LoginModal
+              isOpen={isAuthModal}
+              onClose={onCloseModal}
+            />
+          )}
+        </header>
+      }
+    />
   )
 })

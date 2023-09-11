@@ -5,6 +5,7 @@ import cls from './Page.module.scss'
 import { type StateSchema } from '@/app/providers/StoreProvider'
 import { getSaveScrollByPath, saveScrollActions } from '@/features/ScrollSave'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { toggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInfinityScroll } from '@/shared/lib/hooks/useInfinityScroll/useInfinityScroll'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
@@ -55,7 +56,11 @@ export const Page: React.FC<PageProps> = memo((props: PageProps) => {
   return (
     <section
       ref={wrapperRef}
-      className={classNames(cls.Page, {}, [className])}
+      className={classNames(toggleFeatures({
+        name: 'isAppRedesigned',
+        on: () => cls.PageRedesigned,
+        off: () => cls.Page,
+      }), {}, [className])}
       onScroll={onScroll}
       id={PAGE_ID}
       data-testid={props['data-testid'] ?? 'page'}
