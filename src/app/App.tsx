@@ -2,7 +2,9 @@ import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
 import { AppRouter } from './providers/router'
 import { getUserMounted, initAuthData } from '@/entities/User'
+import { MainLayout } from '@/shared/layout/MainLayout'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useTheme } from '@/shared/lib/hooks/useTheme/useTheme'
 import { Navbar } from '@/widgets/Navbar'
@@ -25,14 +27,31 @@ export const App: React.FC = () => {
   }
 
   return (
-    <div className={classNames('app', {}, [theme])}>
-      <Suspense fallback={<PageLoader />}>
-        <Navbar />
-        <div className="content-page">
-          <Sidebar />
-          {mounted && <AppRouter/>}
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={
+        <div className={classNames('app', {}, [theme])}>
+          <Suspense fallback={<PageLoader />}>
+            <Navbar />
+            <div className="content-page">
+              <Sidebar />
+              {mounted && <AppRouter/>}
+            </div>
+          </Suspense>
         </div>
-      </Suspense>
-    </div>
+      }
+      on={
+        <div className={classNames('app_redesigned', {}, [theme])}>
+          <Suspense fallback={<PageLoader />}>
+            <MainLayout
+              header={<Navbar />}
+              toolbar={<div />}
+              content={<AppRouter/>}
+              sidebar={<Sidebar />}
+            />
+          </Suspense>
+        </div>
+      }
+    />
   )
 }
