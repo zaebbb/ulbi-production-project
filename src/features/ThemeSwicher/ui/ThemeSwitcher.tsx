@@ -27,7 +27,6 @@ export const ThemeSwitcher: React.FC<ThemeSwitcherProps> = memo((props: ThemeSwi
       className={classNames('', {}, [className])}
       onClick={onToggleTheme}
       theme={ThemeButton.CLEAR}
-
     >
       <Icon Svg={ThemeIcon} width={40} height={40} isInverted />
     </Button>
