@@ -1,0 +1,20 @@
+.AppLink {
+  text-decoration: none;
+  transition: color 0.3s, opacity 0.3s;
+}
+
+.primary {
+  color: var(--text-redesigned);
+
+  &:hover {
+    color: var(--accept-redesigned);
+  }
+}
+
+.red {
+  color: var(--cancel-redesigned);
+
+  &:hover {
+    opacity: 0.8;
+  }
+}

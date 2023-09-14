@@ -1,5 +1,5 @@
 import { render, screen } from '@testing-library/react'
-import { Button, ThemeButton } from './Button'
+import { Button } from './Button'
 
 describe('UI компонент <Button>', () => {
   test(
@@ -12,7 +12,7 @@ describe('UI компонент <Button>', () => {
   test(
     'Рендер компонента с темой CLEAR',
     () => {
-      render(<Button theme={ThemeButton.CLEAR}>Test</Button>)
+      render(<Button variant={'clear'}>Test</Button>)
       expect(screen.getByText('Test')).toHaveClass('clear')
       screen.debug()
     })

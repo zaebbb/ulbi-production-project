@@ -2,27 +2,16 @@ import React, { type ButtonHTMLAttributes, memo } from 'react'
 import cls from './Button.module.scss'
 import { type Additional, classNames, type Mods } from '@/shared/lib/classNames/classNames'
 
-export enum ThemeButton {
-  CLEAR = 'clear',
-  CLEAR_INVERTED = 'clearInverted',
-  OUTLINE = 'outline',
-  OUTLINE_RED = 'outline_red',
-  BACKGROUND = 'background',
-  BACKGROUND_INVERTED = 'backgroundInverted'
-}
+export type VariantButton = 'clear' | 'outline'
 
-export enum SizeButton {
-  M = 'size_m',
-  L = 'size_l',
-  XL = 'size_xl'
-}
+export type SizeButton = 'm' | 'l' | 'xl'
 
 interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
   className?: string
   /**
    * Тема кнопки. Отвечает за визуал (в рамке, без стилей, противоположный теме приложения цвет и тд)
    */
-  theme?: ThemeButton
+  variant?: VariantButton
   /**
    * Флаг, делающий кнопку квадратной
    */
@@ -50,8 +39,8 @@ export const Button: React.FC<ButtonProps> = memo((props: ButtonProps) => {
     className,
     children,
     square,
-    theme = ThemeButton.CLEAR,
-    size = SizeButton.M,
+    variant = 'outline',
+    size = 'm',
     disabled = false,
     fullWidth = false,
     ...otherProps
@@ -59,7 +48,7 @@ export const Button: React.FC<ButtonProps> = memo((props: ButtonProps) => {
 
   const additional: Additional = [
     className,
-    cls[theme],
+    cls[variant],
     cls[size],
   ]
 

@@ -1,6 +1,6 @@
 import type { ComponentMeta, ComponentStory } from '@storybook/react'
-import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
-import { AppLink, AppLinkTheme } from './AppLink'
+import { ThemeDecorator } from '../../../config/storybook/ThemeDecorator/ThemeDecorator'
+import { AppLink } from './AppLink'
 import { Theme } from '@/shared/const'
 
 const meta: ComponentMeta<typeof AppLink> = {
@@ -17,25 +17,25 @@ const Template: ComponentStory<typeof AppLink> = (args) => <AppLink {...args} />
 export const AppLinkPrimaryLight = Template.bind({})
 AppLinkPrimaryLight.args = {
   children: 'AppLinkPrimaryLight',
-  theme: AppLinkTheme.PRIMARY,
+  variant: 'primary',
 }
 
 export const AppLinkSecondaryLight = Template.bind({})
 AppLinkSecondaryLight.args = {
   children: 'AppLinkSecondaryLight',
-  theme: AppLinkTheme.SECONDARY,
+  variant: 'primary',
 }
 
 export const AppLinkPrimaryDark = Template.bind({})
 AppLinkPrimaryDark.args = {
   children: 'AppLinkPrimaryDark',
-  theme: AppLinkTheme.PRIMARY,
+  variant: 'primary',
 }
 AppLinkPrimaryDark.decorators = [ThemeDecorator(Theme.DARK)]
 
 export const AppLinkSecondaryDark = Template.bind({})
 AppLinkSecondaryDark.args = {
   children: 'AppLinkSecondaryDark',
-  theme: AppLinkTheme.SECONDARY,
+  variant: 'primary',
 }
 AppLinkSecondaryDark.decorators = [ThemeDecorator(Theme.DARK)]
