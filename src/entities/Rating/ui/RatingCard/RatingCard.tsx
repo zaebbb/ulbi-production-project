@@ -3,7 +3,6 @@ import { BrowserView, MobileView } from 'react-device-detect'
 import { useTranslation } from 'react-i18next'
 import cls from './RatingCard.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button, ThemeButton } from '@/shared/ui/Button'
 import { Card } from '@/shared/ui/Card'
 import { Drawer } from '@/shared/ui/Drawer'
 import { Input } from '@/shared/ui/Input'
@@ -12,6 +11,7 @@ import { HStack } from '@/shared/ui/Stack/Hstack/HStack'
 import { VStack } from '@/shared/ui/Stack/VStack/VStack'
 import { StarRating } from '@/shared/ui/StarRating'
 import { Text } from '@/shared/ui/Text'
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
 
 interface RatingCardProps {
   className?: string

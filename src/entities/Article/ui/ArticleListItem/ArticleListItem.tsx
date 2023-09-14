@@ -15,13 +15,13 @@ import NotFoundImage from '@/shared/assets/images/not-found.png'
 import { getRouteArticleDetails } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { AppImage } from '@/shared/ui/AppImage'
-import { AppLink } from '@/shared/ui/AppLink'
 import { Avatar } from '@/shared/ui/Avatar'
-import { Button, ThemeButton } from '@/shared/ui/Button'
 import { Card } from '@/shared/ui/Card'
-import { Icon } from '@/shared/ui/Icon'
 import { Skeleton } from '@/shared/ui/Skeleton'
 import { Text } from '@/shared/ui/Text'
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { AppLink } from '@/shared/ui/redesigned/AppLink'
+import { Icon } from '@/shared/ui/redesigned/Icon'
 
 interface ArticleListItemProps {
   className?: string

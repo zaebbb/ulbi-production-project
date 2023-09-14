@@ -11,9 +11,9 @@ import cls from './LoginForm.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Button, ThemeButton } from '@/shared/ui/Button'
 import { Input } from '@/shared/ui/Input'
 import { Text, TextTheme } from '@/shared/ui/Text'
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
 
 export interface LoginFormProps {
   className?: string

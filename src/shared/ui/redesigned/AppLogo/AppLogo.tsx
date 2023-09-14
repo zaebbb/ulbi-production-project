@@ -6,10 +6,14 @@ import { HStack } from '@/shared/ui/Stack'
 
 interface AppLogoProps {
   className?: string
+  size?: number
 }
 
 export const AppLogo: React.FC<AppLogoProps> = memo((props: AppLogoProps) => {
-  const { className } = props
+  const {
+    className,
+    size = 50,
+  } = props
 
   return (
     <HStack
@@ -19,7 +23,12 @@ export const AppLogo: React.FC<AppLogoProps> = memo((props: AppLogoProps) => {
     >
       <div className={cls.gradientBig} />
       <div className={cls.gradientSmall} />
-      <AppSvg className={cls.appLogo} />
+      <AppSvg
+        className={cls.appLogo}
+        width={size}
+        height={size}
+        color={'black'}
+      />
     </HStack>
   )
 })

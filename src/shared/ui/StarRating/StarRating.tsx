@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Icon } from '../Icon'
+import { Icon } from '../redesigned/Icon'
 import cls from './StarRating.module.scss'
 import StarIcon from '@/shared/assets/icons/star.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'

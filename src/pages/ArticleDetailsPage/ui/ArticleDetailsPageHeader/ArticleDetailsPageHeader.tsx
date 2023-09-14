@@ -7,7 +7,7 @@ import cls from './ArticleDetailsPageHeader.module.scss'
 import { getArticleDetailsData } from '@/entities/Article'
 import { getRouteArticleEdit, getRouteArticles } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button, ThemeButton } from '@/shared/ui/Button'
+import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
 
 interface ArticleDetailsPageHeaderProps {
   className?: string

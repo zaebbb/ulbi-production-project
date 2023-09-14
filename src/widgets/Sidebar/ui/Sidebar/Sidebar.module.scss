@@ -8,31 +8,31 @@
   background: var(--inverted-bg-color);
 
   transition: width 0.3s;
-}
 
-.switchers {
-  position: absolute;
-  bottom: 20px;
+  .switchers {
+    position: absolute;
+    bottom: 20px;
 
-  display: flex;
-  justify-content: center;
+    display: flex;
+    justify-content: center;
 
-  width: 100%;
-}
+    width: 100%;
+  }
 
-.lang {
-  margin-left: 15px;
-}
+  .lang {
+    margin-left: 15px;
+  }
 
-.collapseBtn {
-  position: absolute;
-  right: -32px;
-  bottom: 32px;
-}
+  .collapseBtn {
+    position: absolute;
+    right: -32px;
+    bottom: 32px;
+  }
 
-.items {
-  margin-top: 20px;
-  margin-left: 20px;
+  .items {
+    margin-top: 20px;
+    margin-left: 20px;
+  }
 }
 
 .collapsed {
@@ -49,15 +49,64 @@
 
 // redesigned
 .SidebarRedesigned {
+  position: relative;
+
   overflow: hidden;
 
   width: 220px;
   height: 100%;
+  margin-left: 20px;
 
   background: var(--light-bg-redesigned);
   border-radius: 32px;
+
+  .appLogo {
+    padding-top: 20px;
+  }
+
+  .items {
+    margin-top: 40px;
+  }
+
+  .collapseBtn {
+    position: absolute;
+    top: 50%;
+    right: 12px;
+    transform: translateY(-50%);
+  }
+
+  .switchers {
+    position: absolute;
+    bottom: 40px;
+
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-content: center;
+
+    width: 100%;
+  }
 }
 
-.appLogo {
-  padding-top: 20px;
+.collapsedRedesigned {
+  width: 50px;
+
+  .switchers {
+    flex-direction: column;
+  }
+
+  .lang {
+    margin-left: 0;
+  }
+
+  .items {
+    display: flex;
+    align-items: center;
+    margin-top: 40px;
+  }
+
+  .collapseBtn {
+    right: 50%;
+    transform: translate(50%, -50%) rotate(180deg);
+  }
 }
