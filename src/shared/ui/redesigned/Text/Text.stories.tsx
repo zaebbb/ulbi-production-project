@@ -1,6 +1,6 @@
 import type { ComponentStory, Meta } from '@storybook/react'
-import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
-import { Text, TextSize, TextTheme } from './Text'
+import { ThemeDecorator } from '../../../config/storybook/ThemeDecorator/ThemeDecorator'
+import { Text } from './Text'
 import { Theme } from '@/shared/const'
 
 const meta: Meta<typeof Text> = {
@@ -49,38 +49,38 @@ TextDark.args = {
 }
 TextDark.decorators = [ThemeDecorator(Theme.DARK)]
 
-export const TextError = Template.bind({})
-TextError.args = {
-  title: 'Title',
-  text: 'Description',
-  theme: TextTheme.ERROR,
-}
-
-export const TextErrorDark = Template.bind({})
-TextErrorDark.args = {
-  title: 'Title',
-  text: 'Description',
-  theme: TextTheme.ERROR,
-}
-TextErrorDark.decorators = [ThemeDecorator(Theme.DARK)]
-
-export const TitleAndTextSizeM = Template.bind({})
-TitleAndTextSizeM.args = {
-  title: 'Title',
-  text: 'Description',
-  size: TextSize.M,
-}
-
-export const TitleAndTextSizeL = Template.bind({})
-TitleAndTextSizeL.args = {
-  title: 'Title',
-  text: 'Description',
-  size: TextSize.L,
-}
-
-export const TitleAndTextSizeS = Template.bind({})
-TitleAndTextSizeS.args = {
-  title: 'Title',
-  text: 'Description',
-  size: TextSize.S,
-}
+// export const TextError = Template.bind({})
+// TextError.args = {
+//   title: 'Title',
+//   text: 'Description',
+//   theme: TextTheme.ERROR,
+// }
+//
+// export const TextErrorDark = Template.bind({})
+// TextErrorDark.args = {
+//   title: 'Title',
+//   text: 'Description',
+//   theme: TextTheme.ERROR,
+// }
+// TextErrorDark.decorators = [ThemeDecorator(Theme.DARK)]
+//
+// export const TitleAndTextSizeM = Template.bind({})
+// TitleAndTextSizeM.args = {
+//   title: 'Title',
+//   text: 'Description',
+//   size: TextSize.M,
+// }
+//
+// export const TitleAndTextSizeL = Template.bind({})
+// TitleAndTextSizeL.args = {
+//   title: 'Title',
+//   text: 'Description',
+//   size: TextSize.L,
+// }
+//
+// export const TitleAndTextSizeS = Template.bind({})
+// TitleAndTextSizeS.args = {
+//   title: 'Title',
+//   text: 'Description',
+//   size: TextSize.S,
+// }

@@ -9,10 +9,10 @@ import { NotificationButton } from '@/features/notificationButton'
 import { getRouteArticleCreate } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ToggleFeatures } from '@/shared/lib/features'
-import { HStack } from '@/shared/ui/Stack'
-import { Text, TextTheme } from '@/shared/ui/Text'
 import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
 import { AppLink } from '@/shared/ui/redesigned/AppLink'
+import { HStack } from '@/shared/ui/redesigned/Stack'
 
 interface NavbarProps {
   className?: string

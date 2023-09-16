@@ -22,7 +22,7 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Text, TextTheme } from '@/shared/ui/Text'
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
 
 interface EditableProfileCardProps {
   className?: string

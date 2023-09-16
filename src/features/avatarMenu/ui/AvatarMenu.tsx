@@ -3,8 +3,11 @@ import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, isAdmin, isManager, userActions } from '@/entities/User'
 import { getRouteAdminPanel, getRouteProfile } from '@/shared/const'
-import { Avatar } from '@/shared/ui/Avatar'
-import { Menu } from '@/shared/ui/Popups'
+import { ToggleFeatures } from '@/shared/lib/features'
+import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar'
+import { Menu as MenuDeprecated } from '@/shared/ui/deprecated/Popups'
+import { Avatar } from '@/shared/ui/redesigned/Avatar'
+import { Menu } from '@/shared/ui/redesigned/Popups'
 
 interface AvatarMenuProps {
   className?: string
@@ -27,25 +30,39 @@ export const AvatarMenu: React.FC<AvatarMenuProps> = memo((props: AvatarMenuProp
     return null
   }
 
+  const items = [
+    ...(isAdminPanel ? [{
+      content: t('nav-admin'),
+      href: getRouteAdminPanel(),
+    }] : []),
+    {
+      content: t('nav-profile'),
+      href: getRouteProfile(authData.id),
+    },
+    {
+      content: t('btn-logout'),
+      onClick: onLogout,
+    },
+  ]
+
   return (
-    <Menu
-      className={className}
-      items={[
-        ...(isAdminPanel ? [{
-          content: t('nav-admin'),
-          href: getRouteAdminPanel(),
-        }] : []),
-        {
-          content: t('nav-profile'),
-          href: getRouteProfile(authData.id),
-        },
-        {
-          content: t('btn-logout'),
-          onClick: onLogout,
-        },
-      ]}
-      trigger={<Avatar size={30} src={authData.avatar} />}
-      direction={'bottom-right'}
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={
+        <MenuDeprecated
+          className={className}
+          items={items}
+          trigger={<AvatarDeprecated size={30} src={authData.avatar} />}
+          direction={'bottom-right'}
+        />
+      }
+      on={<Menu
+        className={className}
+        items={items}
+        trigger={<Avatar size={48} src={authData.avatar} />}
+        direction={'bottom-right'}
+      />}
     />
+
   )
 })

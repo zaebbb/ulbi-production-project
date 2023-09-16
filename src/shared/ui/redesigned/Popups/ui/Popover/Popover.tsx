@@ -1,9 +1,9 @@
 import { Popover as HPopover } from '@headlessui/react'
 import React, { memo } from 'react'
-import { type DirectionType } from '../../../../types/ui'
 import popupsCls from '../../styles/popup.module.scss'
 import cls from './Popover.module.scss'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
+import { type DirectionType } from '@/shared/types/ui'
 
 interface PopoverProps {
   className?: string
@@ -22,6 +22,7 @@ export const Popover: React.FC<PopoverProps> = memo((props: PopoverProps) => {
 
   const additionalOptions: Additional = [
     popupsCls[`direction-${direction}`],
+    popupsCls.menu,
   ]
 
   return (
