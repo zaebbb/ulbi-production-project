@@ -19,7 +19,7 @@ import { AddCommentForm } from '@/features/addCommentForm'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Text, TextSize } from '@/shared/ui/Text'
+import { Text, TextSize } from '@/shared/ui/deprecated/Text'
 
 interface ArticleDetailsCommentsProps {
   className?: string

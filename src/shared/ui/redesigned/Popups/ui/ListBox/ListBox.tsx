@@ -1,12 +1,12 @@
 import { Listbox as HListBox } from '@headlessui/react'
 import React, { Fragment, memo } from 'react'
 import { HStack } from '../../../Stack/Hstack/HStack'
-import { Text } from '../../../Text/Text'
 import popupsCls from '../../styles/popup.module.scss'
 import cls from './ListBox.module.scss'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 import { type DirectionType } from '@/shared/types/ui'
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button/Button'
+import { Button } from '@/shared/ui/redesigned/Button/Button'
+import { Text } from '@/shared/ui/redesigned/Text/Text'
 
 export interface ListBoxItem {
   value: string
@@ -39,6 +39,7 @@ export const ListBox: React.FC<ListBoxProps> = memo((props: ListBoxProps) => {
 
   const additionalOptions: Additional = [
     popupsCls[`direction-${direction}`],
+    popupsCls.menu,
   ]
 
   return (
@@ -58,7 +59,6 @@ export const ListBox: React.FC<ListBoxProps> = memo((props: ListBoxProps) => {
         <HListBox.Button className={cls.trigger}>
           <Button
             disabled={readonly}
-            theme={ThemeButton.OUTLINE}
             className={cls.button}
           >
             {value ?? defaultValue}

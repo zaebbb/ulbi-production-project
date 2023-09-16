@@ -9,10 +9,10 @@ import { ThemeSwitcher } from '@/features/ThemeSwicher'
 import ArrowSidebar from '@/shared/assets/icons/redesigned/ArrowSidebar.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ToggleFeatures } from '@/shared/lib/features'
-import { VStack } from '@/shared/ui/Stack'
 import { Button as ButtonDeprecated, SizeButton, ThemeButton } from '@/shared/ui/deprecated/Button'
 import { AppLogo } from '@/shared/ui/redesigned/AppLogo/AppLogo'
 import { Icon } from '@/shared/ui/redesigned/Icon'
+import { VStack } from '@/shared/ui/redesigned/Stack'
 
 interface SidebarProps {
   className?: string

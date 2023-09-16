@@ -1,5 +1,6 @@
 .Menu {
   position: relative;
+  background: var(--dark-bg-redesigned);
 }
 
 .button {
@@ -16,10 +17,7 @@
 .items {
   position: absolute;
   z-index: 1000;
-
   overflow: hidden;
-
-  background: var(--card-bg);
   border-radius: 8px;
 }
 
@@ -29,11 +27,15 @@
   width: 100%;
   padding: 10px 25px;
 
-  color: var(--primary-color);
+  color: var(--text-redesigned);
   text-align: left;
   list-style-type: none;
 
   background: none;
   border: none;
   outline: none;
+
+  &:hover {
+    background: var(--light-bg-redesigned);
+  }
 }

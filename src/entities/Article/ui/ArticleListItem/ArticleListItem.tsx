@@ -14,14 +14,14 @@ import EyeIcon from '@/shared/assets/icons/eye-20-20.svg'
 import NotFoundImage from '@/shared/assets/images/not-found.png'
 import { getRouteArticleDetails } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { AppImage } from '@/shared/ui/AppImage'
 import { Avatar } from '@/shared/ui/Avatar'
-import { Card } from '@/shared/ui/Card'
-import { Skeleton } from '@/shared/ui/Skeleton'
-import { Text } from '@/shared/ui/Text'
 import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { Card } from '@/shared/ui/deprecated/Card'
+import { Text } from '@/shared/ui/deprecated/Text'
+import { AppImage } from '@/shared/ui/redesigned/AppImage'
 import { AppLink } from '@/shared/ui/redesigned/AppLink'
 import { Icon } from '@/shared/ui/redesigned/Icon'
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton'
 
 interface ArticleListItemProps {
   className?: string

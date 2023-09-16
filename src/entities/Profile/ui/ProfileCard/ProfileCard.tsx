@@ -8,8 +8,8 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { Avatar } from '@/shared/ui/Avatar'
 import { Input } from '@/shared/ui/Input'
 import { Loader } from '@/shared/ui/Loader'
-import { HStack } from '@/shared/ui/Stack'
-import { Text, TextTheme } from '@/shared/ui/Text'
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
+import { HStack } from '@/shared/ui/redesigned/Stack'
 
 interface ProfileCardProps {
   className?: string

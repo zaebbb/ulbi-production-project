@@ -5,9 +5,9 @@ import NoProfile from '@/shared/assets/icons/profile.png'
 import { getRouteProfile } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { Avatar } from '@/shared/ui/Avatar'
-import { Skeleton } from '@/shared/ui/Skeleton'
-import { Text } from '@/shared/ui/Text'
+import { Text } from '@/shared/ui/deprecated/Text'
 import { AppLink } from '@/shared/ui/redesigned/AppLink'
+import { Skeleton } from '@/shared/ui/redesigned/Skeleton'
 
 interface CommentCardProps {
   className?: string

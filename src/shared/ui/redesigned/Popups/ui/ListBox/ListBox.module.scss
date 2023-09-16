@@ -21,15 +21,19 @@
   position: absolute;
   z-index: 100;
 
-  background: var(--list-box-bg);
+  background: var(--dark-bg-redesigned);
   border-radius: 12px;
-  box-shadow: 0 0 15px rgb(0 0 0 / 40%);
+  box-shadow: 0 0 15px var(--dark-bg-redesigned);
 }
 
 .option {
   cursor: pointer;
   padding: 10px 20px;
   list-style: none;
+
+  &:hover {
+    background: var(--light-bg-redesigned);
+  }
 }
 
 .readonly {

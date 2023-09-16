@@ -1,6 +1,6 @@
 import React, { type CSSProperties, memo, useMemo } from 'react'
-import { AppImage } from '../redesigned/AppImage'
-import { Skeleton } from '../redesigned/Skeleton'
+import { AppImage } from '../AppImage'
+import { Skeleton } from '../Skeleton'
 import cls from './Avatar.module.scss'
 import { classNames, type Mods } from '@/shared/lib/classNames/classNames'
 
@@ -41,7 +41,9 @@ export const Avatar: React.FC<AvatarProps> = memo((props: AvatarProps) => {
       src={src}
       alt={alt}
       className={classNames(
-        cls.Avatar, mods, [className]
+        cls.Avatar,
+        mods,
+        [className]
       )}
       style={size ? styles : {}}
       fallback={<Skeleton border={'50%'} />}

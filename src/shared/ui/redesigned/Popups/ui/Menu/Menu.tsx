@@ -4,8 +4,8 @@ import popupsCls from '../../styles/popup.module.scss'
 import cls from './Menu.module.scss'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 import { type DirectionType } from '@/shared/types/ui'
-import { Button } from '@/shared/ui/deprecated/Button/Button'
 import { AppLink } from '@/shared/ui/redesigned/AppLink/AppLink'
+import { Button } from '@/shared/ui/redesigned/Button/Button'
 
 export interface MenuItem {
   content?: React.ReactNode
@@ -31,6 +31,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
 
   const additionalOptions: Additional = [
     popupsCls[`direction-${direction}`],
+    popupsCls.menu,
   ]
 
   return (

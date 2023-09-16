@@ -12,8 +12,8 @@ import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { Input } from '@/shared/ui/Input'
-import { Text, TextTheme } from '@/shared/ui/Text'
 import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
 
 export interface LoginFormProps {
   className?: string
