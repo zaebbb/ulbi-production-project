@@ -35,7 +35,11 @@ export const Page: React.FC<PageProps> = memo((props: PageProps) => {
   const scrollPosition = useSelector((state: StateSchema) => getSaveScrollByPath(state, pathname))
 
   useInfinityScroll({
-    wrapperRef,
+    wrapperRef: toggleFeatures({
+      name: 'isAppRedesigned',
+      on: () => undefined,
+      off: () => wrapperRef,
+    }),
     triggerRef,
     callback: onScrollEnd,
   })

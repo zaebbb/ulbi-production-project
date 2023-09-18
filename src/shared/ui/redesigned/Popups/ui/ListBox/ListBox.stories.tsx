@@ -9,7 +9,7 @@ const meta: Meta<typeof ListBox> = {
   ],
 }
 
-const ListBoxTestComponent: ListBoxItem[] = [
+const ListBoxTestComponent: Array<ListBoxItem<string>> = [
   { value: '1', content: '1' },
   { value: '2', content: '2' },
 ]
