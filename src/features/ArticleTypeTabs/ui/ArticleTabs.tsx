@@ -3,7 +3,9 @@ import { useTranslation } from 'react-i18next'
 import cls from './ArticleTabs.module.scss'
 import { ArticleType } from '@/entities/Article'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { type TabItem, Tabs } from '@/shared/ui/Tabs'
+import { ToggleFeatures } from '@/shared/lib/features'
+import { Tabs as TabsDeprecated } from '@/shared/ui/deprecated/Tabs'
+import { Tabs, type TabItem } from '@/shared/ui/redesigned/Tabs'
 
 interface ArticleTabsProps {
   className?: string
@@ -27,12 +29,27 @@ export const ArticleTabs: React.FC<ArticleTabsProps> = memo((props: ArticleTabsP
   ], [t])
 
   return (
-    <div className={classNames(cls.ArticleTabs, {}, [className])}>
-      <Tabs
-        tabs={typeTabs}
-        value={type}
-        onTabClick={onChangeType}
-      />
-    </div>
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={
+        <div className={classNames(cls.ArticleTabs, {}, [className])}>
+          <TabsDeprecated
+            tabs={typeTabs}
+            value={type}
+            onTabClick={onChangeType}
+          />
+        </div>
+      }
+      on={
+        <div className={classNames(cls.ArticleTabs, {}, [className])}>
+          <Tabs
+            direction={'column'}
+            tabs={typeTabs}
+            value={type}
+            onTabClick={onChangeType}
+          />
+        </div>
+      }
+    />
   )
 })
