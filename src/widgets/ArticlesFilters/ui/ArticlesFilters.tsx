@@ -5,10 +5,12 @@ import cls from './ArticlesFilters.module.scss'
 import { type ArticleSortField, type ArticleType } from '@/entities/Article'
 import { ArticleSortSelector } from '@/features/ArticleSortSelector'
 import { ArticleTabs } from '@/features/ArticleTypeTabs'
+import SearchIcon from '@/shared/assets/icons/redesigned/SearchIcon.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { type SortOrder } from '@/shared/types/sort'
-import { Input } from '@/shared/ui/deprecated/Input'
 import { Card } from '@/shared/ui/redesigned/Card'
+import { Icon } from '@/shared/ui/redesigned/Icon'
+import { Input } from '@/shared/ui/redesigned/Input'
 import { VStack } from '@/shared/ui/redesigned/Stack'
 
 interface ArticlesFiltersProps {
@@ -48,6 +50,7 @@ export const ArticlesFilters: React.FC<ArticlesFiltersProps> =
             placeholder={t('article-search')}
             value={search}
             onChange={onChangeSearch}
+            addonLeft={<Icon Svg={SearchIcon} />}
           />
           <ArticleTabs
             className={cls.types}

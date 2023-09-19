@@ -3,10 +3,12 @@ import React, { Fragment, useMemo } from 'react'
 import { HStack } from '../../../Stack/Hstack/HStack'
 import popupsCls from '../../styles/popup.module.scss'
 import cls from './ListBox.module.scss'
+import ArrowBottom from '@/shared/assets/icons/redesigned/ArrowBottomListBox.svg'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 import { TypedMemo } from '@/shared/lib/components/TypedMemo'
 import { type DirectionType } from '@/shared/types/ui'
 import { Button } from '@/shared/ui/redesigned/Button/Button'
+import { Icon } from '@/shared/ui/redesigned/Icon'
 import { Text } from '@/shared/ui/redesigned/Text/Text'
 
 export interface ListBoxItem<T extends string> {
@@ -66,6 +68,7 @@ export const ListBoxComponent = <T extends string>(props: ListBoxProps<T>) => {
             variant={'filled'}
             disabled={readonly}
             className={cls.button}
+            addonRight={<Icon Svg={ArrowBottom} />}
           >
             {selectedItem?.content ?? defaultValue}
           </Button>

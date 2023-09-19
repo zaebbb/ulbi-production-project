@@ -11,6 +11,8 @@ interface InputProps extends HTMLInputProps {
   placeholder?: string
   autoFocus?: boolean
   readonly?: boolean
+  addonLeft?: React.ReactNode
+  addonRight?: React.ReactNode
 }
 
 export const Input: React.FC<InputProps> = memo((props: InputProps) => {
@@ -22,19 +24,17 @@ export const Input: React.FC<InputProps> = memo((props: InputProps) => {
     placeholder,
     autoFocus,
     readonly = false,
+    addonLeft,
+    addonRight,
     ...otherProps
   } = props
 
   const ref = React.useRef<HTMLInputElement>(null)
 
   const [isFocused, setIsFocused] = React.useState<boolean>(false)
-  const [caretPosition, setCaretPosition] = React.useState<number>(0)
-
-  const isCaretVisible = isFocused && !readonly
 
   const onChangeHandler = (e: React.ChangeEvent<HTMLInputElement>): void => {
     onChange?.(e.target.value)
-    setCaretPosition(e.target.value.length)
   }
 
   const onBlur = (): void => {
@@ -45,12 +45,11 @@ export const Input: React.FC<InputProps> = memo((props: InputProps) => {
     setIsFocused(true)
   }
 
-  const onSelect = (e: any): void => {
-    setCaretPosition(e?.target?.selectionStart || 0)
-  }
-
   const mods: Mods = {
     [cls.readonly]: readonly,
+    [cls.focused]: isFocused,
+    [cls.withAddonLeft]: Boolean(addonLeft),
+    [cls.withAddonRight]: Boolean(addonRight),
   }
 
   React.useEffect((): void => {
@@ -62,30 +61,20 @@ export const Input: React.FC<InputProps> = memo((props: InputProps) => {
 
   return (
     <div className={classNames(cls.InputWrapper, mods, [className])}>
-      {
-        placeholder && (
-          <div className={cls.placeholder}>
-            {`${placeholder}>`}
-          </div>
-        )
-      }
-      <div className={cls.caretWrapper}>
-        <input
-          ref={ref}
-          className={cls.input}
-          value={value}
-          onChange={onChangeHandler}
-          type={type}
-          onBlur={onBlur}
-          onFocus={onFocus}
-          onSelect={onSelect}
-          readOnly={readonly}
-          {...otherProps}
-        />
-        {isCaretVisible && (
-          <span style={{ left: `${caretPosition * 9}px` }} className={cls.caret} />
-        )}
-      </div>
+      <div className={cls.addonLeft}>{addonLeft}</div>
+      <input
+        ref={ref}
+        className={cls.input}
+        value={value}
+        onChange={onChangeHandler}
+        type={type}
+        onBlur={onBlur}
+        onFocus={onFocus}
+        readOnly={readonly}
+        placeholder={placeholder}
+        {...otherProps}
+      />
+      <div className={cls.addonRight}>{addonRight}</div>
     </div>
   )
 })
