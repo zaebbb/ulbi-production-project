@@ -6,19 +6,19 @@
   &.editing {
     border: 2px solid var(--red-light);
   }
-}
 
-.input {
-  margin-top: 10px;
-}
+  .input {
+    margin-top: 10px;
+  }
 
-.loading {
-  height: 300px;
-}
+  .loading {
+    height: 300px;
+  }
 
-.avatar {
-  width: 100px;
-  height: 100px;
-  object-fit: cover;
-  border-radius: 50%;
+  .avatar {
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    border-radius: 50%;
+  }
 }

@@ -51,6 +51,7 @@ export const ArticlesFilters: React.FC<ArticlesFiltersProps> =
             value={search}
             onChange={onChangeSearch}
             addonLeft={<Icon Svg={SearchIcon} />}
+            size={'s'}
           />
           <ArticleTabs
             className={cls.types}
