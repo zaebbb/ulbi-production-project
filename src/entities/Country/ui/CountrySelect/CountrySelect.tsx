@@ -1,7 +1,9 @@
 import React from 'react'
 import { Country } from '../../model/types/country'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { ListBox } from '@/shared/ui/deprecated/Popups'
+import { ToggleFeatures } from '@/shared/lib/features'
+import { ListBox as ListBoxDeprecated } from '@/shared/ui/deprecated/Popups'
+import { ListBox } from '@/shared/ui/redesigned/Popups'
 
 interface CountrySelectProps {
   className?: string
@@ -30,17 +32,35 @@ export const CountrySelect: React.FC<CountrySelectProps> = (props) => {
     onChange?.(value as Country)
   }, [onChange])
 
-  return (
-    <ListBox
-      className={classNames(
-        '', {}, [className]
-      )}
-      label={label}
-      value={value}
-      readonly={readonly}
-      onChange={onChangeHandler}
-      items={options}
-      direction={'top-left'}
-    />
+  return (<ToggleFeatures
+    feature={'isAppRedesigned'}
+    off={
+      <ListBoxDeprecated
+        className={classNames(
+          '', {}, [className]
+        )}
+        label={label}
+        value={value}
+        readonly={readonly}
+        onChange={onChangeHandler}
+        items={options}
+        direction={'top-left'}
+      />
+    }
+    on={
+      <ListBox
+        className={classNames(
+          '', {}, [className]
+        )}
+        label={label}
+        value={value}
+        readonly={readonly}
+        onChange={onChangeHandler}
+        items={options}
+        direction={'top-left'}
+      />
+    }
+  />
+
   )
 }
