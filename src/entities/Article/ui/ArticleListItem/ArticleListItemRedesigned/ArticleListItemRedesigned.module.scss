@@ -1,0 +1,24 @@
+.ArticleListItemRedesigned {
+  position: relative;
+}
+
+.BIG {
+  .img {
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .textBlock {
+    overflow: hidden;
+    height: 72px;
+  }
+}
+
+.SMALL {
+  .img {
+    width: 200px;
+    height: 200px;
+    object-fit: cover;
+  }
+}
