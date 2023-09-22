@@ -48,23 +48,19 @@
   outline: none;
 }
 
+.outline {
+  background: none;
+  border: 1px solid var(--icon-redesigned);
+  border-radius: 34px;
+
+  &:hover {
+    border: 1px solid var(--accept-redesigned);
+  }
+}
+
 .addonLeft,
 .addonRight {
   display: flex;
-}
-
-.outline {
-  color: var(--primary-color);
-  background: transparent;
-  border: 1px solid var(--primary-color);
-  border-radius: 10px;
-
-  &_red {
-    color: var(--red-light);
-    background: transparent;
-    border: 1px solid var(--red-light);
-    border-radius: 10px;
-  }
 }
 
 .square {

@@ -18,6 +18,9 @@ interface AvatarProps {
   sizeType?: AvatarSize
 }
 
+/**
+ * @deprecated
+ * */
 export const Avatar: React.FC<AvatarProps> = memo((props: AvatarProps) => {
   const {
     className,
