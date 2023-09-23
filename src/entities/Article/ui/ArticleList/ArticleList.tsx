@@ -5,7 +5,9 @@ import { ArticleListItem } from '../ArticleListItem/ArticleListItem'
 import { ArticleListItemSkeleton } from '../ArticleListItem/ArticleListItem.skeleton'
 import cls from './ArticleList.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { Text } from '@/shared/ui/deprecated/Text'
+import { HStack } from '@/shared/ui/redesigned/Stack'
 
 interface ArticleListProps {
   className?: string
@@ -44,25 +46,52 @@ export const ArticleList: React.FC<ArticleListProps> = memo((props: ArticleListP
   }
 
   return (
-    <div
-      className={
-        classNames(cls.ArticleList, {}, [className, cls[view]])
-      }
-      data-testid={'ArticleList'}
-    >
-      { articles.map(article => (
-        <ArticleListItem
-          article={article}
-          view={view}
-          target={target}
-          key={article.id}
-          className={cls.card}
-        />
-      )) }
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={
+        <div
+          className={
+            classNames(cls.ArticleList, {}, [className, cls[view]])
+          }
+          data-testid={'ArticleList'}
+        >
+          { articles.map(article => (
+            <ArticleListItem
+              article={article}
+              view={view}
+              target={target}
+              key={article.id}
+              className={cls.card}
+            />
+          )) }
 
-      {
-        isLoading && getSkeleton(view)
+          {
+            isLoading && getSkeleton(view)
+          }
+        </div>
       }
-    </div>
+      on={
+        <HStack
+          wrap={'wrap'}
+          gap={16}
+          className={classNames(cls.ArticleListRedesigned, {}, [className])}
+          data-testid={'ArticleList'}
+        >
+          { articles.map(article => (
+            <ArticleListItem
+              article={article}
+              view={view}
+              target={target}
+              key={article.id}
+              className={cls.card}
+            />
+          )) }
+
+          {
+            isLoading && getSkeleton(view)
+          }
+        </HStack>
+      }
+    />
   )
 })

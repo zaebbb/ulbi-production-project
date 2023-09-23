@@ -110,3 +110,14 @@
     }
   }
 }
+
+.ArticleListItemRedesigned {
+  &.BIG {
+    width: 100%;
+  }
+
+  &.SMALL {
+    width: 230px;
+    height: 350px;
+  }
+}

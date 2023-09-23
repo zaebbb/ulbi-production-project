@@ -20,6 +20,12 @@ export const ArticleListItemSkeleton: React.FC<ArticleListItemSkeletonProps> =
       view,
     } = props
 
+    const mainClass = toggleFeatures({
+      name: 'isAppRedesigned',
+      off: () => cls.ArticleListItem,
+      on: () => cls.ArticleListItemRedesigned,
+    })
+
     const Skeleton = toggleFeatures({
       name: 'isAppRedesigned',
       off: () => SkeletonDeprecated,
@@ -34,7 +40,8 @@ export const ArticleListItemSkeleton: React.FC<ArticleListItemSkeletonProps> =
 
     if (view === ArticleView.BIG) {
       return (
-        <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+        <div className={classNames(
+          mainClass, {}, [className, cls[view]])}>
           <Card className={cls.card}>
             <div className={cls.header}>
               <Skeleton width={30} height={30} border={'50%'} />
@@ -57,7 +64,7 @@ export const ArticleListItemSkeleton: React.FC<ArticleListItemSkeletonProps> =
     }
 
     return (
-      <div className={classNames(cls.ArticleListItem, {}, [className, cls[view]])}>
+      <div className={classNames(mainClass, {}, [className, cls[view]])}>
         <Card className={cls.card}>
           <div className={cls.imageWrapper}>
             <Skeleton width={200} height={200} className={cls.img} />
