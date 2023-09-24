@@ -8,6 +8,7 @@ import { ForbiddenPage } from '@/pages/ForbiddenPage'
 import { MainPage } from '@/pages/MainPage'
 import { NotFoundPage } from '@/pages/NotFoundPage'
 import { ProfilePage } from '@/pages/ProfilePage'
+import { SettingsPage } from '@/pages/SettingsPage'
 import {
   AppRoutes,
   getRouteAbout,
@@ -18,6 +19,7 @@ import {
   getRouteArticleEdit,
   getRouteArticles,
   getRouteMain,
+  getRouteSettings,
   getRouteNotFound,
   getRouteProfile,
 } from '@/shared/const'
@@ -60,6 +62,12 @@ export const routeConfig: Record<AppRoutes, AppRoutesProps> = {
   [AppRoutes.ADMIN_PANEL]: {
     path: getRouteAdminPanel(),
     element: <AdminPage/>,
+    authOnly: true,
+    roles: [UserRole.ADMIN, UserRole.MANAGER],
+  },
+  [AppRoutes.SETTINGS]: {
+    path: getRouteSettings(),
+    element: <SettingsPage/>,
     authOnly: true,
     roles: [UserRole.ADMIN, UserRole.MANAGER],
   },

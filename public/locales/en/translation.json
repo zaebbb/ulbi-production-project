@@ -55,5 +55,10 @@
   "you-use-like-rating": "Thank you for the review!",
   "article-modal-first-visit-title": "article-modal-first-visit-title",
   "article-modal-first-visit-text": "article-modal-first-visit-text",
-  "articles-sorting-to": "Sorting to:"
+  "articles-sorting-to": "Sorting to:",
+  "settings-user": "User settings",
+  "nav-settings": "Settings",
+  "used-design-new": "New",
+  "used-design-old": "Old",
+  "used-design": "Interface variant"
 }

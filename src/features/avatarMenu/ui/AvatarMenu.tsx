@@ -2,7 +2,7 @@ import React, { memo } from 'react'
 import { useTranslation } from 'react-i18next'
 import { useDispatch, useSelector } from 'react-redux'
 import { getUserAuthData, isAdmin, isManager, userActions } from '@/entities/User'
-import { getRouteAdminPanel, getRouteProfile } from '@/shared/const'
+import { getRouteAdminPanel, getRouteProfile, getRouteSettings } from '@/shared/const'
 import { ToggleFeatures } from '@/shared/lib/features'
 import { Avatar as AvatarDeprecated } from '@/shared/ui/deprecated/Avatar'
 import { Menu as MenuDeprecated } from '@/shared/ui/deprecated/Popups'
@@ -38,6 +38,10 @@ export const AvatarMenu: React.FC<AvatarMenuProps> = memo((props: AvatarMenuProp
     {
       content: t('nav-profile'),
       href: getRouteProfile(authData.id),
+    },
+    {
+      content: t('nav-settings'),
+      href: getRouteSettings(),
     },
     {
       content: t('btn-logout'),
