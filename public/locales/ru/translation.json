@@ -59,5 +59,10 @@
   "nav-settings": "Настройки",
   "used-design-new": "Новый",
   "used-design-old": "Старый",
-  "used-design": "Вариант интерфейса"
+  "used-design": "Вариант интерфейса",
+  "views-to": "views-to",
+  "{{count}} views-to_zero": "{{count}} просмотров",
+  "{{count}} views-to_one": "{{count}} просмотр",
+  "{{count}} views-to_few": "{{count}} просмотра",
+  "{{count}} views-to_many": "{{count}} просмотров"
 }
