@@ -30,7 +30,7 @@ export const App: React.FC = () => {
     <ToggleFeatures
       feature={'isAppRedesigned'}
       off={
-        <div className={classNames('app', {}, [theme])}>
+        <div id={'app'} className={classNames('app', {}, [theme])}>
           <Suspense fallback={<PageLoader />}>
             <Navbar />
             <div className="content-page">
@@ -41,7 +41,7 @@ export const App: React.FC = () => {
         </div>
       }
       on={
-        <div className={classNames('app_redesigned', {}, [theme])}>
+        <div id={'app'} className={classNames('app_redesigned', {}, [theme])}>
           <Suspense fallback={<PageLoader />}>
             <MainLayout
               header={<Navbar />}
