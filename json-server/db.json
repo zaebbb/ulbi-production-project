@@ -2632,7 +2632,7 @@
       "features": {
         "isArticleRatingEnabled": true,
         "isArticleCounterEnabled": true,
-        "isAppRedesigned": true
+        "isAppRedesigned": false
       },
       "jsonSettings": {
         "theme": "app_dark_theme",

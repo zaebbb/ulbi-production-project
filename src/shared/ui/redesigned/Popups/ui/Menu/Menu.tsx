@@ -5,7 +5,6 @@ import cls from './Menu.module.scss'
 import { type Additional, classNames } from '@/shared/lib/classNames/classNames'
 import { type DirectionType } from '@/shared/types/ui'
 import { AppLink } from '@/shared/ui/redesigned/AppLink/AppLink'
-import { Button } from '@/shared/ui/redesigned/Button/Button'
 
 export interface MenuItem {
   content?: React.ReactNode
@@ -46,7 +45,8 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
         {
           items.map((item, i) => {
             const content = ({ active }: { active: boolean }) => (
-              <Button
+              <button
+                type={'button'}
                 disabled={item?.disabled}
                 onClick={item?.onClick}
                 className={
@@ -60,7 +60,7 @@ export const Menu: React.FC<MenuProps> = memo((props: MenuProps) => {
                 }
               >
                 {item.content}
-              </Button>
+              </button>
             )
 
             if (item.href) {

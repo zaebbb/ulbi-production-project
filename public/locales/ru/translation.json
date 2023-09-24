@@ -54,5 +54,10 @@
   "you-use-like-rating": "Спасибо за оценку!",
   "article-modal-first-visit-title": "article-modal-first-visit-title",
   "article-modal-first-visit-text": "article-modal-first-visit-text",
-  "articles-sorting-to": "Сортировать по:"
+  "articles-sorting-to": "Сортировать по:",
+  "settings-user": "Настройки пользователя",
+  "nav-settings": "Настройки",
+  "used-design-new": "Новый",
+  "used-design-old": "Старый",
+  "used-design": "Вариант интерфейса"
 }

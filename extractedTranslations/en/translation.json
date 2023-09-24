@@ -68,6 +68,7 @@
   "nav-admin": "nav-admin",
   "nav-main": "nav-main",
   "nav-profile": "nav-profile",
+  "nav-settings": "nav-settings",
   "not-found": "not-found",
   "please-reload-page": "please-reload-page",
   "profile": "profile",
@@ -86,8 +87,12 @@
   "profile-save": "profile-save",
   "reload-page": "reload-page",
   "send-rating": "send-rating",
+  "settings-user": "settings-user",
   "to-main-page": "to-main-page",
   "unexpected-error": "unexpected-error",
+  "used-design": "used-design",
+  "used-design-new": "used-design-new",
+  "used-design-old": "used-design-old",
   "you-use-like-rating": "you-use-like-rating",
   "your-feedback": "your-feedback"
 }
