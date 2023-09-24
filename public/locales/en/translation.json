@@ -60,5 +60,8 @@
   "nav-settings": "Settings",
   "used-design-new": "New",
   "used-design-old": "Old",
-  "used-design": "Interface variant"
+  "used-design": "Interface variant",
+  "views-to": "views-to",
+  "{{count}} views-to_other": "{{count}} views",
+  "{{count}} views-to_one": "{{count}} view"
 }

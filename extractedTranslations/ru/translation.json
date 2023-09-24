@@ -94,5 +94,7 @@
   "nav-settings": "nav-settings",
   "used-design-new": "used-design-new",
   "used-design-old": "used-design-old",
-  "used-design": "used-design"
+  "used-design": "used-design",
+  "views-to": "views-to",
+  "{{count}} views-to": "{{count}} views-to"
 }

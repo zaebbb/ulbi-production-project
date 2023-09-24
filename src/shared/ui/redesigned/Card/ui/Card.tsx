@@ -12,6 +12,7 @@ interface CardProps extends HTMLAttributes<HTMLDivElement> {
   children: ReactNode
   variant?: CardVariant
   isMax?: boolean
+  isFullHeight?: boolean
   padding?: CardPadding
   borderRadius?: CardBorderRadius
 }
@@ -34,6 +35,7 @@ export const Card: React.FC<CardProps> = memo((props: CardProps) => {
     children,
     variant = 'normal',
     isMax = false,
+    isFullHeight = false,
     padding = '8',
     borderRadius = 'normal',
     ...otherProps
@@ -41,6 +43,7 @@ export const Card: React.FC<CardProps> = memo((props: CardProps) => {
 
   const mods: Mods = {
     [cls.max]: isMax,
+    [cls.max_height]: isFullHeight,
   }
 
   const additional: Additional = [

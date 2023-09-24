@@ -69,9 +69,9 @@ export const Button: React.FC<ButtonProps> = memo((props: ButtonProps) => {
       {...otherProps}
       disabled={disabled}
     >
-      <div className={cls.addonLeft}>{addonLeft}</div>
+      {addonLeft && <div className={cls.addonLeft}>{addonLeft}</div>}
       {children}
-      <div className={cls.addonRight}>{addonRight}</div>
+      {addonRight && <div className={cls.addonRight}>{addonRight}</div>}
     </button>
   )
 })
