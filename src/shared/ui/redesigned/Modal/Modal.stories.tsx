@@ -1,5 +1,5 @@
 import type { ComponentStory, Meta } from '@storybook/react'
-import { ThemeDecorator } from '../../config/storybook/ThemeDecorator/ThemeDecorator'
+import { ThemeDecorator } from '../../../config/storybook/ThemeDecorator/ThemeDecorator'
 import { Modal } from './Modal'
 import { Theme } from '@/shared/const'
 

@@ -3,6 +3,7 @@ import cls from './Modal.module.scss'
 import {
   classNames, type Mods,
 } from '@/shared/lib/classNames/classNames'
+import { toggleFeatures } from '@/shared/lib/features'
 import { useModal } from '@/shared/lib/hooks/useModal/useModal'
 import { Overlay } from '@/shared/ui/redesigned/Overlay/Overlay'
 import { Portal } from '@/shared/ui/redesigned/Portal/Portal'
@@ -44,10 +45,19 @@ export const Modal: React.FC<ModalProps> = (props) => {
   }
 
   return (
-    <Portal>
+    <Portal element={document.getElementById('app') ?? document.body}>
       <div
         className={classNames(
-          cls.Modal, mods, [className]
+          cls.Modal,
+          mods,
+          [
+            className,
+            toggleFeatures({
+              name: 'isAppRedesigned',
+              on: () => cls.modalRedesigned,
+              off: () => cls.modalDeprecated,
+            }),
+          ]
         )}
       >
         <Overlay onClick={close} />

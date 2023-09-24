@@ -1,3 +1,15 @@
+.modalRedesigned {
+  .content {
+    background: var(--light-bg-redesigned);
+  }
+}
+
+.modalDeprecated {
+  .content {
+    background: var(--bg-color);
+  }
+}
+
 .Modal {
   pointer-events: none;
 
@@ -12,20 +24,7 @@
   align-items: center;
   justify-content: center;
 
-  color: var(--primary-color);
-
   opacity: 0;
-
-  .overlay {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-
-    width: 100%;
-    height: 100%;
-
-    background: var(--overlay-color);
-  }
 
   .content {
     transform: scale(0.5);
@@ -33,7 +32,6 @@
     max-width: 60%;
     padding: 20px;
 
-    background: var(--bg-color);
     border-radius: 12px;
 
     transition: 0.3s transform;
