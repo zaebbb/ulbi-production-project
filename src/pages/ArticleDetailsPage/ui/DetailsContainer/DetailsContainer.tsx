@@ -12,7 +12,7 @@ export const DetailsContainer: React.FC<DetailsContainerProps> =
     const { className, id } = props
 
     return (
-      <Card isMax className={className} borderRadius={'round'}>
+      <Card isMax className={className} borderRadius={'round'} padding={'24'}>
         <ArticleDetails id={id}/>
       </Card>
     )

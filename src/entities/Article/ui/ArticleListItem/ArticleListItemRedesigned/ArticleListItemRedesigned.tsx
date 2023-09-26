@@ -29,7 +29,7 @@ export const ArticleListItemRedesigned: React.FC<ArticleListItemProps> =
 
     const userInfo = (
       <>
-        <Avatar size={32} src={article.user.avatar} />
+        <Avatar size={32} src={article.user.avatar} className={cls.avatar} />
         <Text isBold text={article.user.username} />
       </>
     )
@@ -46,7 +46,7 @@ export const ArticleListItemRedesigned: React.FC<ArticleListItemProps> =
 
     const skeleton = (
       <Skeleton
-        width={view === ArticleView.BIG ? '100%' : '200px'}
+        width={'100%'}
         height={view === ArticleView.BIG ? '250px' : '200px'}
       />
     )
@@ -124,6 +124,7 @@ export const ArticleListItemRedesigned: React.FC<ArticleListItemProps> =
       >
         <Card
           className={cls.card}
+          padding={'0'}
           borderRadius={'round'}
         >
           <AppImage
