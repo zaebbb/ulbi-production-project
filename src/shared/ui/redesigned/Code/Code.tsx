@@ -1,9 +1,8 @@
 import React, { memo } from 'react'
-import { Icon } from '../redesigned/Icon'
+import { Icon } from '../Icon'
 import cls from './Code.module.scss'
-import CopyIcon from '@/shared/assets/icons/copy-20-20.svg'
+import IconCopy from '@/shared/assets/icons/redesigned/IconCopy.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Button } from '@/shared/ui/deprecated/Button/Button'
 
 interface CodeProps {
   className?: string
@@ -19,9 +18,12 @@ export const Code: React.FC<CodeProps> = memo((props: CodeProps) => {
 
   return (
     <pre className={classNames(cls.Code, {}, [className])}>
-      <Button className={cls.copy} onClick={onCopy}>
-        <Icon Svg={CopyIcon} type={'stroke'} />
-      </Button>
+      <Icon
+        clickable
+        onClick={onCopy}
+        className={cls.copy}
+        Svg={IconCopy}
+      />
       <code>
         {codeData}
       </code>
