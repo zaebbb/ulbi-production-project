@@ -1,5 +1,5 @@
 import React, { memo } from 'react'
-import { Icon } from '../redesigned/Icon'
+import { Icon } from '../Icon'
 import cls from './StarRating.module.scss'
 import StarIcon from '@/shared/assets/icons/star.svg'
 import { classNames } from '@/shared/lib/classNames/classNames'
@@ -48,6 +48,7 @@ export const StarRating: React.FC<StarRatingProps> = memo((props: StarRatingProp
     <div className={classNames(cls.StarRating, {}, [className])}>
       {stars.map((star) => (
         <Icon
+          clickable={!isSelected}
           onMouseEnter={onHover(star)}
           onMouseLeave={onLeave}
           onClick={onClick(star)}

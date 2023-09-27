@@ -4,7 +4,10 @@ import { type Comment } from '../../model/types/comment'
 import { CommentCard } from '../CommentCard/CommentCard'
 import cls from './CommentList.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Text } from '@/shared/ui/deprecated/Text'
+import { ToggleFeatures } from '@/shared/lib/features'
+import { Text as TextDeprecated } from '@/shared/ui/deprecated/Text'
+import { VStack } from '@/shared/ui/redesigned/Stack'
+import { Text } from '@/shared/ui/redesigned/Text'
 
 interface CommentListProps {
   className?: string
@@ -30,8 +33,16 @@ export const CommentList: React.FC<CommentListProps> = memo((props: CommentListP
     )
   }
 
+  const text = (
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={<TextDeprecated text={t('comments-not-found')} />}
+      on={<Text text={t('comments-not-found')} />}
+    />
+  )
+
   return (
-    <div className={classNames(cls.CommentList, {}, [className])}>
+    <VStack gap={16} isMax className={classNames('', {}, [className])}>
       {
         comments?.length
           ? comments.map(comment => (
@@ -42,8 +53,8 @@ export const CommentList: React.FC<CommentListProps> = memo((props: CommentListP
               isLoading={isLoading}
             />
           ))
-          : <Text text={t('comments-not-found')} />
+          : text
       }
-    </div>
+    </VStack>
   )
 })
