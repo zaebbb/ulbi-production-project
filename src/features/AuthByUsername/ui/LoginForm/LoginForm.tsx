@@ -10,10 +10,15 @@ import { loginActions, loginReducer } from '../../model/slice/loginSlice'
 import cls from './LoginForm.module.scss'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
-import { Input } from '@/shared/ui/deprecated/Input'
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
+import { Button as ButtonDeprecated, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { Input as InputDeprecated } from '@/shared/ui/deprecated/Input'
+import { Text as TextDeprecated, TextTheme } from '@/shared/ui/deprecated/Text'
+import { Button } from '@/shared/ui/redesigned/Button'
+import { Input } from '@/shared/ui/redesigned/Input'
+import { VStack } from '@/shared/ui/redesigned/Stack'
+import { Text } from '@/shared/ui/redesigned/Text'
 
 export interface LoginFormProps {
   className?: string
@@ -60,40 +65,82 @@ const LoginForm: React.FC<LoginFormProps> = memo((props: LoginFormProps) => {
       reducers={initialReducers}
       removeAfterUnmount
     >
-      <div className={classNames(cls.LoginForm, {}, [className])}>
-        <Text
-          title={t('modal-auth-title')}
-        />
-        {error && (
-          <Text
-            text={t('error-auth')}
-            theme={TextTheme.ERROR}
-          />
-        )}
-        <Input
-          placeholder={t('input-login')}
-          type="text"
-          className={cls.input}
-          autoFocus
-          onChange={onChangeUsername}
-          value={username}
-        />
-        <Input
-          placeholder={t('input-password')}
-          type="text"
-          className={cls.input}
-          onChange={onChangePassword}
-          value={password}
-        />
-        <Button
-          theme={ThemeButton.OUTLINE}
-          className={cls.loginBtn}
-          onClick={onLoginClick}
-          disabled={isLoading}
-        >
-          {t('btn-auth')}
-        </Button>
-      </div>
+      <ToggleFeatures
+        feature={'isAppRedesigned'}
+        off={
+          <div className={classNames(cls.LoginForm, {}, [className])}>
+            <TextDeprecated
+              title={t('modal-auth-title')}
+            />
+            {error && (
+              <TextDeprecated
+                text={t('error-auth')}
+                theme={TextTheme.ERROR}
+              />
+            )}
+            <InputDeprecated
+              placeholder={t('input-login')}
+              type="text"
+              className={cls.input}
+              autoFocus
+              onChange={onChangeUsername}
+              value={username}
+            />
+            <InputDeprecated
+              placeholder={t('input-password')}
+              type="text"
+              className={cls.input}
+              onChange={onChangePassword}
+              value={password}
+            />
+            <ButtonDeprecated
+              theme={ThemeButton.OUTLINE}
+              className={cls.loginBtn}
+              onClick={onLoginClick}
+              disabled={isLoading}
+            >
+              {t('btn-auth')}
+            </ButtonDeprecated>
+          </div>
+        }
+        on={
+          <div className={classNames(cls.LoginForm, {}, [className])}>
+            <VStack gap={16}>
+              <Text
+                title={t('modal-auth-title')}
+              />
+              {error && (
+                <Text
+                  text={t('error-auth')}
+                  variant={'error'}
+                />
+              )}
+              <Input
+                placeholder={t('input-login')}
+                type="text"
+                className={cls.input}
+                autoFocus
+                onChange={onChangeUsername}
+                value={username}
+              />
+              <Input
+                placeholder={t('input-password')}
+                type="text"
+                className={cls.input}
+                onChange={onChangePassword}
+                value={password}
+              />
+              <Button
+                className={cls.loginBtn}
+                onClick={onLoginClick}
+                disabled={isLoading}
+              >
+                {t('btn-auth')}
+              </Button>
+            </VStack>
+          </div>
+        }
+      />
     </DynamicModuleLoader>
   )
 })

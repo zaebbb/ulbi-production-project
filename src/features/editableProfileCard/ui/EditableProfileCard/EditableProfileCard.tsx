@@ -20,9 +20,11 @@ import { Currency } from '@/entities/Currency'
 import { ProfileCard } from '@/entities/Profile'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { DynamicModuleLoader, type ReducerList } from '@/shared/lib/components/DynamicModuleLoader'
+import { ToggleFeatures } from '@/shared/lib/features'
 import { useAppDispatch } from '@/shared/lib/hooks/useAppDispatch/useAppDispatch'
 import { useInitialEffect } from '@/shared/lib/hooks/useInitialEffect/useInitialEffect'
-import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
+import { Text as TextDeprecated, TextTheme } from '@/shared/ui/deprecated/Text'
+import { Text } from '@/shared/ui/redesigned/Text'
 
 interface EditableProfileCardProps {
   className?: string
@@ -124,11 +126,25 @@ export const EditableProfileCard = memo((props: EditableProfileCardProps) => {
         data-testid={'editable-profile-card'}
       >
         {validate?.length && validate.map(err => (
-          <Text
+          <ToggleFeatures
             key={err}
-            text={validateErrorTranslates[err]}
-            theme={TextTheme.ERROR}
-            data-testid={'editable-profile-card-error'}
+            feature={'isAppRedesigned'}
+            off={
+              <TextDeprecated
+                key={err}
+                text={validateErrorTranslates[err]}
+                theme={TextTheme.ERROR}
+                data-testid={'editable-profile-card-error'}
+              />
+            }
+            on={
+              <Text
+                key={err}
+                text={validateErrorTranslates[err]}
+                variant={'error'}
+                data-testid={'editable-profile-card-error'}
+              />
+            }
           />
         ))}
 
