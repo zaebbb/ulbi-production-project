@@ -5,8 +5,11 @@ import {
 } from '../../api/articleRecommendationsApi'
 import { ArticleList } from '@/entities/Article'
 import { classNames } from '@/shared/lib/classNames/classNames'
-import { Text, TextSize } from '@/shared/ui/deprecated/Text'
+import { ToggleFeatures } from '@/shared/lib/features'
+import { VStack as VStackDeprecated } from '@/shared/ui/deprecated/Stack'
+import { Text as TextDeprecated, TextSize } from '@/shared/ui/deprecated/Text'
 import { VStack } from '@/shared/ui/redesigned/Stack'
+import { Text } from '@/shared/ui/redesigned/Text'
 
 interface ArticleRecommendationsListProps {
   className?: string
@@ -26,19 +29,40 @@ export const ArticleRecommendationsList = memo((props: ArticleRecommendationsLis
   }
 
   return (
-    <VStack
-      gap={8}
-      className={classNames('', {}, [className])}
-      data-testid={'ArticleRecommendationsList'}
-    >
-      <Text
-        size={TextSize.L}
-        title={t('article-recommendations')}
-      />
-      <ArticleList
-        articles={articles}
-        target={'_blank'}
-      />
-    </VStack>
+    <ToggleFeatures
+      feature={'isAppRedesigned'}
+      off={
+        <VStackDeprecated
+          gap={8}
+          className={classNames('', {}, [className])}
+          data-testid={'ArticleRecommendationsList'}
+        >
+          <TextDeprecated
+            size={TextSize.L}
+            title={t('article-recommendations')}
+          />
+          <ArticleList
+            articles={articles}
+            target={'_blank'}
+          />
+        </VStackDeprecated>
+      }
+      on={
+        <VStack
+          gap={8}
+          className={classNames('', {}, [className])}
+          data-testid={'ArticleRecommendationsList'}
+        >
+          <Text
+            size={'l'}
+            title={t('article-recommendations')}
+          />
+          <ArticleList
+            articles={articles}
+            target={'_blank'}
+          />
+        </VStack>
+      }
+    />
   )
 })
