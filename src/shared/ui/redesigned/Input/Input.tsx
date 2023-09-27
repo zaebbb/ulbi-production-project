@@ -94,8 +94,8 @@ export const Input: React.FC<InputProps> = memo((props: InputProps) => {
 
   if (label) {
     return (
-      <HStack isMax gap={8}>
-        {label && <Text text={label} />}
+      <HStack isMax gap={8} align={'center'}>
+        {label && <Text text={label} className={cls.label} />}
         {input}
       </HStack>
     )

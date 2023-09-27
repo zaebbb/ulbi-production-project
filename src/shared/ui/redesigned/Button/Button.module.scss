@@ -42,19 +42,51 @@
 }
 
 .filled {
-  background: var(--light-bg-redesigned);
   border: none;
   border-radius: 34px;
   outline: none;
+
+  &.normal {
+    background: var(--light-bg-redesigned);
+  }
+
+  &.success {
+    background: var(--save-redesigned);
+  }
+
+  &.error {
+    background: var(--cancel-redesigned);
+  }
 }
 
 .outline {
   background: none;
-  border: 2px solid var(--icon-redesigned);
   border-radius: 34px;
 
-  &:hover {
-    border: 2px solid var(--accept-redesigned);
+  &.normal {
+    border: 2px solid var(--icon-redesigned);
+
+    &:hover {
+      border: 2px solid var(--accept-redesigned);
+    }
+  }
+
+  &.success {
+    border: 2px solid var(--save-redesigned);
+
+    &:hover {
+      color: var(--save-redesigned);
+      opacity: 0.7;
+    }
+  }
+
+  &.cancel {
+    border: 2px solid var(--cancel-redesigned);
+
+    &:hover {
+      color: var(--cancel-redesigned);
+      opacity: 0.7;
+    }
   }
 }
 

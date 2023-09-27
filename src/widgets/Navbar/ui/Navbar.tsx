@@ -9,9 +9,10 @@ import { NotificationButton } from '@/features/notificationButton'
 import { getRouteArticleCreate } from '@/shared/const'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ToggleFeatures } from '@/shared/lib/features'
-import { Button, ThemeButton } from '@/shared/ui/deprecated/Button'
+import { Button as ButtonDeprecated, ThemeButton } from '@/shared/ui/deprecated/Button'
 import { Text, TextTheme } from '@/shared/ui/deprecated/Text'
 import { AppLink } from '@/shared/ui/redesigned/AppLink'
+import { Button } from '@/shared/ui/redesigned/Button'
 import { HStack } from '@/shared/ui/redesigned/Stack'
 
 interface NavbarProps {
@@ -72,13 +73,13 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
       feature={'isAppRedesigned'}
       off={
         <header className={classNames(cls.Navbar, {}, [className])}>
-          <Button
+          <ButtonDeprecated
             theme={ThemeButton.CLEAR_INVERTED}
             className={cls.links}
             onClick={onShowModal}
           >
             {t('login-account')}
-          </Button>
+          </ButtonDeprecated>
           {isAuthModal && (
             <LoginModal
               isOpen={isAuthModal}
@@ -88,11 +89,11 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
         </header>
       }
       on={
-        <header className={classNames(cls.Navbar, {}, [className])}>
+        <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
           <Button
-            theme={ThemeButton.CLEAR_INVERTED}
             className={cls.links}
             onClick={onShowModal}
+            variant={'clear'}
           >
             {t('login-account')}
           </Button>
