@@ -29,6 +29,10 @@ const ThemeProvider: React.FC<ThemeProviderProps> = (props) => {
   }, [defaultTheme, isThemeInited])
 
   React.useEffect(() => {
+    document.body.className = theme
+  }, [theme])
+
+  React.useEffect(() => {
     if (defaultTheme) {
       setTheme(defaultTheme)
     }

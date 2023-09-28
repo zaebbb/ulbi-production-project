@@ -71,7 +71,11 @@ export const ArticleListItemSkeleton: React.FC<ArticleListItemSkeletonProps> =
           </div>
 
           <div className={cls.infoWrapper}>
-            <Skeleton width={130} height={16} className={cls.types} />
+            <Skeleton width={200} height={70} className={cls.types} />
+          </div>
+
+          <div className={cls.infoWrapper}>
+            <Skeleton width={250} height={16} className={cls.types} />
           </div>
 
           <Skeleton
