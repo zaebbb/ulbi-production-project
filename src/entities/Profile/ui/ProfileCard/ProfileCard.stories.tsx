@@ -4,6 +4,7 @@ import { ProfileCard } from './ProfileCard'
 import { Country } from '@/entities/Country'
 import { Currency } from '@/entities/Currency'
 import ImageStorybook from '@/shared/assets/images/storybook.png'
+import { NewDesignDecorator } from '@/shared/config/storybook/NewDesignDecorator/NewDesignDecorator'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDecorator'
 import { Theme } from '@/shared/const'
@@ -19,8 +20,7 @@ export default {
 const Template: ComponentStory<typeof ProfileCard> =
   (args) => <ProfileCard {...args} />
 
-export const Primary = Template.bind({})
-Primary.args = {
+const args = {
   data: {
     first: '111',
     lastname: 'Mihailov',
@@ -33,6 +33,9 @@ Primary.args = {
   },
 }
 
+export const Primary = Template.bind({})
+Primary.args = args
+
 export const IsLoading = Template.bind({})
 IsLoading.args = {
   isLoading: true,
@@ -44,12 +47,29 @@ Error.args = {
 }
 
 export const ProfileCardLight = Template.bind({})
+ProfileCardLight.args = args
 ProfileCardLight.decorators = [
   StoreDecorator({}),
 ]
 
 export const ProfileCardDark = Template.bind({})
+ProfileCardDark.args = args
 ProfileCardDark.decorators = [
   ThemeDecorator(Theme.DARK),
   StoreDecorator({}),
+]
+
+export const ProfileCardLightRedesigned = Template.bind({})
+ProfileCardLightRedesigned.args = args
+ProfileCardLightRedesigned.decorators = [
+  StoreDecorator({}),
+  NewDesignDecorator,
+]
+
+export const ProfileCardDarkRedesigned = Template.bind({})
+ProfileCardDarkRedesigned.args = args
+ProfileCardDarkRedesigned.decorators = [
+  ThemeDecorator(Theme.DARK),
+  StoreDecorator({}),
+  NewDesignDecorator,
 ]
