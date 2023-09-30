@@ -3,7 +3,7 @@ import { Avatar, AvatarSize } from './Avatar'
 import ImageStorybook from '@/shared/assets/images/storybook.png'
 
 const meta: Meta<typeof Avatar> = {
-  title: 'shared/Avatar',
+  title: 'shared/redesigned/Avatar',
   component: Avatar,
 }
 

@@ -2,7 +2,7 @@ import type { ComponentStory, Meta } from '@storybook/react'
 import { Popover } from './Popover'
 
 const meta: Meta<typeof Popover> = {
-  title: 'shared/popups/Popover',
+  title: 'shared/redesigned/popups/Popover',
   component: Popover,
 }
 

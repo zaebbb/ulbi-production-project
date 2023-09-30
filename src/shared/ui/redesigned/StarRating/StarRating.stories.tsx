@@ -3,7 +3,7 @@ import type { ComponentStory } from '@storybook/react'
 import { StarRating } from './StarRating'
 
 export default {
-  title: 'shared/StarRating',
+  title: 'shared/redesigned/StarRating',
   component: StarRating,
 } satisfies ComponentMeta<typeof StarRating>
 

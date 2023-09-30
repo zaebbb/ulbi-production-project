@@ -63,11 +63,11 @@ export const ListBoxComponent = <T extends string>(props: ListBoxProps<T>) => {
         onChange={onChange}
         disabled={readonly}
       >
-        <HListBox.Button className={cls.trigger}>
+        <HListBox.Button as={React.Fragment} >
           <Button
             variant={'filled'}
             disabled={readonly}
-            className={cls.button}
+            className={cls.trigger}
             addonRight={<Icon Svg={ArrowBottom} />}
           >
             {selectedItem?.content ?? defaultValue}

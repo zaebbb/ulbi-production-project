@@ -4,7 +4,7 @@ import { ThemeDecorator } from '@/shared/config/storybook/ThemeDecorator/ThemeDe
 import { Theme } from '@/shared/const'
 
 const meta: Meta<typeof Card> = {
-  title: 'widgets/Card',
+  title: 'shared/redesigned/Card',
   component: Card,
   argTypes: {
 

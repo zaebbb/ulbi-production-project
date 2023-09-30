@@ -2,7 +2,7 @@ import type { ComponentStory, Meta } from '@storybook/react'
 import { Input } from './Input'
 
 const meta: Meta<typeof Input> = {
-  title: 'shared/Input',
+  title: 'shared/redesigned/Input',
   component: Input,
   argTypes: {
 
