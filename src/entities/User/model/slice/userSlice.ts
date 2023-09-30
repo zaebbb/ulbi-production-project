@@ -3,7 +3,7 @@ import { initAuthData } from '../services/initAuthData'
 import { saveJsonSettings } from '../services/saveJsonSettings'
 import { type JsonSettings } from '../types/jsonSettings'
 import { type User, type UserSchema } from '../types/user'
-import { USER_LOCAL_STORAGE_KEY } from '@/shared/const/localstorage'
+import { LOCAL_STORAGE_LAST_DESIGN_KEY, USER_LOCAL_STORAGE_KEY } from '@/shared/const/localstorage'
 import { setFeatureFlags } from '@/shared/lib/features'
 
 const initialState: UserSchema = {
@@ -21,6 +21,9 @@ export const userSlice = createSlice({
       localStorage.setItem(
         USER_LOCAL_STORAGE_KEY,
         action.payload.id
+      )
+      localStorage.setItem(
+        LOCAL_STORAGE_LAST_DESIGN_KEY, action.payload?.features?.isAppRedesigned ? 'new' : 'old'
       )
     },
     logout: (state) => {

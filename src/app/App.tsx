@@ -2,6 +2,7 @@ import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
 import { AppRouter } from './providers/router'
 import { getUserMounted, initAuthData } from '@/entities/User'
+import { AppLoaderLayout } from '@/shared/layout/AppLoaderLayout'
 import { MainLayout } from '@/shared/layout/MainLayout'
 import { classNames } from '@/shared/lib/classNames/classNames'
 import { ToggleFeatures } from '@/shared/lib/features'
@@ -22,7 +23,15 @@ export const App: React.FC = () => {
 
   if (!mounted) {
     return (
-      <PageLoader />
+      <ToggleFeatures
+        feature={'isAppRedesigned'}
+        off={<PageLoader />}
+        on={(
+          <div id={'app'} className={classNames('app_redesigned', {}, [theme])}>
+            <AppLoaderLayout />
+          </div>
+        )}
+      />
     )
   }
 
