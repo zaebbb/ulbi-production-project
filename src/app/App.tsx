@@ -1,6 +1,7 @@
 import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
 import { useAppToolbar } from './lib/hooks/useAppToolbar'
+import { withTheme } from './providers/ThemeProvider/ui/WithTheme'
 import { AppRouter } from './providers/router'
 import { getUserMounted, initAuthData } from '@/entities/User'
 import { AppLoaderLayout } from '@/shared/layout/AppLoaderLayout'
@@ -13,7 +14,7 @@ import { Navbar } from '@/widgets/Navbar'
 import { PageLoader } from '@/widgets/PageLoader'
 import { Sidebar } from '@/widgets/Sidebar'
 
-export const App: React.FC = () => {
+const App: React.FC = React.memo(() => {
   const { theme } = useTheme()
   const dispatch = useAppDispatch()
   const mounted = useSelector(getUserMounted)
@@ -65,4 +66,6 @@ export const App: React.FC = () => {
       }
     />
   )
-}
+})
+
+export default withTheme(App)

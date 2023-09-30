@@ -1,5 +1,8 @@
 import { ComponentMeta, type ComponentStory } from '@storybook/react'
 import { CommentCard } from './CommentCard'
+import {
+  FeatureFlagsDecorator,
+} from '@/shared/config/storybook/FeatureFlagsDecorator/FeatureFlagsDecorator'
 import { StoreDecorator } from '@/shared/config/storybook/StoreDecorator/StoreDecorator'
 
 export default {
@@ -25,4 +28,27 @@ isLoading.args = {
 }
 isLoading.decorators = [
   StoreDecorator({}),
+]
+
+export const PrimaryRedesigned = Template.bind({})
+PrimaryRedesigned.args = {
+  comment: { id: '1', text: 'hello world', user: { id: '1', username: 'test user' } },
+}
+PrimaryRedesigned.decorators = [
+  StoreDecorator({}),
+  FeatureFlagsDecorator({
+    isAppRedesigned: true,
+  }),
+]
+
+export const isLoadingRedesigned = Template.bind({})
+isLoadingRedesigned.args = {
+  comment: { id: '1', text: 'hello world', user: { id: '1', username: 'test user' } },
+  isLoading: true,
+}
+isLoadingRedesigned.decorators = [
+  StoreDecorator({}),
+  FeatureFlagsDecorator({
+    isAppRedesigned: true,
+  }),
 ]
