@@ -1,5 +1,6 @@
 import React, { Suspense } from 'react'
 import { useSelector } from 'react-redux'
+import { useAppToolbar } from './lib/hooks/useAppToolbar'
 import { AppRouter } from './providers/router'
 import { getUserMounted, initAuthData } from '@/entities/User'
 import { AppLoaderLayout } from '@/shared/layout/AppLoaderLayout'
@@ -16,6 +17,7 @@ export const App: React.FC = () => {
   const { theme } = useTheme()
   const dispatch = useAppDispatch()
   const mounted = useSelector(getUserMounted)
+  const toolbar = useAppToolbar()
 
   React.useEffect(() => {
     dispatch(initAuthData())
@@ -54,7 +56,7 @@ export const App: React.FC = () => {
           <Suspense fallback={<PageLoader />}>
             <MainLayout
               header={<Navbar />}
-              toolbar={<div />}
+              toolbar={toolbar}
               content={<AppRouter/>}
               sidebar={<Sidebar />}
             />
