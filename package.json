@@ -144,6 +144,7 @@
     "react-virtualized": "^9.22.5"
   },
   "loki": {
+    "chromeSelector": "#root",
     "configurations": {
       "chrome.laptop": {
         "target": "chrome.app",

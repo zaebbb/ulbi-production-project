@@ -2,7 +2,7 @@ import type { ComponentStory, Meta } from '@storybook/react'
 import { ListBox, type ListBoxItem } from './ListBox'
 
 const meta: Meta<typeof ListBox> = {
-  title: 'shared/popups/ListBox',
+  title: 'shared/redesigned/popups/ListBox',
   component: ListBox,
   decorators: [
     (Story) => <div style={{ padding: 100 }}><Story /></div>,
