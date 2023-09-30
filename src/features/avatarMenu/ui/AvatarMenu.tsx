@@ -60,12 +60,14 @@ export const AvatarMenu: React.FC<AvatarMenuProps> = memo((props: AvatarMenuProp
           direction={'bottom-right'}
         />
       }
-      on={<Menu
-        className={className}
-        items={items}
-        trigger={<Avatar size={48} src={authData.avatar} />}
-        direction={'bottom-right'}
-      />}
+      on={
+        <Menu
+          className={className}
+          items={items}
+          trigger={<Avatar size={48} src={authData.avatar} />}
+          direction={'bottom-right'}
+        />
+      }
     />
 
   )

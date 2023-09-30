@@ -60,7 +60,7 @@ export const Navbar: React.FC<NavbarProps> = memo((props: NavbarProps) => {
           <header className={classNames(cls.NavbarRedesigned, {}, [className])}>
             <HStack gap={16} className={cls.actions} align={'center'}>
               <NotificationButton />
-              <AvatarMenu />
+              <AvatarMenu className={cls.menu} />
             </HStack>
           </header>
         }

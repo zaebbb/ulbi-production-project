@@ -25,3 +25,16 @@ export const getRouteAccessDenied = () => '/access-denied'
 export const getRouteNotFound = () => '*'
 
 export { Theme } from '@/shared/const/theme'
+
+export const AppRouteByPath: Record<string, AppRoutes> = {
+  [getRouteMain()]: AppRoutes.MAIN,
+  [getRouteAbout()]: AppRoutes.ABOUT,
+  [getRouteProfile(':id')]: AppRoutes.PROFILE,
+  [getRouteArticles()]: AppRoutes.ARTICLES,
+  [getRouteArticleDetails(':id')]: AppRoutes.ARTICLE_DETAILS,
+  [getRouteArticleCreate()]: AppRoutes.ARTICLE_CREATE,
+  [getRouteArticleEdit(':id')]: AppRoutes.ARTICLE_EDIT,
+  [getRouteAdminPanel()]: AppRoutes.ADMIN_PANEL,
+  [getRouteSettings()]: AppRoutes.SETTINGS,
+  [getRouteAccessDenied()]: AppRoutes.ACCESS_DENIED,
+}
